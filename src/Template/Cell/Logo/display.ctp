@@ -1,0 +1,1 @@
+<a class="navbar-brand" href="<?= $this->Url->build(['controller' => 'Home', 'action' => 'index']) ?>"><?= $this->Html->image('home/home-header-logo.png', ['alt' => 'logo', 'style' => 'height: 35px']) ?></a>
