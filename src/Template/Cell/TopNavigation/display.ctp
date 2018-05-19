@@ -9,6 +9,7 @@
             <ul class="navbar-nav ml-auto">
                 <?php foreach($menuItems as $menuItem): ?>
                     <li class="nav-item <?= $menuItem['class'] ?>">
+                        <div class="left-caret"></div>
                         <a class="nav-link top-item" id="<?= $menuItem['name'] ?>"><?= $menuItem['title'] ?></a>
                     </li>
                 <?php endforeach; ?>
@@ -20,10 +21,10 @@
     <div class="container">
         <div id="navbarSub" class="navbar-collapse">
             <?php foreach($menuItems as $menuItem): ?>
-              <ul id="sub-<?= $menuItem['name'] ?>" class="navbar-nav">
+              <ul id="sub-<?= $menuItem['name'] ?>" class="navbar-nav ml-auto">
                 <?php foreach($menuItem['subfields'] as $subname => $subfield): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $menuItem['url'] ?>#<?= $subname ?>" id=""><?= $subfield ?></a>
+                        <span class="oi nav-icon" data-glyph="<?= $subfield['icon'] ?>" aria-hidden="true"></span><a class="nav-link" href="<?= $menuItem['url'] ?>#<?= $subname ?>"><?= $subfield['text'] ?></a>
                     </li>
                 <?php endforeach; ?>
               </ul>

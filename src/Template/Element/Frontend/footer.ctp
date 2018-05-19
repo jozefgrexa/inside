@@ -28,7 +28,7 @@
 		$('nav#subNavbar').show(); //show main menu
 		
 		//handle links
-		id = $(this).attr('id');
+		let id = $(this).attr('id');
 		$(this).parents('ul').children().removeClass("active"); //remove all active classes from main navbar links
 		$(this).parent().addClass("active"); //set selected navbar link to active
 		$("ul#sub-"+id).show(); //show sub menu
@@ -38,14 +38,15 @@
 		if ($('#subNavbar').css('display') == 'none') {
 			$("#navbarSub").children().hide(); //hide all sub menu items
 			$('nav#subNavbar').show(); //show main menu
-			$('#home').parents('ul').children().removeClass("active"); //remove all active classes from main navbar links
-			$('#home').parent().addClass("active"); //set selected navbar link to active
-			$("ul#sub-home").slideDown(); //show sub menu
+			let id = '<?= $this->request->params['controller'] ?>';
+			id = id.toLowerCase();
+			$('#'+id).parents('ul').children().removeClass("active"); //remove all active classes from main navbar links
+			$('#'+id).parent().addClass("active"); //set selected navbar link to active
+			$("ul#sub-"+id).show(); //show sub menu
 		} else {
-			id = $('#mainNavbar .nav-item.active a').attr('id');
-			$("ul#sub-"+id).slideUp(function() {
-				$('#subNavbar').hide();
-			});
+			let id = $('#mainNavbar .nav-item.active a').attr('id');
+			$("ul#sub-"+id).hide();
+			$('#subNavbar').hide();
 		}
 	});
 </script>

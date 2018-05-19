@@ -5,7 +5,6 @@
 <title>INSIDE > What Matters Most</title>
 
 <?= $this->Html->meta('icon') ?>
-<?= $this->Html->css('scrolling-nav.css') ?>
 <?= $this->Html->css('bootstrap.min.css') ?>
 <?= $this->Html->css('open-iconic.css') ?>
 <?= $this->Html->css('style.css') ?>
