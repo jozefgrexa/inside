@@ -33,8 +33,6 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
-        $this->addPlugin('Migrations');
-
         // Call parent to load bootstrap from files.
         parent::bootstrap();
     }
