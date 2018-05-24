@@ -16,6 +16,8 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
+use Cake\Mailer\Email;
 
 /**
  * Application Controller
@@ -52,5 +54,28 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
+    }
+
+    /**
+     * Send email to users
+     *
+     * @param $to
+     * @param $subject
+     * @param $template
+     * @param array $vars
+     * @return bool
+     */
+    protected function _sendEmail($to, $subject, $template, $vars = [])
+    {
+        $vars['appName'] = Configure::read('App.name');
+        $email = new Email('default');
+        $email->template($template)
+            ->viewVars($vars)
+            ->emailFormat('html')
+            ->to($to)
+            ->subject($subject)
+            ->send();
+
+        return true;
     }
 }

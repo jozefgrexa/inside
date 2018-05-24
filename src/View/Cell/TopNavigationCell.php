@@ -34,7 +34,7 @@ class TopNavigationCell extends Cell
             'title' => 'Víkend',
             'target' => 'Weekend@index',
             'subfields' => [
-                'home' => ['text' => 'Domov', 'icon' => 'home'],
+                'start' => ['text' => 'Domov', 'icon' => 'home'],
                 'info' => ['text' => 'Informácie', 'icon' => 'info'],
                 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
                 'program' => ['text' => 'Program', 'icon' => 'list'],
@@ -45,18 +45,19 @@ class TopNavigationCell extends Cell
             'title' => 'Games',
             'target' => 'Games@index',
             'subfields' => [
-                'home' => ['text' => 'Domov', 'icon' => 'home'],
+                'start' => ['text' => 'Domov', 'icon' => 'home'],
+                'sports' => ['text' => 'Športy', 'icon' => 'grid-two-up'],
                 'info' => ['text' => 'O Games', 'icon' => 'info'],
                 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                'program' => ['text' => 'Program', 'icon' => 'list'],
-                'theme' => ['text' => 'Téma', 'icon' => 'book'],
+                'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
+                'place' => ['text' => 'Miesto', 'icon' => 'map'],
             ],
         ],
         'camp' => [
             'title' => 'Tábor',
             'target' => 'Camp@index',
             'subfields' => [
-                'home' => ['text' => 'Domov', 'icon' => 'home'],
+                'start' => ['text' => 'Domov', 'icon' => 'home'],
                 'info' => ['text' => 'Informácie', 'icon' => 'info'],
                 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
                 'program' => ['text' => 'Program', 'icon' => 'list'],
@@ -111,6 +112,8 @@ class TopNavigationCell extends Cell
     {
         $currentController = $this->request->params['controller'];
         $currentAction = $this->request->params['action'];
+        // $currentController = $this->request->getParams('controller');
+        // $currentAction = $this->request->getParams('action');
         $activeClass = 'active';
 
         if ($controller == $currentController) {

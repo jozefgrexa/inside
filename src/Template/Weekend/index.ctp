@@ -11,7 +11,7 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </header>
 
-<section id="home">
+<section id="start">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">

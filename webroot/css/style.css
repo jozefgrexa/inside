@@ -1,3 +1,4 @@
+/*************** TOP NAVIGATION NAVBAR *******************/
 .nav-link {
     cursor: pointer;
 }
@@ -15,13 +16,6 @@
     width: 40%;
   }
 }
-/*@media (max-width: 575.98px) {
-  #subNavbar {
-    width: 60%;
-    right: 0;
-    left: auto;
-  }
-}*/
 @media (min-width: 576px) {
   #subNavbar {
     width: 70%;
@@ -32,14 +26,6 @@
     width: 30%;
   }
 }
-/*@media (max-width: 767.98px) {
-  #subNavbar {
-    width: 70%;
-    right: 0;
-    left: auto;
-  }
-}*/
-
 @media (min-width: 768px) {
   #subNavbar {
     width: 80%;
@@ -50,14 +36,13 @@
     width: 20%;
   }
 }
-
 @media (max-width: 991.98px) {
   #close-sub-menu {
     display: none;
   }
-  /*.nav-item {
-    border-bottom: 1px solid gray;
-  }*/
+  .card {
+    margin-top: 20px;
+  }
   #mainNavbar ul:first-child {
     margin-top: 16px;
   }
@@ -78,7 +63,7 @@
     height: 0;
     left: 0;
     border-top: 10px solid transparent;
-    border-right: 10px solid white;
+    border-right: 10px solid #0fb8ad;
     border-bottom: 10px solid transparent;
   }
 }
@@ -110,12 +95,20 @@
 #close-sub-menu span.oi:hover {
     color: darkred;
 }
+
+#mainNavbar.bg-dark {
+  background-color: #20232A !important;
+}
+#subNavbar.bg-light {
+  background: linear-gradient(141deg, #0fb8ad, #1fc8db, #2cb5e8) !important;
+}
+/*************** HOME PAGE *******************/
 .home-big-picture {
   color: white;
   padding: 150px 0;
   height: 80vh;
   min-height: 400px;
-  background: center center no-repeat fixed;
+  background: center center no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -123,4 +116,69 @@
 }
 section {
     padding: 100px 0;
+}
+
+/*************** GAMES FORM CUSTOMIZE *******************/
+#captain-field, #individual-field {
+  display: none;
+}
+#form-switch .btn:focus {
+  box-shadow:none !important;
+}
+#games-form .under-16 {
+  display: none;
+}
+
+/*************** GAMES PAGE *******************/
+.games-home {
+  color: white;
+  padding: 150px 0;
+  min-height: 400px;
+  background: center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.games-info .info-card-1 {
+  background-color: #0E79C1;
+}
+.games-info .info-card-2 {
+  background-color: #83CAEA;
+}
+.games-info .info-card-3 {
+  background-color: #D3BFB6;
+}
+.games-info .info-card-4 {
+  background-color: #D38352;
+}
+
+.games-sports .card {
+  color: #000000;
+}
+.games-sports .card p {
+  margin-bottom: 0.5rem;
+}
+.games-sports .card-title, .games-teams .card-title {
+  text-transform: uppercase;
+}
+.games-sports {
+  background: center center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: #ffffff;
+}
+.games-teams .card {
+  background-color: transparent;
+  border: 1px solid #0fb8ad;
+  color: #0fb8ad;
+}
+.games-teams .card h3{
+  color: #ffffff;
+}
+#gallery img {
+  margin-top: 20px;
+  vertical-align: middle;
 }

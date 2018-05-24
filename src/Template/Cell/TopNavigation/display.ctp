@@ -22,9 +22,10 @@
         <div id="navbarSub" class="navbar-collapse">
             <?php foreach($menuItems as $menuItem): ?>
               <ul id="sub-<?= $menuItem['name'] ?>" class="navbar-nav ml-auto">
+                <!-- <li class="nav-item"><?= $menuItem['title'] ?></li> -->
                 <?php foreach($menuItem['subfields'] as $subname => $subfield): ?>
                     <li class="nav-item">
-                        <span class="oi nav-icon" data-glyph="<?= $subfield['icon'] ?>" aria-hidden="true"></span><a class="nav-link" href="<?= $menuItem['url'] ?>#<?= $subname ?>"><?= $subfield['text'] ?></a>
+                        <span class="oi nav-icon" data-glyph="<?= $subfield['icon'] ?>" aria-hidden="true"></span><a class="nav-link sub-item" href="<?= $menuItem['url'] ?>#<?= $subname ?>"><?= $subfield['text'] ?></a>
                     </li>
                 <?php endforeach; ?>
               </ul>
