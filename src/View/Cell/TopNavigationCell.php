@@ -24,8 +24,8 @@ class TopNavigationCell extends Cell
             'title' => 'Domov',
             'target' => 'Home@index',
             'subfields' => [
-                'goal' => ['text' => 'Cieľ', 'icon' => 'target'],
-                'testimony' => ['text' => 'Svedectvá', 'icon' => 'chat'],
+                'about' => ['text' => 'O nás', 'icon' => 'target'],
+                // 'testimony' => ['text' => 'Svedectvá', 'icon' => 'chat'],
                 'calendar' => ['text' => 'Kalendár', 'icon' => 'calendar'],
                 'contact' => ['text' => 'Kontakt', 'icon' => 'pencil'],
             ],
@@ -35,10 +35,10 @@ class TopNavigationCell extends Cell
             'target' => 'Weekend@index',
             'subfields' => [
                 'start' => ['text' => 'Domov', 'icon' => 'home'],
-                'info' => ['text' => 'Informácie', 'icon' => 'info'],
-                'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                'program' => ['text' => 'Program', 'icon' => 'list'],
-                'theme' => ['text' => 'Téma', 'icon' => 'book'],
+                // 'info' => ['text' => 'Informácie', 'icon' => 'info'],
+                // 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
+                // 'program' => ['text' => 'Program', 'icon' => 'list'],
+                // 'theme' => ['text' => 'Téma', 'icon' => 'book'],
             ],
         ],
         'games' => [
@@ -49,8 +49,8 @@ class TopNavigationCell extends Cell
                 'sports' => ['text' => 'Športy', 'icon' => 'grid-two-up'],
                 'info' => ['text' => 'O Games', 'icon' => 'info'],
                 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
                 'place' => ['text' => 'Miesto', 'icon' => 'map'],
+                'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
             ],
         ],
         'camp' => [
@@ -59,9 +59,10 @@ class TopNavigationCell extends Cell
             'subfields' => [
                 'start' => ['text' => 'Domov', 'icon' => 'home'],
                 'info' => ['text' => 'Informácie', 'icon' => 'info'],
-                'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                'program' => ['text' => 'Program', 'icon' => 'list'],
-                'theme' => ['text' => 'Téma', 'icon' => 'book'],
+                // 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
+                // 'program' => ['text' => 'Program', 'icon' => 'list'],
+                // 'theme' => ['text' => 'Téma', 'icon' => 'book'],
+                'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
             ],
         ],
         // 'contact' => [

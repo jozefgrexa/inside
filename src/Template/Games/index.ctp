@@ -150,7 +150,8 @@
         <!-- form field for individual -->
         <div class="col-md-6 mb-3 switchable-field" id="individual-field">
           <label for="individual-team">Vyber zaradenie</label>
-          <select class="form-control team-input" id="individual-team" name="team" disabled>
+          <select class="form-control team-input" id="individual-team" name="team" required disabled>
+            <option value="">(úloha | typ)</option>
             <?php foreach($teams as $team): ?>
               <?php if($team->sport->title == 'nosport'): ?>
                 <option value="<?= $team->name ?>">
@@ -159,6 +160,9 @@
               <?php endif; ?>
             <?php endforeach; ?>
           </select>
+          <div class="invalid-feedback">
+            Vyber svoju úlohu nesúťažnú úlohu.
+          </div>
         </div>
       </div>
 

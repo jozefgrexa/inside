@@ -63,8 +63,11 @@
     height: 0;
     left: 0;
     border-top: 10px solid transparent;
-    border-right: 10px solid #0fb8ad;
+    border-right: 10px solid #1fc8db;
     border-bottom: 10px solid transparent;
+  }
+  #subNavbar.bg-light {
+    background: linear-gradient(to right, #1fc8db, #3FFC8B) !important;
   }
 }
 
@@ -76,6 +79,9 @@
   }
   .nav-icon, .left-caret {
     display: none;
+  }
+  #subNavbar.bg-light {
+    background: linear-gradient(141deg, #FF61A0, #1fc8db, #3FFC8B) !important;
   }
   /*#mainNavbar ul li.active:after{
     content: '';
@@ -99,23 +105,21 @@
 #mainNavbar.bg-dark {
   background-color: #20232A !important;
 }
-#subNavbar.bg-light {
-  background: linear-gradient(141deg, #0fb8ad, #1fc8db, #2cb5e8) !important;
-}
 /*************** HOME PAGE *******************/
-.home-big-picture {
-  color: white;
-  padding: 150px 0;
-  height: 80vh;
-  min-height: 400px;
-  background: center center no-repeat scroll;
+section {
+    padding: 100px 0;
+}
+.calendar-big-picture {
+  background: center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-section {
-    padding: 100px 0;
+
+/*************** HOME PAGE CAROUSEL ***********************/
+.carousel-caption img {
+  max-height: 15vh;
 }
 
 /*************** GAMES FORM CUSTOMIZE *******************/
@@ -181,4 +185,17 @@ section {
 #gallery img {
   margin-top: 20px;
   vertical-align: middle;
+}
+
+/**************************** WEEKEND PAGE *****************/
+.weekend-big-picture {
+  color: white;
+  padding: 150px 0;
+  height: 70vh;
+  min-height: 300px;
+  background: center center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
