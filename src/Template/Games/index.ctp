@@ -241,7 +241,7 @@
           </div>
         </div>
       </div>
-      <div class="g-recaptcha" data-sitekey="6Lf5GFsUAAAAAI9Z--46Af1aZYuS69xrJuCgA-Ls" data-callback="onSubmit" data-size="invisible"></div>
+      <div class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Submit form</button>
     </form>
   </div>

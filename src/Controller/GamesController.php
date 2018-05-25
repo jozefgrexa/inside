@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\ORM\Table;
+use Cake\Core\Configure;
 
 /**
  * Static content controller
@@ -42,6 +43,7 @@ class GamesController extends AppController
     	if ($this->request->is('post')) {
     		$this->_addParticipant();
     	}
+        $rc_site_key = Configure::read('RCKeys.siteKey');
 
 		$teams = $this->Teams->find()->contain(['Sports','Captains']);
 		$teamscount = $this->Teams->getSportTeamsCount();
@@ -51,7 +53,7 @@ class GamesController extends AppController
 		$churches = $this->Churches->find()->select('name')->toArray();
 		$sports = $this->Sports->find()->select()->where(['title !=' => 'nosport'])->toArray();
 
-		$this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount']));
+		$this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','rc_site_key']));
     }
 
 
