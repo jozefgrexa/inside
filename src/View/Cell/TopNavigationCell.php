@@ -35,10 +35,10 @@ class TopNavigationCell extends Cell
             'target' => 'Weekend@index',
             'subfields' => [
                 'start' => ['text' => 'Domov', 'icon' => 'home'],
-                // 'info' => ['text' => 'Informácie', 'icon' => 'info'],
-                // 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                // 'program' => ['text' => 'Program', 'icon' => 'list'],
-                // 'theme' => ['text' => 'Téma', 'icon' => 'book'],
+                'info' => ['text' => 'Informácie', 'icon' => 'info'],
+                'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
+                'program' => ['text' => 'Program', 'icon' => 'list'],
+                'theme' => ['text' => 'Téma', 'icon' => 'book'],
             ],
         ],
         'games' => [
@@ -98,6 +98,10 @@ class TopNavigationCell extends Cell
             $menuItems[] = $data;
         }
 
+        if (!$this->_isThereActiveClass($menuItems)) {
+            $menuItems[0]['class'] = 'active';
+        }
+
         $this->set(compact('menuItems'));
     }
 
@@ -122,5 +126,14 @@ class TopNavigationCell extends Cell
         }
 
         return '';
+    }
+
+    protected function _isThereActiveClass($menuItems) {
+        foreach ($menuItems as $menuItem) {
+            if ($menuItem['class'] == 'active') {
+                return true;
+            }
+        }
+        return false;
     }
 }

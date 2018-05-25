@@ -225,7 +225,7 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
-            Súhlasím so spracovaním osobných údajov <a href="<?= $this->Url->build(['controller' => 'StaticPages', 'action' => 'gdpr'])?>" target="_blank">(podmienky spracovania)</a>
+            Súhlasím so spracovaním osobných údajov <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'index'])?>" target="_blank">(podmienky spracovania)</a>
           </label>
           <div class="invalid-feedback">
             Pred odoslaním formuláru prosím označ toto pole.
