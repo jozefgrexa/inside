@@ -31,7 +31,7 @@
         <div class="card info-card-1">
           <div class="card-body">
             <h5 class="card-title">Pre každého</h5>
-            <p class="card-text">Prísť môže každý. Pre športovcov máme iba jedno obmedzenie - vek: 12-20 rokov. Ak chceš výnimku, ozvi sa.</p>
+            <p class="card-text">Prísť môže každý. Pre športovcov máme iba jedno obmedzenie - vek: 12-22 rokov. Ak chceš výnimku, ozvi sa.</p>
           </div>
         </div>
       </div>
