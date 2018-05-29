@@ -261,11 +261,11 @@
           <div class="card">
             <div class="card-body">
               <h3 class="card-title"><?= $sport['name'] ?></h3>
-              <h5>Tímy: <?= $teamscount[$sport['title']] ?></h5>
+              <h5>Tímy: <?= $teamscount[$sport['title']] ?> (hráči)</h5>
               <ul>
               <?php foreach($teams as $team): ?>
                 <?php if($team->sport->id == $sport['id']): ?>
-                  <li><?= $team->name ?></li>
+                  <li><?= $team->name ?> (<?= $playersCount[$team->id] ?>)</li>
                 <?php endif; ?>
               <?php endforeach; ?>
               </ul>

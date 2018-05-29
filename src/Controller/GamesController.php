@@ -53,7 +53,13 @@ class GamesController extends AppController
 		$churches = $this->Churches->find()->select('name')->toArray();
 		$sports = $this->Sports->find()->select()->where(['title !=' => 'nosport'])->toArray();
 
-		$this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','rc_site_key']));
+        foreach ($teams as $key => $team) {
+            if ($team->id > 8) {
+                $playersCount[$team->id] = $this->Participants->find('all')->where(['team_id' => $team->id])->count();
+            }
+        }
+
+		$this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','rc_site_key']));
     }
 
 
