@@ -241,8 +241,8 @@
           </div>
         </div>
       </div>
-      <div class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
-      <button class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Submit form</button>
+      <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
+      <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Submit form</button>
     </form>
   </div>
 </section>
@@ -344,11 +344,14 @@
   </div>
 </section> -->
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   function executeRecaptcha() {
     if(document.getElementById("games-form").checkValidity()) {
       grecaptcha.execute();
     }
-}
+  }
+  // function onSubmit() {
+  //   $('#submit-button').prop('disabled', true);
+  // }
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

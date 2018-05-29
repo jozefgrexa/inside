@@ -39,11 +39,16 @@ class GamesController extends AppController
 
     public function index()
     {
-
-    	if ($this->request->is('post')) {
-    		$this->_addParticipant();
-    	}
         $rc_site_key = Configure::read('RCKeys.siteKey');
+        $rc_secret_key = Configure::read('RCKeys.secretKey');
+
+        if ($this->request->is('post')) {
+            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+            if ($rcResponse['success'] == true) {
+                $this->_addParticipant();
+            }
+            $this->set(compact('rcResponse'));
+        }
 
 		$teams = $this->Teams->find()->contain(['Sports','Captains']);
 		$teamscount = $this->Teams->getSportTeamsCount();
@@ -88,9 +93,66 @@ class GamesController extends AppController
 
 		// $shopEmail = new Email('default'); //shop email configuration can be edited in app.php
         // $shopEmail = $shopEmail->from();
-        $email_template = 'games_participant';
-        $this->_sendEmail($participant->email, 'INSIDE Games 2018', $email_template, ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
+        // $email_template = 'games_participant';
+        // $this->_sendEmail($participant->email, 'INSIDE Games 2018', $email_template, ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
         // $this->_sendEmail($shopEmail, 'Detail objednávky č.' . $order->order_number, $email_template, ['order' => $this->Orders->get($order->id, ['contain' => 'OrderItems'])]);
+    }
+
+    private function _verifyResponse($recaptcha){
+        
+        $remoteIp = $this->_getIPAddress();
+
+        // Discard empty solution submissions
+        if (empty($recaptcha)) {
+            return array(
+                'success' => false,
+                'error-codes' => 'missing-input',
+            );
+        }
+
+        $getResponse = $this->getHTTP(
+            array(
+                'secret' => $this->config['rc_secret_key'],
+                'remoteip' => $remoteIp,
+                'response' => $recaptcha,
+            )
+        );
+
+        // get reCAPTCHA server response
+        $responses = json_decode($getResponse, true);
+
+        if (isset($responses['success']) and $responses['success'] == true) {
+            $status = true;
+        } else {
+            $status = false;
+            $error = (isset($responses['error-codes'])) ? $responses['error-codes']
+                : 'invalid-input-response';
+        }
+
+        return array(
+            'success' => $status,
+            'error-codes' => (isset($error)) ? $error : null,
+        );
+    }
+
+
+    private function _getIPAddress(){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+             $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+              $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+
+    private function _getHTTP($data){
+        
+        $url = 'https://www.google.com/recaptcha/api/siteverify?'.http_build_query($data);
+        $response = file_get_contents($url);
+
+        return $response;
     }
     
 }
