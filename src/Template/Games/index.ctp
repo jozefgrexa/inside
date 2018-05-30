@@ -347,11 +347,16 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   function executeRecaptcha() {
+    $('#games-form').on('submit', function(e){
+      e.preventDefault();
+    });
     if(document.getElementById("games-form").checkValidity()) {
+      $('#submit-button').prop('disabled', true);
       grecaptcha.execute();
     }
   }
-  // function onSubmit() {
-  //   $('#submit-button').prop('disabled', true);
-  // }
+  function onSubmit() {
+    document.getElementById("games-form").submit();
+    $('#submit-button').prop('disabled', false);
+  }
 </script>
