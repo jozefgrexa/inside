@@ -4,7 +4,7 @@
 
 ?>
 
-<section id="home" class="games-home" style="background-image: url('webroot/img/games/games-bg-sports.jpg');">
+<section id="home" class="games-home" style="background-image: url('<?= $this->Url->image('games/games-bg-sports.jpg') ?>')">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-6">
@@ -344,7 +344,48 @@
   </div>
 </section> -->
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- ************* FORM RESPONSE MODALS ***************** -->
+<div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Prihlásenie úspešné</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Tvoju prihlášku sme zaregistrovali. Tešíme sa na stretnutie.</p>
+        <p>V prípade nejakej zmeny, alebo tvojej neúčasti nám prosím napíš na <strong>inside@sem.sk</strong>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Rozumiem</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="modalTitle">Prihlásenie nebolo úspešné</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Tvoju prihlášku sa nepodarilo zaregistrovať. Ospravedlňujeme sa. Prosím, skús to znovu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Rozumiem</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script>
   function executeRecaptcha() {
     $('#games-form').on('submit', function(e){
@@ -359,4 +400,6 @@
     document.getElementById("games-form").submit();
     $('#submit-button').prop('disabled', false);
   }
+
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

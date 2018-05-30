@@ -43,10 +43,12 @@ class GamesController extends AppController
 
         if ($this->request->is('post')) {
             $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+
             if ($rcResponse['success'] == true) {
                 $this->_addParticipant();
+                return $this->redirect(['action' => 'success']);
             }
-            $this->set(compact('rcResponse'));
+            return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
         $teams = $this->Teams->find()->contain(['Sports','Captains']);
@@ -66,6 +68,13 @@ class GamesController extends AppController
         $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','rc_site_key']));
     }
 
+    public function success() {
+
+    }
+
+    public function error() {
+        
+    }
 
     private function _addParticipant(){
 

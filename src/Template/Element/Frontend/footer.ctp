@@ -6,9 +6,9 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/customize.js"></script>
+<?= $this->Html->script('/vendor/jquery/jquery.min') ?>
+<?= $this->Html->script('/vendor/bootstrap/js/bootstrap.bundle.min') ?>
+<?= $this->Html->script('customize') ?>
 
 <script>
 	function getCurrentController() {
