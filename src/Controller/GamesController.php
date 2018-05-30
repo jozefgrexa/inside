@@ -101,8 +101,8 @@ class GamesController extends AppController
 
         // $shopEmail = new Email('default'); //shop email configuration can be edited in app.php
         // $shopEmail = $shopEmail->from();
-        // $email_template = 'games_participant';
-        // $this->_sendEmail($participant->email, 'INSIDE Games 2018', $email_template, ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
+        $email_template = 'games_participant';
+        $this->_sendEmail($participant->email, 'INSIDE Games 2018', $email_template, ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
         // $this->_sendEmail($shopEmail, 'Detail objednávky č.' . $order->order_number, $email_template, ['order' => $this->Orders->get($order->id, ['contain' => 'OrderItems'])]);
     }
 

@@ -398,7 +398,6 @@
   }
   function onSubmit() {
     document.getElementById("games-form").submit();
-    $('#submit-button').prop('disabled', false);
   }
 
 </script>
