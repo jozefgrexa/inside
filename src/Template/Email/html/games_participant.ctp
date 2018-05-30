@@ -28,8 +28,8 @@
   </td>
 </tr>
 <tr>
-  <td style="padding: 30px 5px 20px 5px; color: #634840; font-family: font-size: 16px; line-height: 20px; font-style:italic;">
+  <td style="padding: 30px 5px 20px 5px; color: #634840; font-size: 16px; line-height: 20px; font-style:italic;">
     Tešíme sa na stretnutie!<br>
-    <a href="http://www.inside.sem.sk">www.inside.sem.sk</a>
+    <a href="https://www.inside.sem.sk">www.inside.sem.sk</a>
   </td>
 </tr>
