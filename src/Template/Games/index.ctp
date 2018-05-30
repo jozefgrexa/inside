@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-6">
-        <img src="webroot/img/games/games-logo.png"/ class="img-fluid">
+        <?= $this->Html->image('games/games-logo.png', ['alt' => 'games-logo', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-md-12 col-lg-6 text-right pt-3">
         <h4>Športový turnaj <strong>pre každého</strong></h4>
@@ -225,7 +225,7 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
-            Súhlasím so spracovaním osobných údajov <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'index'])?>" target="_blank">(podmienky spracovania)</a>
+            Súhlasím so spracovaním osobných údajov <a href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'data_protection'])?>" target="_blank">(podmienky spracovania)</a>
           </label>
           <div class="invalid-feedback">
             Pred odoslaním formuláru prosím označ toto pole.

@@ -72,7 +72,7 @@ class PagesController extends AppController
 
     }
 
-    public function gdpr()
+    public function dataProtection()
     {
 
     }

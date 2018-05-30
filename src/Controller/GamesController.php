@@ -99,11 +99,7 @@ class GamesController extends AppController
 
         $this->Participants->save($participant);
 
-        // $shopEmail = new Email('default'); //shop email configuration can be edited in app.php
-        // $shopEmail = $shopEmail->from();
-        $email_template = 'games_participant';
-        $this->_sendEmail($participant->email, 'INSIDE Games 2018', $email_template, ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
-        // $this->_sendEmail($shopEmail, 'Detail objednávky č.' . $order->order_number, $email_template, ['order' => $this->Orders->get($order->id, ['contain' => 'OrderItems'])]);
+        $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
     }
 
     private function _verifyResponse($recaptcha){
