@@ -43,11 +43,11 @@ class GamesController extends AppController
         $rc_secret_key = Configure::read('RCKeys.secretKey');
 
         if ($this->request->is('post')) {
-            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
-            if ($rcResponse['success'] == true) {
-                $this->_addParticipant();
-            }
-            $this->set(compact('rcResponse'));
+            $this->_addParticipant();
+            // $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+            // if ($rcResponse['success'] == true) {
+            // }
+            // $this->set(compact('rcResponse'));
         }
 
 		$teams = $this->Teams->find()->contain(['Sports','Captains']);

@@ -344,6 +344,7 @@
   </div>
 </section> -->
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   function executeRecaptcha() {
     if(document.getElementById("games-form").checkValidity()) {
@@ -354,4 +355,3 @@
   //   $('#submit-button').prop('disabled', true);
   // }
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
