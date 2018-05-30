@@ -213,7 +213,7 @@
           <select class="form-control" id="church-select" name="church">
             <option value="no-church">Neviem/Žiadny/Nie je v zozname</option>
             <?php foreach($churches as $church): ?>
-                <option value="<?= $church ?>">
+                <option value="<?= $church->name ?>">
                   <?= $church->name ?>
                 </option>
             <?php endforeach; ?>

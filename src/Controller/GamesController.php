@@ -86,7 +86,7 @@ class GamesController extends AppController
     	}
 
 		$participant->team = $team;
-    	$participant->church = $this->Participants->Churches->findByName($this->request->getData('church'))->first(); 
+    	$participant->church = $this->Churches->findByName($this->request->getData('church'))->first(); 
     	$participant->event = $this->Participants->Events->findByName('Games 2018')->first();
 
 		$this->Participants->save($participant);
