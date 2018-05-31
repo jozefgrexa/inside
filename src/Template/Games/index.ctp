@@ -186,7 +186,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="residence">Adresa</label>
-          <input type="text" class="form-control" id="residence" placeholder="Adresa" name="residence" required>
+          <input type="text" class="form-control" id="residence" placeholder="Ulica, PSČ, Obec" name="residence" required>
           <div class="invalid-feedback">
              Prosím uveď svoju adresu.
           </div>

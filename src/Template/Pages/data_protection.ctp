@@ -77,26 +77,12 @@ $this->viewBuilder()->setLayout('default');
         <li>existencii automatizovaného individuálneho rozhodovania vrátane profilovania podľa § 28 ods. 1 a 4; v týchto prípadoch poskytne prevádzkovateľ dotknutej osobe informácie najmä o použitom postupe, ako aj o význame a predpokladaných dôsledkoch takého spracúvania osobných údajov pre dotknutú osobu.</li>
         </ul>
         <p>Dotknutá osoba má právo byť informovaná o primeraných zárukách týkajúcich sa prenosu podľa § 482 ods. 2 až 4, ak sa osobné údaje prenášajú do tretej krajiny alebo medzinárodnej organizácii.</p>
-        <p>Prevádzkovateľ je povinný poskytnúť dotknutej osobe jej osobné údaje, ktoré spracúva. Za opakované poskytnutie osobných údajov, o ktoré dotknutá osoba požiada, môže prevádzkovateľ účtovať primeraný poplatok zodpovedajúci administratívnym nákladom. Prevádzkovateľ je povinný poskytnúť osobné údaje dotknutej osobe spôsobom podľa jej požiadavky. Každá dotknutá osoba môže kontaktovať zodpovednú osobu s otázkami týkajúcimi sa spracúvania jej osobných údajov</p>
+        <p>Prevádzkovateľ je povinný poskytnúť dotknutej osobe jej osobné údaje, ktoré spracúva. Za opakované poskytnutie osobných údajov, o ktoré dotknutá osoba požiada, môže prevádzkovateľ účtovať primeraný poplatok zodpovedajúci administratívnym nákladom. Prevádzkovateľ je povinný poskytnúť osobné údaje dotknutej osobe spôsobom podľa jej požiadavky. Každá dotknutá osoba môže kontaktovať kontaktnú osobu s otázkami týkajúcimi sa spracúvania jej osobných údajov</p>
 
-        <h6>Zodpovedná osoba u prevádzkovateľa od 25.05.2018:</h6>
+        <h6>Kontaktná osoba:</h6>
         <p>Meno, priezvisko: Ing. Jozef Grexa</p>
         <p>Kontakt: +421 904 205 570</p>
-        <p>Email:  grexa@sem.sk</p>
-         
-
-        <h6>Zodpovedná osoba:</h6>
-        <ul>
-        <li>poskytuje informácie a poradenstvo prevádzkovateľovi alebo sprostredkovateľovi a zamestnancom, ktorí vykonávajú spracúvanie osobných údajov, o ich povinnostiach podľa tohto zákona, osobitných predpisov alebo medzinárodných zmlúv, ktorými je Slovenská republika viazaná, týkajúcich sa ochrany osobných údajov,</li>
-        <li>monitoruje súlad s týmto zákonom, osobitnými predpismi alebo medzinárodnými zmluvami, ktorými je Slovenská republika viazaná, týkajúcimi sa ochrany osobných údajov a s pravidlami prevádzkovateľa alebo sprostredkovateľa súvisiacimi s ochranou osobných údajov vrátane rozdelenia povinností, zvyšovania povedomia a odbornej prípravy osôb, ktoré sú zapojené do spracovateľských operácií a súvisiacich auditov ochrany osobných údajov,</li>
-        <li>poskytuje na požiadanie poradenstvo, ak ide o posúdenie vplyvu na ochranu osobných údajov a monitorovanie jeho vykonávania podľa § 42,</li>
-        <li>spolupracuje s úradom pri plnení svojich úloh,</li>
-        <li>plní úlohy kontaktného miesta pre úrad v súvislosti s otázkami týkajúcimi sa spracúvania osobných údajov vrátane predchádzajúcej konzultácie podľa § 43 a podľa potreby aj konzultácie v iných veciach.</li>
-        </ul>
-
-        <p>Zodpovedná osoba pri výkone svojich úloh náležite zohľadňuje riziko spojené so spracovateľskými operáciami, pričom berie do úvahy povahu, rozsah, kontext a účel spracúvania osobných údajov.</p>
-
-         
+        <p>Email:  grexa@sem.sk</p>         
 
         <h4>ZÁSADY POUŽÍVANIA SÚBOROV COOKIES</h4>
 
@@ -124,7 +110,8 @@ $this->viewBuilder()->setLayout('default');
         <h6>Kontaktné informácie</h6>
         <p>Ak si myslíte, že INSIDE tieto Zásady nedodržal, obráťte sa na nás prostredníctvom emailu inside@sem.sk. V prípade oprávnenosti Vašej sťažnosti problém identifikujeme a čo najskôr vyriešime.</p>
 
-        <p>24. 05. 2018</p>
+        <p>Vytvorené a publikované: 24. 05. 2018</p>
+        <p>Dátum poslednej úpravy: 31. 05. 2018</p>
       </div>
     </div>
 
