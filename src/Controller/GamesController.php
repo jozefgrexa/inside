@@ -51,7 +51,7 @@ class GamesController extends AppController
             return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
-        $teams = $this->Teams->find()->contain(['Sports','Captains']);
+        $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
         $captains = $this->Captains->getCaptainList();
         $peoplecount = $this->Participants->getPeopleCount();

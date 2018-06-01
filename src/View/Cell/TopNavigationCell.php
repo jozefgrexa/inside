@@ -49,7 +49,7 @@ class TopNavigationCell extends Cell
                 'sports' => ['text' => 'Športy', 'icon' => 'grid-two-up'],
                 'info' => ['text' => 'O Games', 'icon' => 'info'],
                 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
-                'place' => ['text' => 'Miesto', 'icon' => 'map'],
+                'map' => ['text' => 'Miesto', 'icon' => 'map'],
                 'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
             ],
         ],
