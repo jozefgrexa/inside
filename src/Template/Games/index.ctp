@@ -393,6 +393,7 @@
     });
     if(document.getElementById("games-form").checkValidity()) {
       $('#submit-button').prop('disabled', true);
+      $('#submit-button').html('Odosiela sa ...');
       grecaptcha.execute();
     }
   }
