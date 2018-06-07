@@ -68,7 +68,7 @@ $this->viewBuilder()->setLayout('default');
       <div class="form-row over-15">
         <div class="col-md-6 mb-3">
           <label for="over-15">Číslo občianskeho preukazu</label>
-          <input type="text" class="form-control" id="over-15" placeholder="XY123456" name="id_nr" required>
+          <input type="text" class="form-control" id="over-15" placeholder="XY123456" name="idcard" required>
           <div class="invalid-feedback">
              Prosím uveď číslo občianskeho preukazu.
           </div>
