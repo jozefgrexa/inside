@@ -17,8 +17,8 @@
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
           <?= $participant->idcard ? '<br/>Číslo občianskeho preukazu: '.$participant->idcard : '' ?>
-          <?= $participant->parent ? '<br/>Meno a priezvisko rodiča (zákonného zástupcu): '.$participant->parent : '' ?>
-          <?= $participant->parent ? '<br/>Telefonický kontakt na rodiča (zákonného zástupcu): '.$participant->phone : '' ?>
+          <?= $participant->parent_id ? '<br/>Meno a priezvisko rodiča (zákonného zástupcu): '.$participant->parent->name : '' ?>
+          <?= $participant->parent_id ? '<br/>Telefonický kontakt na rodiča (zákonného zástupcu): '.$participant->parent->phone : '' ?>
         </td>
       </tr>
     </table>

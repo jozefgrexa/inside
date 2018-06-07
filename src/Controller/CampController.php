@@ -85,7 +85,7 @@ class CampController extends AppController
         $participant->event = $this->Events->find()->where(['slug' => 'tabor-2018'])->first();
 		$this->Participants->save($participant);
 
-        $this->_sendEmail($participant->email, 'INSIDE Tábor 2018', 'camp_participant', ['participant' => $this->Participants->get($participant->id)]);
+        $this->_sendEmail($participant->email, 'INSIDE Tábor 2018', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
     }
 
     private function _verifyResponse($recaptcha){
