@@ -8,14 +8,17 @@
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
         <td style="padding: 20px 0 20px 0; color: #634840; font-size: 16px; line-height: 20px;">
-          Prihlásil si sa na INSIDE Tábor 2018. Tešíme sa z toho! Pred INSIDE Táborom ti na túto mailovú adresu včas pošleme viac potrebných informácií.
+          <strong>Tešíme sa z tvojho prihlásenia sa na INSIDE Tábor 2018!</strong> Pred INSIDE Táborom ti na túto mailovú adresu včas pošleme viac potrebných informácií.
           <br/>
-          <br/>V prihláške si uviedol nasledovné informácie:
+          <br/>V prihláške máš nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
           <br/>Priezvisko: <?= $participant->last_name ?>
           <br/>Dátum narodenia: <?= $participant->birthday ?>
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
+          <?= $participant->idcard ? '<br/>Číslo občianskeho preukazu: '.$participant->idcard : '' ?>
+          <?= $participant->parent ? '<br/>Meno a priezvisko rodiča (zákonného zástupcu): '.$participant->parent : '' ?>
+          <?= $participant->parent ? '<br/>Telefonický kontakt na rodiča (zákonného zástupcu): '.$participant->phone : '' ?>
         </td>
       </tr>
     </table>
@@ -28,7 +31,7 @@
 </tr>
 <tr>
   <td style="padding: 30px 5px 20px 5px; color: #634840; font-size: 16px; line-height: 20px; font-style:italic;">
-    Tešíme sa na stretnutie!<br>
+    Prípravy tábora už začali a čoskoro na webe nájdeš aj tému a program tábora. Dúfame, že aj ty sa tešíš na tábor aspoň tak, ako my :) Vidíme sa!<br>
     <a href="https://www.inside.sem.sk">www.inside.sem.sk</a>
   </td>
 </tr>
