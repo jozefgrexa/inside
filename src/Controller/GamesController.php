@@ -42,17 +42,14 @@ class GamesController extends AppController
         $rc_site_key = Configure::read('RCKeys.siteKey');
 
         if ($this->request->is('post')) {
-            $this->_addParticipant();
-        }
-        // if ($this->request->is('post')) {
-        //     $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
 
-        //     if ($rcResponse['success']) {
-        //         $this->_addParticipant();
-        //         return $this->redirect(['action' => 'success']);
-        //     }
-        //     return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
-        // }
+            if ($rcResponse['success']) {
+                $this->_addParticipant();
+                return $this->redirect(['action' => 'success']);
+            }
+            return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+        }
 
         $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
@@ -104,7 +101,7 @@ class GamesController extends AppController
 
         $this->Participants->save($participant);
 
-        // $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
+        $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
     }
 
     private function _verifyResponse($recaptcha){

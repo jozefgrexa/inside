@@ -41,17 +41,14 @@ class CampController extends AppController
     	$rc_site_key = Configure::read('RCKeys.siteKey');
 
     	if ($this->request->is('post')) {
-	        $this->_addParticipant();
-	    }
-    	// if ($this->request->is('post')) {
-     //        $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
 
-     //        if ($rcResponse['success']) {
-     //            $this->_addParticipant();
-     //            return $this->redirect(['action' => 'success']);
-     //        }
-     //        return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
-     //    }
+            if ($rcResponse['success']) {
+                $this->_addParticipant();
+                return $this->redirect(['action' => 'success']);
+            }
+            return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+        }
 
     	$peoplecount = $this->Participants->getPeopleCount();
         $churches = $this->Churches->find()->select('name')->toArray();
@@ -88,7 +85,7 @@ class CampController extends AppController
         $participant->event = $this->Events->find()->where(['slug' => 'tabor-2018'])->first();
 		$this->Participants->save($participant);
 
-        // $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
+        $this->_sendEmail($participant->email, 'INSIDE Tábor 2018', 'camp_participant', ['participant' => $this->Participants->get($participant->id)]);
     }
 
     private function _verifyResponse($recaptcha){

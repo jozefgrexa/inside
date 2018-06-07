@@ -134,8 +134,7 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
-      <!-- <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button> -->
-      <button id="submit-button" class="btn btn-primary submit" type="submit">Odoslať</button>
+      <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
   </div>
 </section>
