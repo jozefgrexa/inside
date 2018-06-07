@@ -110,7 +110,7 @@
             <option value="">(názov | kapitán | šport)</option>
             <?php foreach($teams as $team): ?>
               <?php if($team->sport->title != 'nosport'): ?>
-                <option value="<?= $team->name ?>">
+                <option value="<?= $team->id ?>">
                   <?= $team->name ?> | <?= $captains[$team->captain->participant_id] ?> | <?= $team->sport->name ?>
                 </option>
               <?php endif; ?>
@@ -154,7 +154,7 @@
             <option value="">(úloha | typ)</option>
             <?php foreach($teams as $team): ?>
               <?php if($team->sport->title == 'nosport'): ?>
-                <option value="<?= $team->name ?>">
+                <option value="<?= $team->id ?>">
                   <?= $team->name ?> | <?= $team->sport->name ?>
                 </option>
               <?php endif; ?>
@@ -242,7 +242,8 @@
         </div>
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
-      <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
+      <!-- <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button> -->
+      <button id="submit-button" class="btn btn-primary submit" type="submit">Odoslať</button>
     </form>
   </div>
 </section>
@@ -252,24 +253,36 @@
     <div class="row">
       <div class="col">
         <h2>Štatistika prihlásených</h2>
-        <p>Celkový počet aktuálne prihlásených: <?= $peoplecount['all'] ?> | Súťažiaci: <?= $peoplecount['sport'] ?> | Nesúťažiaci: <?= $peoplecount['nosport'] ?><p>
+        <p>Celkový počet aktuálne prihlásených: <?= $peoplecount['all'] ?> | Súťažiaci: <?= $peoplecount['sport'] ?> | Nesúťažiaci: <?= $peoplecount['nosport'] ?></p>
       </div>
     </div>
     <div class="row">
       <?php foreach($sports as $sport): ?>
         <div class="col-xs-12 col-sm-6 col-lg-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><?= $sport['name'] ?></h3>
-              <h5>Tímy: <?= $teamscount[$sport['title']] ?> (hráči)</h5>
-              <ul>
-              <?php foreach($teams as $team): ?>
-                <?php if($team->sport->id == $sport['id']): ?>
-                  <li><?= $team->name ?> (<?= $playersCount[$team->id] ?>)</li>
-                <?php endif; ?>
-              <?php endforeach; ?>
-              </ul>
-            </div>
+          <h3 class="sportname"><?= $sport['name'] ?></h3>
+          <div class="accordion" id="<?= 'accordion'.$sport['title'] ?>">
+            <?php foreach($teams as $team): ?>
+              <?php if($team->sport->id == $sport['id']): ?>
+                <div class="card">
+                  <div class="card-header" id="<?= 'team'.$team->id ?>">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="<?= '#collapseTeam'.$team->id ?>" aria-expanded="false" aria-controls="<?= 'collapseTeam'.$team->id ?>">
+                        <?= $team->name ?> (<?= $playersCount[$team->id] ?>)
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="<?= 'collapseTeam'.$team->id ?>" class="collapse" aria-labelledby="<?= 'headingTeam'.$team->id ?>" data-parent="<?= '#accordion'.$sport['title'] ?>">
+                    <div class="card-body">
+                      <?php foreach($players as $player): ?>
+                        <?php if ($player['team_id'] == $team->id): ?>
+                          <span class="text-light"><?= $player['first_name'].', ' ?></span>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </div>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php endforeach; ?>
           </div>
         </div>
       <?php endforeach; ?>
@@ -344,48 +357,6 @@
   </div>
 </section> -->
 
-<!-- ************* FORM RESPONSE MODALS ***************** -->
-<div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle">Prihlásenie úspešné</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Tvoju prihlášku sme zaregistrovali. Tešíme sa na stretnutie.</p>
-        <p>V prípade nejakej zmeny, alebo tvojej neúčasti nám prosím napíš na <strong>inside@sem.sk</strong>.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Rozumiem</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-danger" id="modalTitle">Prihlásenie nebolo úspešné</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Tvoju prihlášku sa nepodarilo zaregistrovať. Ospravedlňujeme sa. Prosím, skús to znovu.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Rozumiem</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <script>
   function executeRecaptcha() {
     $('#games-form').on('submit', function(e){
@@ -400,6 +371,5 @@
   function onSubmit() {
     document.getElementById("games-form").submit();
   }
-
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>

@@ -59,7 +59,7 @@ class TopNavigationCell extends Cell
             'subfields' => [
                 'start' => ['text' => 'Domov', 'icon' => 'home'],
                 'info' => ['text' => 'Informácie', 'icon' => 'info'],
-                // 'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
+                'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
                 // 'program' => ['text' => 'Program', 'icon' => 'list'],
                 // 'theme' => ['text' => 'Téma', 'icon' => 'book'],
                 'gallery' => ['text' => 'Fotky', 'icon' => 'image'],

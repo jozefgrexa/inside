@@ -104,13 +104,33 @@ $('.form-switch-button').click(function(){
 $('#birthday').change(function(){
 	let setDate = $(this).val().split('-');
 	let birth16Date = new Date(parseInt(setDate[0])+16, parseInt(setDate[1])-1, setDate[2]);
+	let birth15Date = new Date(parseInt(setDate[0])+15, parseInt(setDate[1])-1, setDate[2]);
+	let birth18Date = new Date(parseInt(setDate[0])+18, parseInt(setDate[1])-1, setDate[2]);
 	let currentDate = new Date();
 
 	if (birth16Date > currentDate) {
-		$('#games-form .under-16').show();
+		$('.under-16').show();
 		$('#under-16').prop('disabled', false);
 	} else {
-		$('#games-form .under-16').hide();
+		$('.under-16').hide();
 		$('#under-16').prop('disabled', true);
+	}
+
+	if (birth15Date < currentDate) {
+		$('.over-15').show();
+		$('#over-15').prop('disabled', false);
+	} else {
+		$('.over-15').hide();
+		$('#over-15').prop('disabled', true);
+	}
+
+	if (birth18Date > currentDate) {
+		$('.under-18').show();
+		$('#parent').prop('disabled', false);
+		$('#phone').prop('disabled', false);
+	} else {
+		$('.under-18').hide();
+		$('#parent').prop('disabled', true);
+		$('#phone').prop('disabled', true);
 	}
 });

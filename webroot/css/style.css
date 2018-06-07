@@ -129,7 +129,7 @@ section {
 #form-switch .btn:focus {
   box-shadow:none !important;
 }
-#games-form .under-16 {
+.under-16, .over-15 {
   display: none;
 }
 
@@ -186,7 +186,13 @@ section {
   margin-top: 20px;
   vertical-align: middle;
 }
-
+.games-teams .btn-link {
+  color: #0fb8ad;
+  text-decoration: none;
+}
+.games-teams .sportname {
+  text-transform: uppercase;
+}
 /**************************** WEEKEND PAGE *****************/
 .weekend-big-picture {
   color: white;

@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Console\ShellDispatcher;
 use Cake\Event\Event;
 use Cake\Core\Configure;
 use Cake\Mailer\Email;
@@ -77,5 +78,27 @@ class AppController extends Controller
             ->send();
 
         return true;
+    }
+
+    /**
+     * Run migrations on websupport hosting.
+     *
+     * @return void
+     */
+    public function migrate()
+    {
+        ShellDispatcher::run(["cake", "migrations", "migrate"]);
+        die();
+    }
+
+    /**
+     * Run clear cache on websupport hosting.
+     *
+     * @return void
+     */
+    public function clearCache()
+    {
+        ShellDispatcher::run(["cake", "cache", "clear_all"]);
+        die();
     }
 }

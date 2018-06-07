@@ -42,19 +42,23 @@ class GamesController extends AppController
         $rc_site_key = Configure::read('RCKeys.siteKey');
 
         if ($this->request->is('post')) {
-            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
-
-            if ($rcResponse['success'] == true) {
-                $this->_addParticipant();
-                return $this->redirect(['action' => 'success']);
-            }
-            return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+            $this->_addParticipant();
         }
+        // if ($this->request->is('post')) {
+        //     $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+
+        //     if ($rcResponse['success']) {
+        //         $this->_addParticipant();
+        //         return $this->redirect(['action' => 'success']);
+        //     }
+        //     return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+        // }
 
         $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
         $captains = $this->Captains->getCaptainList();
         $peoplecount = $this->Participants->getPeopleCount();
+        $players = $this->Participants->find()->contain('Events')->select(['first_name','team_id'])->where(['Events.slug' => 'games-2018'])->toArray();
 
         $churches = $this->Churches->find()->select('name')->toArray();
         $sports = $this->Sports->find()->select()->where(['title !=' => 'nosport'])->toArray();
@@ -65,7 +69,7 @@ class GamesController extends AppController
             }
         }
 
-        $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','rc_site_key']));
+        $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','players','rc_site_key']));
     }
 
     public function success() {
@@ -80,7 +84,7 @@ class GamesController extends AppController
 
         $participant = $this->Participants->newEntity($this->request->getData());
 
-        if ($teamname = $this->request->getData('team-c')) {
+        if ($this->request->getData('team-c')) {
             $team = $this->Teams->newEntity();
             $team->name = $this->request->getData('team-c');
             $team->sport = $this->Sports->findByName($this->request->getData('sport'))->first();
@@ -90,16 +94,17 @@ class GamesController extends AppController
             $captain->team = $team;
             $this->Captains->save($captain);
         } else {
-            $team = $this->Teams->findByName($this->request->getData('team'))->first();
+            $team_id = $this->request->getData('team');
+            $team = $this->Teams->find()->where(['id' => $team_id])->first();
         }
 
         $participant->team = $team;
         $participant->church = $this->Churches->findByName($this->request->getData('church'))->first(); 
-        $participant->event = $this->Participants->Events->findByName('Games 2018')->first();
+        $participant->event = $this->Participants->Events->find()->where(['slug' => 'games-2018'])->first();
 
         $this->Participants->save($participant);
 
-        $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
+        // $this->_sendEmail($participant->email, 'INSIDE Games 2018', 'games_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Teams'])]);
     }
 
     private function _verifyResponse($recaptcha){

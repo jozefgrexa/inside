@@ -13,6 +13,7 @@ class ParticipantsTable extends Table
         $this->belongsTo('Teams');
         $this->belongsTo('Churches');
         $this->belongsTo('Events');
+        $this->belongsTo('Parents');
     }
 
     public function getPeopleCount() {
