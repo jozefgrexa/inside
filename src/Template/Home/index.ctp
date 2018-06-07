@@ -18,30 +18,31 @@ $this->viewBuilder()->setLayout('default');
 <header>
   <div id="carousel-switch" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carousel-switch" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-switch" data-slide-to="0"></li>
       <li data-target="#carousel-switch" data-slide-to="1"></li>
-      <li data-target="#carousel-switch" data-slide-to="2"></li>
+      <li data-target="#carousel-switch" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('webroot/img/home/slider-bg-01.jpg')">
+      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-01.jpg') ?>')">
         <div class="carousel-caption">
-          <img src="webroot/img/home/home-header-logo.png" class="img-fluid"/>
-          <p>To na čom najviac záleží je ukryté vo vnútri</p>
+          <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
+          <h3>To na čom najviac záleží je ukryté vo vnútri</h3>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('webroot/img/home/slider-bg-02.jpg')">
+      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-02.jpg') ?>')">
+
         <div class="carousel-caption">
-          <img src="webroot/img/home/home-slider-games.png" class="img-fluid" />
-          <p>Športový turnaj v 4 rôznych športoch aj pre nešportovcov.</p>
+          <?= $this->Html->image('home/home-slider-games.png', ['alt' => 'inside games logo', 'class' => 'img-fluid m-3']) ?>
+          <h3>Športový turnaj v 4 rôznych športoch aj pre nešportovcov.</h3>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('webroot/img/home/slider-bg-03.jpg')">
+      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
         <div class="carousel-caption">
-          <img src="webroot/img/home/home-slider-camp.png" class="img-fluid" />
-          <p>Dobrodružný týždeň v rodinnej atmosfére a nádhernej prírode.</p>
+          <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'inside tabor logo', 'class' => 'img-fluid m-3']) ?>
+          <h1>Prihlasovanie spustené!</h1>
         </div>
       </div>
     </div>
@@ -89,31 +90,31 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-01.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-01.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-02.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-02.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-03.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-03.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-04.png" class="img-fluid" />
+        <a href="<?= $this->Url->build(['controller' => 'Games', 'action' => 'index'])?>"><?= $this->Html->image('home/calendar-04.png', ['alt' => 'games-event', 'class' => 'img-fluid']) ?></a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-05.png" class="img-fluid" />
+        <a href="<?= $this->Url->build(['controller' => 'Camp', 'action' => 'index'])?>"><?= $this->Html->image('home/calendar-05.png', ['alt' => 'camp-event', 'class' => 'img-fluid']) ?></a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-06.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-06.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-07.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-07.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-08.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-08.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="webroot/img/home/calendar-09.png" class="img-fluid" />
+        <?= $this->Html->image('home/calendar-09.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
   </div>
 </section>
