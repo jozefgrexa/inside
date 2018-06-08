@@ -50,7 +50,7 @@ class CampController extends AppController
             return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
-    	$peoplecount = $this->Participants->getPeopleCount();
+    	$peoplecount = $this->Participants->getPeopleCount(2); //eventId
         $churches = $this->Churches->find()->select('name')->toArray();
 
     	$this->set(compact(['churches','peoplecount','rc_site_key']));

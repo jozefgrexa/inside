@@ -54,7 +54,7 @@ class GamesController extends AppController
         $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
         $captains = $this->Captains->getCaptainList();
-        $peoplecount = $this->Participants->getPeopleCount();
+        $peoplecount = $this->Participants->getPeopleCount(1); //eventId
         $players = $this->Participants->find()->contain('Events')->select(['first_name','team_id'])->where(['Events.slug' => 'games-2018'])->toArray();
 
         $churches = $this->Churches->find()->select('name')->toArray();

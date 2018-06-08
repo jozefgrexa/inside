@@ -178,6 +178,7 @@ section {
   background-color: transparent;
   border: 1px solid #0fb8ad;
   color: #0fb8ad;
+  margin-top: 0px;
 }
 .games-teams .card h3{
   color: #ffffff;

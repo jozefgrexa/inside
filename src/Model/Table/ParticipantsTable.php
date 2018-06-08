@@ -3,7 +3,6 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-use Cake\ORM\TableRegistry;
 
 class ParticipantsTable extends Table
 {
@@ -16,25 +15,23 @@ class ParticipantsTable extends Table
         $this->belongsTo('Parents');
     }
 
-    public function getPeopleCount() {
-    	$count['all'] = $this->_getAllCount();
-    	$count['sport'] = $this->_getSportmenCount();
-    	$count['nosport'] = $this->_getNoSportmenCount();
+    public function getPeopleCount($eventId) {
+    	$count['all'] = $this->_getAllCount($eventId);
+    	$count['sport'] = $this->_getSportmenCount($eventId);
+    	$count['nosport'] = $this->_getNoSportmenCount($eventId);
     	return $count;
     }
 
-    protected function _getSportmenCount() {
-    	$participants = TableRegistry::get('Participants');
-    	return $participants->find('all')->contain(['Teams'])->where(['Teams.sport_id !=' => 5])->count();
+    protected function _getSportmenCount($eventId) {
+    	return $this->find('all')->contain(['Teams'])->where(['Participants.event_id' => $eventId, 'Teams.sport_id !=' => 5])->count();
     }
 
-    protected function _getNoSportmenCount() {
-    	$participants = TableRegistry::get('Participants');
-    	return $participants->find('all')->contain(['Teams'])->where(['Teams.sport_id' => 5])->count();
+    protected function _getNoSportmenCount($eventId) {
+    	return $this->find('all')->contain(['Teams'])->where(['Participants.event_id' => $eventId, 'Teams.sport_id' => 5])->count();
     }
 
-    protected function _getAllCount() {
-    	return TableRegistry::get('Participants')->find('all')->count();
+    protected function _getAllCount($eventId) {
+    	return $this->find('all')->where(['Participants.event_id' => $eventId])->count();
     }
 
 }

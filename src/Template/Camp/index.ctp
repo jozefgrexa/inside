@@ -136,6 +136,11 @@ $this->viewBuilder()->setLayout('default');
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
+    <div class="row mt-5">
+      <div class="col">
+        <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
+      </div>
+    </div>
   </div>
 </section>
 
