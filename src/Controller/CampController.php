@@ -52,8 +52,9 @@ class CampController extends AppController
 
     	$peoplecount = $this->Participants->getPeopleCount(2); //eventId
         $churches = $this->Churches->find()->select('name')->toArray();
+        $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'tabor-2018'])->toArray();
 
-    	$this->set(compact(['churches','peoplecount','rc_site_key']));
+    	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames']));
     }
     
     public function success() {

@@ -139,6 +139,9 @@ $this->viewBuilder()->setLayout('default');
     <div class="row mt-5">
       <div class="col">
         <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
+        <?php foreach ($peoplenames as $name): ?>
+          <span><?= $name['first_name'] ?>, </span>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
