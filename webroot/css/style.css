@@ -136,7 +136,7 @@ section {
 /*************** GAMES PAGE *******************/
 .games-home {
   color: white;
-  padding: 150px 0;
+  padding: 70px 0 0 0;
   min-height: 400px;
   background: center center no-repeat scroll;
   -webkit-background-size: cover;
