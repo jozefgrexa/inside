@@ -201,7 +201,7 @@
                 <tr>
                   <th scope="col">Tím</th>
                   <th scope="col">Skóre</th>
-                  <th scope="col">+/- body</th>
+                  <th scope="col">+/-</th>
                   <th scope="col">Body</th>
                 </tr>
               </thead>
@@ -220,7 +220,7 @@
 
 
           <div class="tab-pane fade" id="floorball" role="tabpanel" aria-labelledby="floorball-tab">
-            <!-- <table class="table">
+            <table class="table">
               <thead>
                 <tr>
                   <th scope="col">Čas</th>
@@ -243,10 +243,179 @@
                 </tr>
                 <?php endforeach; ?>
               </tbody>
-            </table>   -->
+            </table>  
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Skupina A</h4>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tím</th>
+                      <th scope="col">Skóre</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($floorballATable as $key => $team): ?>
+                    <tr>
+                      <td><?= $key ?></td>
+                      <td><?= $team['score1'].':'.$team['score2'] ?></td>
+                      <td><?= $team['score1']-$team['score2'] ?></td>
+                      <td><?= $team['points'] ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-4">
+                <h4>Skupina B</h4>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tím</th>
+                      <th scope="col">Skóre</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($floorballBTable as $key => $team): ?>
+                    <tr>
+                      <td><?= $key ?></td>
+                      <td><?= $team['score1'].':'.$team['score2'] ?></td>
+                      <td><?= $team['score1']-$team['score2'] ?></td>
+                      <td><?= $team['points'] ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-4">
+                <h4>Skupina C</h4>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tím</th>
+                      <th scope="col">Skóre</th>
+                      <th scope="col">+/-</th>
+                      <th scope="col">Body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($floorballCTable as $key => $team): ?>
+                    <tr>
+                      <td><?= $key ?></td>
+                      <td><?= $team['score1'].':'.$team['score2'] ?></td>
+                      <td><?= $team['score1']-$team['score2'] ?></td>
+                      <td><?= $team['points'] ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <div class="tab-pane fade" id="volleyball" role="tabpanel" aria-labelledby="volleyball-tab"></div>
-          <div class="tab-pane fade" id="dodgeball" role="tabpanel" aria-labelledby="dodgeball-tab"></div>
+
+
+          <div class="tab-pane fade" id="volleyball" role="tabpanel" aria-labelledby="volleyball-tab">
+            <h4 class="mb-3 mt-3">Rozpis zápasov</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Čas</th>
+                  <th scope="col">Tím 1</th>
+                  <th scope="col">Tím 2</th>
+                  <th scope="col">Výsledok</th>
+                  <th scope="col">Ihrisko</th>
+                  <th scope="col">Fáza</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($volleyball as $match): ?>
+                <tr>
+                  <td><?= $match['time']?></td>
+                  <td><?= $match['team1']?></td>
+                  <td><?= $match['team2']?></td>
+                  <td><?= $match['score1']?> : <?= $match['score2']?></td>
+                  <td><?= $match['ground']?></td>
+                  <td><?= $match['comment']?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <h4>Tabuľka</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Tím</th>
+                  <th scope="col">Skóre</th>
+                  <th scope="col">+/-</th>
+                  <th scope="col">Body</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($volleyballTable as $key => $team): ?>
+                <tr>
+                  <td><?= $key ?></td>
+                  <td><?= $team['score1'].':'.$team['score2'] ?></td>
+                  <td><?= $team['score1']-$team['score2'] ?></td>
+                  <td><?= $team['points'] ?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+
+
+          <div class="tab-pane fade" id="dodgeball" role="tabpanel" aria-labelledby="dodgeball-tab">
+            <h4 class="mb-3 mt-3">Rozpis zápasov</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Čas</th>
+                  <th scope="col">Tím 1</th>
+                  <th scope="col">Tím 2</th>
+                  <th scope="col">Výsledok</th>
+                  <th scope="col">Ihrisko</th>
+                  <th scope="col">Fáza</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($dodgeball as $match): ?>
+                <tr>
+                  <td><?= $match['time']?></td>
+                  <td><?= $match['team1']?></td>
+                  <td><?= $match['team2']?></td>
+                  <td><?= $match['score1']?> : <?= $match['score2']?></td>
+                  <td><?= $match['ground']?></td>
+                  <td><?= $match['comment']?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <h4>Tabuľka</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Tím</th>
+                  <th scope="col">Skóre</th>
+                  <th scope="col">+/-</th>
+                  <th scope="col">Body</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($dodgeballTable as $key => $team): ?>
+                <tr>
+                  <td><?= $key ?></td>
+                  <td><?= $team['score1'].':'.$team['score2'] ?></td>
+                  <td><?= $team['score1']-$team['score2'] ?></td>
+                  <td><?= $team['points'] ?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

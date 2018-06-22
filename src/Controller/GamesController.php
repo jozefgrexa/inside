@@ -63,6 +63,11 @@ class GamesController extends AppController
         $dodgeball = $this->Dodgeball->find()->toArray();
 
         $footballTable = $this->Football->getStandings();
+        $floorballATable = $this->Floorball->getStandings('skupina A');
+        $floorballBTable = $this->Floorball->getStandings('skupina B');
+        $floorballCTable = $this->Floorball->getStandings('skupina C');
+        $volleyballTable = $this->Volleyball->getStandings();
+        $dodgeballTable = $this->Dodgeball->getStandings();
 
         $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
@@ -79,7 +84,7 @@ class GamesController extends AppController
             }
         }
 
-        $this->set(compact(['teams','sports','peoplecount','teamscount','playersCount','players','football','floorball','volleyball','dodgeball','footballTable']));
+        $this->set(compact(['teams','sports','peoplecount','teamscount','playersCount','players','football','floorball','volleyball','dodgeball','footballTable','floorballATable','floorballBTable','floorballCTable','volleyballTable','dodgeballTable']));
         // $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','players','rc_site_key']));
     }
 
