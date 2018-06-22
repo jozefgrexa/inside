@@ -57,10 +57,10 @@ class GamesController extends AppController
         // }
 
         // match servis
-        $football = $this->Football->find()->toArray();
-        $floorball = $this->Floorball->find()->toArray();
-        $volleyball = $this->Volleyball->find()->toArray();
-        $dodgeball = $this->Dodgeball->find()->toArray();
+        $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
+        $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
+        $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
+        $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
 
         $footballTable = $this->Football->getStandings();
         $floorballATable = $this->Floorball->getStandings('skupina A');

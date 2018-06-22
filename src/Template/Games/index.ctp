@@ -245,7 +245,7 @@
               </tbody>
             </table>  
             <div class="row">
-              <div class="col-md-4">
+              <div class="col">
                 <h4>Skupina A</h4>
                 <table class="table">
                   <thead>
@@ -268,7 +268,9 @@
                   </tbody>
                 </table>
               </div>
-              <div class="col-md-4">
+            </div>
+            <div class="row">
+              <div class="col">
                 <h4>Skupina B</h4>
                 <table class="table">
                   <thead>
@@ -291,7 +293,9 @@
                   </tbody>
                 </table>
               </div>
-              <div class="col-md-4">
+            </div>
+            <div class="row">
+              <div class="col">
                 <h4>Skupina C</h4>
                 <table class="table">
                   <thead>
