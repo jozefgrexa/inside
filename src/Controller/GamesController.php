@@ -35,21 +35,34 @@ class GamesController extends AppController
         $this->loadModel('Captains');
         $this->loadModel('Sports');
         $this->loadModel('Churches');
+
+        $this->loadModel('Football');
+        $this->loadModel('Floorball');
+        $this->loadModel('Volleyball');
+        $this->loadModel('Dodgeball');
     }
 
     public function index()
     {
-        $rc_site_key = Configure::read('RCKeys.siteKey');
+        // $rc_site_key = Configure::read('RCKeys.siteKey');
 
-        if ($this->request->is('post')) {
-            $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+        // if ($this->request->is('post')) {
+        //     $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
 
-            if ($rcResponse['success']) {
-                $this->_addParticipant();
-                return $this->redirect(['action' => 'success']);
-            }
-            return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
-        }
+        //     if ($rcResponse['success']) {
+        //         $this->_addParticipant();
+        //         return $this->redirect(['action' => 'success']);
+        //     }
+        //     return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+        // }
+
+        // match servis
+        $football = $this->Football->find()->toArray();
+        $floorball = $this->Floorball->find()->toArray();
+        $volleyball = $this->Volleyball->find()->toArray();
+        $dodgeball = $this->Dodgeball->find()->toArray();
+
+        $footballTable = $this->Football->getStandings();
 
         $teams = $this->Teams->find()->contain(['Sports','Captains'])->order(['sport_id' => 'ASC']);
         $teamscount = $this->Teams->getSportTeamsCount();
@@ -66,7 +79,8 @@ class GamesController extends AppController
             }
         }
 
-        $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','players','rc_site_key']));
+        $this->set(compact(['teams','sports','peoplecount','teamscount','playersCount','players','football','floorball','volleyball','dodgeball','footballTable']));
+        // $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','players','rc_site_key']));
     }
 
     public function success() {

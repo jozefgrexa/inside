@@ -50,7 +50,7 @@ class TopNavigationCell extends Cell
                 'rules' => ['text' => 'Pravidlá', 'icon' => 'bullhorn'],
                 'sports' => ['text' => 'Športy', 'icon' => 'grid-two-up'],
                 'info' => ['text' => 'O Games', 'icon' => 'info'],
-                'signup' => ['text' => 'Prihlasovanie', 'icon' => 'check'],
+                'matches' => ['text' => 'Rozpisy a výsledky', 'icon' => 'check'],
                 'map' => ['text' => 'Miesto', 'icon' => 'map'],
                 'gallery' => ['text' => 'Fotky', 'icon' => 'image'],
             ],
