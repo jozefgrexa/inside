@@ -220,6 +220,7 @@
 
 
           <div class="tab-pane fade" id="floorball" role="tabpanel" aria-labelledby="floorball-tab">
+            <h4 class="mb-3 mt-3">Rozpis zápasov</h4>
             <table class="table">
               <thead>
                 <tr>
@@ -261,7 +262,7 @@
                     <tr>
                       <td><?= $key ?></td>
                       <td><?= $team['score1'].':'.$team['score2'] ?></td>
-                      <td><?= $team['score1']-$team['score2'] ?></td>
+                      <td><?= ($team['score1']-$team['score2']) > 0 ? '+'.($team['score1']-$team['score2']) : ($team['score1']-$team['score2']) ?></td>
                       <td><?= $team['points'] ?></td>
                     </tr>
                     <?php endforeach; ?>
