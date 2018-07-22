@@ -4,12 +4,11 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture" style="background-image: url('<?= $this->Url->image('camp/camp-big-pic.jpg') ?>')">
+<section id="start" class="weekend-big-picture" style="background-image: url('<?= $this->Url->image('camp/biblengers_skyline_2.jpg') ?>')">
   <div class="container">
     <div class="row">
       <div class="col text-right">
-        <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
-        <p class="lead">Dobrodružný týždeň v rodinnej atmosfére a nádhernej prírode.</p>
+        <?= $this->Html->image('camp/header_logo.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
       </div>
     </div>
   </div>
@@ -20,7 +19,50 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2>12-19.august | Planinka, Dechtice</h2>
-        <p class="lead">Prihlasovanie je už spustené. Čoskoro tu nájdeš informácie o téme a programe tábora.</p>
+        <p class="lead">Rekreačné zariadenie Planinka, ubytovanie v 2, 3 a 4-posteľových izbách v hlavnej budove so zrekonštruovanými sociálnymi zariadeniami na chodbe, prípadne na 4-posteľových chatkách s vlastnými sociálnymi zariadeniami. Stravovanie 5x denne a pitný režim sú zabezpečené.</p>
+        <p class="lead">Začíname v nedeľu 12.8. registráciou, ktorá bude spustená od 16:00. Prvým bodom programu bude večera o 18:00. Končíme v nedeľu 19.8. obedom. Doprava na a z podujatia je individuálna.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program" style="background-image: url('<?= $this->Url->image('camp/biblengers_back.jpg') ?>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white">Náčrt programu dňa</h2>
+        <p class="lead text-white">ale každý deň bude niečím špeciálny, čiže sa iste neboj stereotypu</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-3 text-white">
+        <h4>7:30 Osobné stíšenia</h4>
+        <h4>8:00 Rozcvička</h4>
+        <h4>8:15 Raňajky</h4>
+        <h4>9:00 Výcvik hrdinu- doobedné spoločenstvo</h4>
+        <h4>10:30 CeloTáborovýRôznoŠportovýTurnaj</h4>
+      </div>
+      <div class="col-md-6 mt-3 text-white">
+        <h4>12:30 Obed + poobedné voľno</h4>
+        <h4>14:30 Hra </h4>
+        <h4>18:00 Večera</h4>
+        <h4>19:30 Večerný program</h4>
+        <h4>22:30 Večierka</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="theme">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <?= $this->Html->image('camp/header_theme.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <p class="lead">Tému tábora sme nazvali Biblengers a jej zámerom je pomôcť ti, aby sa z bežného tínedžera, akým si aj ty, stal Biblenger - biblický nasledovník Pána Ježiša, ktorý bude svetlom a svedectvom na akomkoľvek mieste, kde sa bude nachádzať, ktorý bude prikladať ruku k dielu prinášania Božieho kráľovstva a jeho princípov na zem. Dúfam, že si na to pripravený a tešíš sa aspoň trochu tak ako my!</p>
       </div>
     </div>
   </div>
