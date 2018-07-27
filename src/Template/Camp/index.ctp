@@ -37,17 +37,24 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-md-6 mt-3 text-white">
         <h4>7:30 Osobné stíšenia</h4>
+        <small>Kto chce si môže privstať a mať svoj osobný čas s Bohom</small><hr/>
         <h4>8:00 Rozcvička</h4>
-        <h4>8:15 Raňajky</h4>
-        <h4>9:00 Výcvik hrdinu- doobedné spoločenstvo</h4>
-        <h4>10:30 CeloTáborovýRôznoŠportovýTurnaj</h4>
+        <small>Akčná, veselá a niekedy aj pojašená</small><hr/>
+        <h4>8:15 Raňajky</h4><hr/>
+        <h4>9:00 Výcvik hrdinu</h4>
+        <small>Doobedné spoločenstvo, čítanie Biblie a skupinky</small><hr/>
+        <h4>10:30 CTRŠT</h4>
+        <small>Celo-táborový-rôzno-športový-turnaj</small><hr/>
       </div>
       <div class="col-md-6 mt-3 text-white">
         <h4>12:30 Obed + poobedné voľno</h4>
+        <small>Bufet, rozhovory, športy, pohoda</small><hr/>
         <h4>14:30 Hra </h4>
-        <h4>18:00 Večera</h4>
+        <small>Väčšinou nejaká tímová veľká hra</small><hr/>
+        <h4>18:00 Večera</h4><hr/>
         <h4>19:30 Večerný program</h4>
-        <h4>22:30 Večierka</h4>
+        <small>Piesne, scénky, videá, hry, modlitby, svedectvá a iné </small><hr/>
+        <h4>22:30 Večierka</h4><hr/>
       </div>
     </div>
   </div>
@@ -71,8 +78,9 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
-    <p class="lead">Prihlásiť sa na tábor môžeš práve tu. Cena tábora je <strong>110 €</strong>. Avšak vieme ti poskytnúť zľavu, len nám napíš na inside@sem.sk.</p>
-    <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
+    <p class="lead">Prihlasovanie je uzavreté.</p>
+    <!-- <p class="lead">Prihlásiť sa na tábor môžeš práve tu. Cena tábora je <strong>110 €</strong>. Avšak vieme ti poskytnúť zľavu, len nám napíš na inside@sem.sk.</p> -->
+    <!-- <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
           <label for="first-name">Meno</label>
@@ -177,7 +185,8 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
-    </form>
+    </form> -->
+
     <div class="row mt-5">
       <div class="col">
         <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
