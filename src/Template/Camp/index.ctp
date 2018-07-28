@@ -78,9 +78,9 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
-    <p class="lead">Prihlasovanie je uzavreté.</p>
-    <!-- <p class="lead">Prihlásiť sa na tábor môžeš práve tu. Cena tábora je <strong>110 €</strong>. Avšak vieme ti poskytnúť zľavu, len nám napíš na inside@sem.sk.</p> -->
-    <!-- <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
+    <!-- <p class="lead">Prihlasovanie je uzavreté.</p> -->
+    <p class="lead">Prihlásiť sa na tábor môžeš práve tu. Cena tábora je <strong>110 €</strong>. Avšak vieme ti poskytnúť zľavu, len nám napíš na inside@sem.sk.</p>
+    <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
           <label for="first-name">Meno</label>
@@ -185,7 +185,7 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
-    </form> -->
+    </form>
 
     <div class="row mt-5">
       <div class="col">
