@@ -101,7 +101,7 @@ $('.form-switch-button').click(function(){
 	}
 });
 
-$('#birthday').change(function(){
+$('#camp-form #birthday').change(function(){
 	let setDate = $(this).val().split('-');
 	let birth16Date = new Date(parseInt(setDate[0])+16, parseInt(setDate[1])-1, setDate[2]);
 	let birth15Date = new Date(parseInt(setDate[0])+15, parseInt(setDate[1])-1, setDate[2]);
@@ -132,5 +132,19 @@ $('#birthday').change(function(){
 		$('.under-18').hide();
 		$('#parent').prop('disabled', true);
 		$('#phone').prop('disabled', true);
+	}
+});
+
+$('#week-form #birthday').change(function(){
+	let setDate = $(this).val().split('-');
+	let birth16Date = new Date(parseInt(setDate[0])+16, parseInt(setDate[1])-1, setDate[2]);
+	let currentDate = new Date();
+
+	if (birth16Date > currentDate) {
+		$('.under-16').show();
+		$('#under-16').prop('disabled', false);
+	} else {
+		$('.under-16').hide();
+		$('#under-16').prop('disabled', true);
 	}
 });

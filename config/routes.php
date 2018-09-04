@@ -52,6 +52,13 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'index' (in this case, src/Template/home/index.ctp)...
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/vikend', ['controller' => 'Weekend', 'action' => 'index']);
+    $routes->connect('/vikend/prihlasenie-neuspesne', ['controller' => 'Weekend', 'action' => 'error']);
+    $routes->connect('/vikend/prihlasenie-uspesne', ['controller' => 'Weekend', 'action' => 'success']);
+    $routes->connect('/tabor', ['controller' => 'Camp', 'action' => 'index']);
+    $routes->connect('/tabor/prihlasenie-neuspesne', ['controller' => 'Camp', 'action' => 'error']);
+    $routes->connect('/tabor/prihlasenie-uspesne', ['controller' => 'Camp', 'action' => 'success']);
+    $routes->connect('/ochrana-udajov', ['controller' => 'Pages', 'action' => 'data_protection']);
 
     /**
      * Connect catchall routes for all controllers.
