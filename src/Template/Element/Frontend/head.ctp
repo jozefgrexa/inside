@@ -10,4 +10,5 @@
 <?= $this->Html->css('style.css') ?>
 <?= $this->Html->css('half-slider.css') ?>
 <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Audiowide&amp;subset=latin-ext" rel="stylesheet">
