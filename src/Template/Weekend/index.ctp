@@ -68,7 +68,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">20:00 Chvály</li>
           <li class="list-group-item bg-transparent">20:30 Modlitby, zdieľanie, skupinky</li>
           <li class="list-group-item bg-transparent">21:00 Voľno</li>
-          <li class="list-group-item bg-transparent">23:00 Nočný kľud</li>
+          <li class="list-group-item bg-transparent">23:00 Nočný pokoj</li>
         </ul>
       </div>
       <div class="col-md-4 mt-3 text-white">
@@ -77,17 +77,17 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">08:00 Osobné stíšenie</li>
           <li class="list-group-item bg-transparent">09:00 Chvály, modlitby</li>
           <li class="list-group-item bg-transparent">09:30 Slovo</li>
-          <li class="list-group-item bg-transparent">10:00 Športy, voľný čas</li>
-          <li class="list-group-item bg-transparent">11:30 Chvály, modlitby</li>
-          <li class="list-group-item bg-transparent">12:00 Diskusie (talkshow s hosťami)</li>
-          <li class="list-group-item bg-transparent">12:30 Voľno (modlitby, hry, rozhovory)</li>
-          <li class="list-group-item bg-transparent">17:00 Modlitby, chvály</li>
-          <li class="list-group-item bg-transparent">17:30 Slovo</li>
-          <li class="list-group-item bg-transparent">18:00 Prestávka</li>
-          <li class="list-group-item bg-transparent">20:00 Chvály</li>
-          <li class="list-group-item bg-transparent">20:30 Modlitby, zdieľanie, skupinky</li>
-          <li class="list-group-item bg-transparent">21:00 Voľno</li>
-          <li class="list-group-item bg-transparent">23:00 Nočný kľud</li>
+          <li class="list-group-item bg-transparent">10:00 Blok modlitieb</li>
+          <li class="list-group-item bg-transparent">11:00 Voľno</li>
+          <li class="list-group-item bg-transparent">13:30 Vizio-čas</li>
+          <li class="list-group-item bg-transparent">15:30 Chvály</li>
+          <li class="list-group-item bg-transparent">16:00 Slovo</li>
+          <li class="list-group-item bg-transparent">16:30 Blok modlitieb</li>
+          <li class="list-group-item bg-transparent">19:00 Chvály</li>
+          <li class="list-group-item bg-transparent">19:30 Slovo</li>
+          <li class="list-group-item bg-transparent">20:00 Blok modlitieb</li>
+          <li class="list-group-item bg-transparent">21:00 Voľno, chvály</li>
+          <li class="list-group-item bg-transparent">23:00 Nočný pokoj</li>
         </ul>
       </div>
       <div class="col-md-4 mt-3 text-white">
