@@ -24,7 +24,7 @@
 </tr>
 <tr>
   <td style="padding: 30px 5px 20px 5px; color: #634840; font-size: 16px; line-height: 20px;">
-    Uisťujeme ťa, že všetky tebou poskytnuté údaje sú v bezpečí a budeme s nimi narábať v súlade so zákonom a <a href="https://inside.sem.sk/pages/data_protection" target="_blank">podmienkami spracovania osobných údajov</a>, ktoré nájdeš na našom webe.
+    Uisťujeme ťa, že všetky tebou poskytnuté údaje sú v bezpečí a budeme s nimi narábať v súlade so zákonom a <a href="https://inside.sem.sk/ochrana-udajov" target="_blank">podmienkami spracovania osobných údajov</a>, ktoré nájdeš na našom webe.
   </td>
 </tr>
 <tr>

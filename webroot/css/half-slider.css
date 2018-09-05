@@ -5,8 +5,7 @@
  */
 
 .carousel-item {
-  height: 65vh;
-  min-height: 300px;
+  min-height: 65vh;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;

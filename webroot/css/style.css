@@ -207,6 +207,15 @@ section {
   -o-background-size: cover;
 }
 
+.vmp-text {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Suez One', serif;
+  font-size: x-large;
+  padding-bottom: 50px;
+}
+
 .bg-week-lead {
   background-color: #153B50;
 }

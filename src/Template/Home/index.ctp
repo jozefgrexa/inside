@@ -19,8 +19,7 @@ $this->viewBuilder()->setLayout('default');
   <div id="carousel-switch" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel-switch" data-slide-to="0"></li>
-      <li data-target="#carousel-switch" data-slide-to="1"></li>
-      <li data-target="#carousel-switch" data-slide-to="2" class="active"></li>
+      <li data-target="#carousel-switch" data-slide-to="1" class="active"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
@@ -31,20 +30,19 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-02.jpg') ?>')">
-
-        <div class="carousel-caption">
-          <?= $this->Html->image('home/home-slider-games.png', ['alt' => 'inside games logo', 'class' => 'img-fluid m-3']) ?>
-          <h3>Športový turnaj v 4 rôznych športoch aj pre nešportovcov.</h3>
-        </div>
+      <div class="carousel-item active text-center" style="background-image: url('<?= $this->Url->image('weekend/weekend-big-pic.jpg') ?>');">
+        <!-- <div class="carousel-caption"> -->
+          <a href="<?= $this->Url->build(['controller' => 'Weekend', 'action' => 'index']) ?>"><?= $this->Html->image('weekend/vmp-intro.png', ['alt' => 'modlitby pôst logo', 'class' => 'img-fluid']) ?></a>
+          <h3 class="vmp-text">Víkend modlitieb a pôstu</h3>
+        <!-- </div> -->
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
+      <!-- <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
         <div class="carousel-caption">
           <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'inside tabor logo', 'class' => 'img-fluid m-3']) ?>
           <h1>Prihlasovanie spustené!</h1>
         </div>
-      </div>
+      </div> -->
     </div>
     <a class="carousel-control-prev" href="#carousel-switch" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
