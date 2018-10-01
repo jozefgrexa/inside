@@ -49,11 +49,14 @@ class WeekendController extends AppController
             return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
-    	$peoplecount = $this->Participants->getPeopleCount(3); //eventId
+        $peoplecount[] = $this->Participants->getPeopleCount(4); //eventId
+    	$peoplecount[] = $this->Participants->getPeopleCount(5); //eventId
+        $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-4-2018'])->toArray();
+        $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-5-2018'])->toArray();
         $churches = $this->Churches->find()->select('name')->toArray();
-        $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'vmp-2018'])->toArray();
-
-    	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames']));
+        $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['OR' => [['slug' => 'inside-vikend-4-2018'], ['slug' => 'inside-vikend-5-2018']],])->toArray();
+        
+    	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames','terms']));
     }
     
     public function success() {
@@ -67,15 +70,13 @@ class WeekendController extends AppController
     private function _addParticipant(){
 
         $participant = $this->Participants->newEntity($this->request->getData());
-        $fasting = $this->request->getData('fasting');
+        // $fasting = $this->request->getData('fasting');
         
-        $participant->church = $this->Churches->findByName($this->request->getData('church'))->first(); 
-        $participant->event = $this->Events->find()->where(['slug' => 'vmp-2018'])->first();
+        $participant->church = $this->Churches->findByName($this->request->getData('church'))->first();
+        $participant->event = $this->Events->findById($this->request->getData('term'))->first();
 		$this->Participants->save($participant);
 
-        $info_subject = 'Prihláška - VMP 2018 - ' . $participant->first_name . ' ' . $participant->last_name;
-        $this->_sendEmail($participant->email, 'Víkend modlitieb a pôstu 2018', 'vmp_participant', ['participant' => $this->Participants->get($participant->id), 'fasting' => $fasting]);
-        $this->_sendEmail('inside@sem.sk', $info_subject, 'vmp_info', ['participant' => $this->Participants->get($participant->id), 'fasting' => $fasting]);
+        $this->_sendEmail($participant->email, 'Prihlásenie - INSIDE Víkend', 'weekend_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Events'])]);
     }
 
     private function _verifyResponse($recaptcha){

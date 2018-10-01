@@ -163,14 +163,27 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="term-select">Vyber termín víkendu</label>
+          <select class="form-control" id="term-select" name="term">
+            <?php foreach($terms as $term): ?>
+                <option value="<?= $term['id'] ?>">
+                  <?= $term['start_date'] ?> - <?= $term['end_date'] ?>
+                </option>
+            <?php endforeach; ?>
+          </select>
+        </div>
+      </div>
+
       <div class="form-group">
-        <div class="form-check">
+        <!-- <div class="form-check">
           <input class="form-check-input" type="checkbox" value="yes" name="fasting" id="invalidCheck">
           <label class="form-check-label" for="invalidCheck">
             Počas víkendu chcem mať úplný pôst od jedla
           </label>
         </div>
-        <hr/>
+        <hr/> -->
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
@@ -196,12 +209,15 @@ $this->viewBuilder()->setLayout('default');
     </form>
 
     <div class="row mt-5">
-      <div class="col">
-        <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
-        <?php foreach ($peoplenames as $name): ?>
-          <span><?= $name['first_name'] ?>, </span>
-        <?php endforeach; ?>
-      </div>
+      <?php foreach ($terms as $key => $term): ?>
+        <div class="col-md-6">
+          <h6><?= $key+1 ?>. termín: <?= $term['start_date'] ?>-<?= $term['end_date'] ?></h6>
+          <h4>Počet aktuálne prihlásených: <?= $peoplecount[$key]['all'] ?></h4>
+          <?php foreach ($peoplenames[$key] as $name): ?>
+            <span><?= $name['first_name'] ?>, </span>
+          <?php endforeach; ?>
+        </div>
+      <?php endforeach ?>
     </div>
   </div>
 </section>
