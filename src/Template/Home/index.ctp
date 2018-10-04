@@ -30,10 +30,10 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item active text-center" style="background-image: url('<?= $this->Url->image('weekend/weekend-big-pic.jpg') ?>');">
+      <div class="carousel-item active text-center" >
         <!-- <div class="carousel-caption"> -->
-          <a href="<?= $this->Url->build(['controller' => 'Weekend', 'action' => 'index']) ?>"><?= $this->Html->image('weekend/vmp-intro.png', ['alt' => 'modlitby pôst logo', 'class' => 'img-fluid']) ?>
-          <h3 class="vmp-text">Víkend modlitieb a pôstu</h3></a>
+          <a href="<?= $this->Url->build(['controller' => 'Weekend', 'action' => 'index']) ?>"><?= $this->Html->image('weekend/just_trying.png', ['alt' => 'modlitby pôst logo', 'class' => 'img-fluid']) ?>
+          </a>
         <!-- </div> -->
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->

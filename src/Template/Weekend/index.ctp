@@ -4,11 +4,11 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture" style="background-image: url('webroot/img/weekend/weekend-big-pic.jpg');">
+<section id="start" class="weekend-big-picture" >
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <?= $this->Html->image('weekend/vmp-logo.png', ['alt' => 'vmp-logo', 'class' => 'img-fluid']) ?>
+        <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2>O čo ide?</h2>
-        <p class="lead">Našim cieľom je zhromaždiť služobníkov z nášho seniorátu a <b>spoločne sa modliť a postiť</b> za to, aby sa Božie dielo a Božia vôľa diala medzi nami. Tento víkend je hlavne miestom, kde <b>dá cirkev srdcia dokopy v spoločný zápas</b>. Viac o tom, <b>čo dáš</b> ako o tom, čo zoberieš. Ale popri tom <b>v spoločenstve s Pánom Ježišom a súrodencami</b> môžeme a túžime <b>rásť a čerpať</b> a tešiť sa s našim Kráľom.</p>
+        <p class="lead">Pozývame ťa na víkend plný akcie, ktorý sa tak ako vždy uskutoční v Častej! Počas tohto víkendu zažiješ rôzne hry či aktivity, ale zároveň sa budeš môcť zamyslieť nas témou celého víkendu a nad tým, ako vyzerá tvoj život s Pánom Bohom. Avšak určite sa nemusíš báť nudného školského vyučovania, lebo veríme, že aj o dôležitých a vážnych veciach sa dá hovoriť zaujímavo :) </p>
       </div>
     </div>
   </div>
@@ -29,21 +29,22 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Prečo pôst?</h2>
-        <p>Počas víkendu sa chceme spoločne postiť od jedla. Podľa Božieho Slova je pôst spôsob, akým sa môžeme pokoriť pred Bohom a hľadať Ho. Dokonca aj Pán Ježiš sa postil od jedla 40 dní. Pán Ježiš spomína pôst aj ako formu duchovného boja (Mk 9,29). My sa chceme spoločne postiť počas celého pobytu.</p>
-        <p>Pôst je samozrejme dobrovoľný a ak sa z nejakého dôvodu postiť nechceš, alebo nemôžeš, zabezpečíme ti v stredisku stravu - prosím uveď to v prihláške. Túžime tvoriť slobodné prostredie, v ktorom sa nikto na nikoho nebude kvôli ničomu pozerať ako na menejcenného. Aj ty maj prosím SLOBODU sa rozhodnúť pre pôst sám za seba a nerozmýšľaj nad tým, čo si pomyslia iní. Túžime po tom, aby si nepomysleli nič iné iba "v pokore pokladali iných za hodnejších než seba."</p>
+        <h2>O téme</h2>
+        <p>
+        Tentokrát sa pozrieme na príbeh zo starej zmluvy, o ktorom si možno počul na besiedke či hodine náboženstva. Alebo si o ňom videl film. Alebo proste len počul z rozprávania. Bude to príbeh o potope sveta a zameriame sa na to, čo pre nás tento príbeh znamená v dnešnej dobe. Lebo hoci sa odohráva dávno v minulosti, má nám čo povedať aj dnes, lebo sa nachádzame vo veľmi podobnej situácii ako ľudia vtedy. Akurát je na arche miesto aj pre teba, tak neváhaj a NASTÚP SI! :)
+        </p>
       </div>
       <div class="col-md-6">
         <h2>Praktické informácie</h2>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Podujatie je pre mládež a dorast od 15 rokov</li>
+            <li class="list-group-item">Podujatie je pre dorast vo veku 12-15 rokov</li>
             <li class="list-group-item">MIESTO: Prameň, Častá-Píla</li>
-            <li class="list-group-item">TERMÍN: 14-16. september 2018</li>
+            <li class="list-group-item">TERMÍN: 19.-21. alebo 26.-28. október 2018</li>
             <li class="list-group-item">ZAČIATOK: piatok - 16:00-registrácia</li>
             <li class="list-group-item">KONIEC: nedeľa - okolo 16:00</li>
             <li class="list-group-item">BÝVANIE: 4-8 posteľové chatky</li>
-            <li class="list-group-item">CENA: 15 Eur / 30 Eur / dohodou</li>
-            <li class="list-group-item">Pre účastníkov, ktorí sa budú počas pobytu postiť, je cena víkendu vzhľadom na znížené náklady na stravu 15 Eur. Cena víkendu s kompletnou stravou je 30 Eur. V prípade, že by jediným dôvodom tvojej neúčasti mali byť financie, prosím ozvi sa na inside@sem.sk. Radi ti poskytneme zľavu až do výšky 100%.</li>
+            <li class="list-group-item">CENA: 30 Eur</li>
+            <li class="list-group-item"> V prípade, že by jediným dôvodom tvojej neúčasti mali byť financie, prosím ozvi sa na inside@sem.sk. Radi ti poskytneme zľavu až do výšky 100%.</li>
           </ul>
       </div>
     </div>
@@ -62,41 +63,32 @@ $this->viewBuilder()->setLayout('default');
         <h4>Piatok</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">16:00 Registrácia</li>
-          <li class="list-group-item bg-transparent">18:00 Úvod, modlitby, chvály</li>
-          <li class="list-group-item bg-transparent">18:30 Slovo</li>
-          <li class="list-group-item bg-transparent">19:00 Prestávka</li>
-          <li class="list-group-item bg-transparent">20:00 Chvály</li>
-          <li class="list-group-item bg-transparent">20:30 Modlitby, zdieľanie, skupinky</li>
-          <li class="list-group-item bg-transparent">21:00 Voľno</li>
-          <li class="list-group-item bg-transparent">23:00 Nočný pokoj</li>
+          <li class="list-group-item bg-transparent">18:00 Večera</li>
+          <li class="list-group-item bg-transparent">19:30 Večerný program</li>
+          <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
       <div class="col-md-4 mt-3 text-white">
         <h4>Sobota</h4>
         <ul class="list-group list-group-flush bg-transparent">
-          <li class="list-group-item bg-transparent">08:00 Osobné stíšenie</li>
-          <li class="list-group-item bg-transparent">09:00 Chvály, modlitby</li>
-          <li class="list-group-item bg-transparent">09:30 Slovo</li>
-          <li class="list-group-item bg-transparent">10:00 Blok modlitieb</li>
-          <li class="list-group-item bg-transparent">11:00 Voľno</li>
-          <li class="list-group-item bg-transparent">13:30 Vizio-čas</li>
-          <li class="list-group-item bg-transparent">15:30 Chvály</li>
-          <li class="list-group-item bg-transparent">16:00 Slovo</li>
-          <li class="list-group-item bg-transparent">16:30 Blok modlitieb</li>
-          <li class="list-group-item bg-transparent">19:00 Chvály</li>
-          <li class="list-group-item bg-transparent">19:30 Slovo</li>
-          <li class="list-group-item bg-transparent">20:00 Blok modlitieb</li>
-          <li class="list-group-item bg-transparent">21:00 Voľno, chvály</li>
-          <li class="list-group-item bg-transparent">23:00 Nočný pokoj</li>
+          <li class="list-group-item bg-transparent">08:00 Budíček</li>
+          <li class="list-group-item bg-transparent">08:15 Raňajky</li>
+          <li class="list-group-item bg-transparent">09:15 Diskusné skupinky</li>
+          <li class="list-group-item bg-transparent">10:15 Doobedné športové aktivity</li>
+          <li class="list-group-item bg-transparent">12:30 Obed</li>
+          <li class="list-group-item bg-transparent">14:30 Veľká hra</li>
+          <li class="list-group-item bg-transparent">18:00 Večera</li>
+          <li class="list-group-item bg-transparent">19:30 Večerný program</li>
+          <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
       <div class="col-md-4 mt-3 text-white">
         <h4>Nedeľa</h4>
         <ul class="list-group list-group-flush bg-transparent">
-          <li class="list-group-item bg-transparent">08:00 Osobné stíšenie</li> 
-          <li class="list-group-item bg-transparent">09:00 Spoločenstvo</li>
-          <li class="list-group-item bg-transparent">12:00 Spoločný obed</li>
-          <li class="list-group-item bg-transparent">13:00 Voľno a odchod domov</li>
+          <li class="list-group-item bg-transparent">08:00 Budíček</li>
+          <li class="list-group-item bg-transparent">08:15 Raňajky</li>
+          <li class="list-group-item bg-transparent">09:15 Diskusné skupinky</li>
+          <li class="list-group-item bg-transparent">10:15 Služby Božie</li>
         </ul>
       </div> 
     </div>
