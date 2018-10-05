@@ -5,11 +5,11 @@ $this->viewBuilder()->setLayout('default');
 ?>
 
 <section id="start" class="weekend-big-picture weekend" >
-    <div class="row">
-      <div class="col-md-12">
-        <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
-      </div>
+  <div class="row">
+    <div class="col-md-12">
+      <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
     </div>
+  </div>
 </section>
 
 <section id="about" class="text-white bg-week-lead">

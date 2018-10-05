@@ -4,13 +4,10 @@
 
 ?>
 
-<section id="home" class="games-home" style="background-image: url('<?= $this->Url->image('camp/camp-big-pic.jpg') ?>')">
-  <div class="container">
-    <div class="row">
-      <div class="col text-right">
-        <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
-        <p class="lead">Dobrodružný týždeň v rodinnej atmosfére a nádhernej prírode.</p>
-      </div>
+<section id="start" class="weekend-big-picture weekend" >
+  <div class="row">
+    <div class="col-md-12">
+      <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
     </div>
   </div>
 </section>
