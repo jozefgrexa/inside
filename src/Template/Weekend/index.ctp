@@ -208,9 +208,9 @@ $this->viewBuilder()->setLayout('default');
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
 
-    <div class="row mt-5">
+    <div class="row">
       <?php foreach ($terms as $key => $term): ?>
-        <div class="col-md-6">
+        <div class="col-md-6 mt-5">
           <h6><?= $key+1 ?>. termín: <?= $term['start_date'] ?>-<?= $term['end_date'] ?></h6>
           <h4>Počet aktuálne prihlásených: <?= $peoplecount[$key]['all'] ?></h4>
           <?php foreach ($peoplenames[$key] as $name): ?>
