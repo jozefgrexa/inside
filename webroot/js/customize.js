@@ -138,6 +138,7 @@ $('#camp-form #birthday').change(function(){
 $('#week-form #birthday').change(function(){
 	let setDate = $(this).val().split('-');
 	let birth16Date = new Date(parseInt(setDate[0])+16, parseInt(setDate[1])-1, setDate[2]);
+	let birth18Date = new Date(parseInt(setDate[0])+18, parseInt(setDate[1])-1, setDate[2]);
 	let currentDate = new Date();
 
 	if (birth16Date > currentDate) {
@@ -146,5 +147,13 @@ $('#week-form #birthday').change(function(){
 	} else {
 		$('.under-16').hide();
 		$('#under-16').prop('disabled', true);
+	}
+
+	if (birth18Date > currentDate) {
+		$('.under-18').show();
+		$('.under-18 > input').prop('disabled', false);
+	} else {
+		$('.under-18').hide();
+		$('.under-18 > input').prop('disabled', true);
 	}
 });

@@ -132,6 +132,9 @@ section {
 .under-16, .over-15 {
   display: none;
 }
+.under-18 {
+  display: block;
+}
 
 /*************** GAMES PAGE *******************/
 .games-home {

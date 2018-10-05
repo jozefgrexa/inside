@@ -15,7 +15,7 @@
 namespace App\Controller;
 
 use Cake\Core\Configure;
-
+use Cake\I18n\Date;
 /**
  * Static content controller
  *
@@ -55,6 +55,11 @@ class WeekendController extends AppController
         $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-5-2018'])->toArray();
         $churches = $this->Churches->find()->select('name')->toArray();
         $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['OR' => [['slug' => 'inside-vikend-4-2018'], ['slug' => 'inside-vikend-5-2018']],])->toArray();
+
+        foreach ($terms as $key => $term) {
+            $term['start_date'] = $term['start_date']->format('d.m.Y');
+            $term['end_date'] = $term['end_date']->format('d.m.Y');
+        }
         
     	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames','terms']));
     }
