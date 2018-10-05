@@ -4,14 +4,12 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture" >
-  <div class="container">
+<section id="start" class="weekend-big-picture weekend" >
     <div class="row">
-      <div class="col text-center">
+      <div class="col-md-12">
         <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
       </div>
     </div>
-  </div>
 </section>
 
 <section id="about" class="text-white bg-week-lead">
@@ -51,7 +49,7 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<section id="program" style="background-image: url('<?= $this->Url->image('weekend/weekend-big-bg.jpg') ?>'); background-attachment: fixed;">
+<section id="program" class="weekend" style="background-image: url('<?= $this->Url->image('weekend/weekend-big-bg.jpg') ?>');">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
