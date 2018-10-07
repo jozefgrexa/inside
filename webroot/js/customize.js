@@ -143,10 +143,10 @@ $('#week-form #birthday').change(function(){
 
 	if (birth16Date > currentDate) {
 		$('.under-16').show();
-		$('#under-16').prop('disabled', false);
+		$('.under-16 > input').prop('disabled', false);
 	} else {
 		$('.under-16').hide();
-		$('#under-16').prop('disabled', true);
+		$('.under-16 > input').prop('disabled', true);
 	}
 
 	if (birth18Date > currentDate) {
