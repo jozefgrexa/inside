@@ -122,7 +122,7 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2>Kontakt</h2>
-        <p class="lead">INSIDE zastrešuje <a href="http://www.sem.sk" target="_blank">Spoločenstvo evanjelickej mládeže (OZ)</a>. Deje sa hlavne v bratislavskom a trnavskom kraji v spolupráci s <a href="https://www.facebook.com/BAsenioratECAV/" target="_blank">Bratislavským seniorátom ECAV</a>. Je veľa ľudí, ktorým by stálo za to napísať a ktorí by ti neorzprávali o INSIDE, ale sa zaujímali skôr o teba. Ale najlepšie bude, keď začneš tu: <strong>inside@sem.sk</strong>. Alebo môžeš skúsiť aj na <a href="https://www.facebook.com/groups/128360077233101/" target="_blank">FB (skupina INSIDE)</a>. Alebo, ak nám chceš poslať list, môžeš na Legionárska 4, 811 07 Bratislava.</p>
+        <p class="lead">INSIDE zastrešuje <a href="http://www.sem.sk" target="_blank">Spoločenstvo evanjelickej mládeže (OZ)</a>. Deje sa hlavne v bratislavskom a trnavskom kraji v spolupráci s <a href="https://www.facebook.com/BAsenioratECAV/" target="_blank">Bratislavským seniorátom ECAV</a>. Je veľa ľudí, ktorým by stálo za to napísať a ktorí by ti nerozprávali o INSIDE, ale sa zaujímali skôr o teba. Ale najlepšie bude, keď začneš tu: <strong>inside@sem.sk</strong>. Alebo môžeš skúsiť aj na <a href="https://www.facebook.com/groups/128360077233101/" target="_blank">FB (skupina INSIDE)</a>.</p>
         <p>Každopádne sa potešíme, ak sa ozveš</p>
       </div>
     </div>
