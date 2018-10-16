@@ -54,7 +54,7 @@ class WeekendController extends AppController
         $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-4-2018'])->toArray();
         $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-5-2018'])->toArray();
         $churches = $this->Churches->find()->select('name')->toArray();
-        $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['OR' => [['slug' => 'inside-vikend-4-2018'], ['slug' => 'inside-vikend-5-2018']],])->toArray();
+        $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['slug' => 'inside-vikend-5-2018'])->toArray();
 
         foreach ($terms as $key => $term) {
             $term['start_date'] = $term['start_date']->format('d.m.Y');
