@@ -157,11 +157,9 @@ $this->viewBuilder()->setLayout('default');
         <div class="col-md-6 mb-3">
           <label for="term-select">Vyber termín víkendu</label>
           <select class="form-control" id="term-select" name="term">
-            <?php foreach($terms as $term): ?>
-                <option value="<?= $term['id'] ?>">
-                  <?= $term['start_date'] ?> - <?= $term['end_date'] ?>
-                </option>
-            <?php endforeach; ?>
+            <option value="<?= $terms[1]['id'] ?>">
+              <?= $terms[1]['start_date'] ?> - <?= $terms[1]['end_date'] ?>
+            </option>
           </select>
         </div>
       </div>
