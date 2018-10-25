@@ -96,6 +96,7 @@ $this->viewBuilder()->setLayout('default');
 
 <section id="signup">
   <div class="container">
+  <!--
     <h2>Prihlasovací formulár</h2>
     <form id="week-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
@@ -165,7 +166,7 @@ $this->viewBuilder()->setLayout('default');
           </select>
         </div>
       </div>
-
+      
       <div class="form-group">
         <!-- <div class="form-check">
           <input class="form-check-input" type="checkbox" value="yes" name="fasting" id="invalidCheck">
@@ -173,7 +174,7 @@ $this->viewBuilder()->setLayout('default');
             Počas víkendu chcem mať úplný pôst od jedla
           </label>
         </div>
-        <hr/> -->
+        <hr/> 
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
@@ -207,6 +208,7 @@ $this->viewBuilder()->setLayout('default');
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
+    -->
 
     <div class="row">
       <?php foreach ($terms as $key => $term): ?>
