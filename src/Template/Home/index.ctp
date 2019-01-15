@@ -23,20 +23,21 @@ $this->viewBuilder()->setLayout('default');
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-01.jpg') ?>')">
+      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('home/slider-bg-01.jpg') ?>')">
         <div class="carousel-caption">
           <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
           <h3>To na čom najviac záleží je ukryté vo vnútri</h3>
         </div>
       </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item active text-center" >
-        <!-- <div class="carousel-caption"> -->
-          <a href="<?= $this->Url->build(['controller' => 'Weekend', 'action' => 'index']) ?>"><?= $this->Html->image('weekend/just_trying.png', ['alt' => 'modlitby pôst logo', 'class' => 'img-fluid']) ?>
-          </a>
-        <!-- </div> -->
+      <!-- Slide Two - Link to Facebook group-->
+      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
+        <div class="carousel-caption">
+          <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
+          <h3>Viac fotiek nájdeš v našej <a href="https://www.facebook.com/groups/128360077233101/" target="_blank" class="text-white font-italic">Facebookovej skupine</a>.</h3>
+        </div>
       </div>
-      <!-- Slide Three - Set the background image for this slide in the line below -->
+
+      <!-- Slide Four - Set the background image for this slide in the line below -->
       <!-- <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
         <div class="carousel-caption">
           <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'inside tabor logo', 'class' => 'img-fluid m-3']) ?>
@@ -82,7 +83,7 @@ $this->viewBuilder()->setLayout('default');
       </div>
     </div>
   </div>
-</section> -->
+</section> 
 
 <section id="calendar" class="calendar-big-picture" style="background-image: url('webroot/img/home/calendar-bg-pic.jpg');">
   <div class="container">
@@ -115,6 +116,10 @@ $this->viewBuilder()->setLayout('default');
         <?= $this->Html->image('home/calendar-09.png', ['alt' => 'calendar-event', 'class' => 'img-fluid']) ?>
       </div>
   </div>
+</section>-->
+
+<section id="calendar-19">
+  <img src="webroot/img/home/inside_2019.jpg" class="img-fluid">
 </section>
 
 <section id="contact">
