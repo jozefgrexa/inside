@@ -4,7 +4,7 @@
 
 ?>
 
-<section id="start" class="weekend-big-picture weekend" style="background-image: url('/inside/webroot/img/weekend/nezastavitelny_bg.jpg');">
+<section id="start" class="weekend-big-picture weekend" style="background-image: url('/img/weekend/nezastavitelny_bg.jpg');">
   <div class="container">
     <div class="row">
       <div class="col text-center">
