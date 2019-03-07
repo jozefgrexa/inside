@@ -4,10 +4,12 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture weekend" >
-  <div class="row">
-    <div class="col-md-12">
-      <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
+<section id="start" class="weekend-big-picture weekend" style="background-image: url('webroot/img/weekend/nezastavitelny_bg.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <?= $this->Html->image('weekend/nezastavitelny_title.jpg', ['alt' => 'vmp-logo', 'class' => 'img-fluid']) ?>
+      </div>
     </div>
   </div>
 </section>
@@ -49,15 +51,15 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<section id="program" class="weekend" style="background-image: url('<?= $this->Url->image('weekend/weekend-big-bg.jpg') ?>');">
+<section id="program" class="weekend" style="background-image: url('<?= $this->Url->image('weekend/nezastavitelny-big-bg-2.jpg') ?>');">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-white">Program</h2>
+        <h2>Program</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 mt-3 text-white">
+      <div class="col-md-4 mt-3">
         <h4>Piatok</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">16:00 Registrácia</li>
@@ -66,7 +68,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3 text-white">
+      <div class="col-md-4 mt-3">
         <h4>Sobota</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
@@ -80,7 +82,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3 text-white">
+      <div class="col-md-4 mt-3">
         <h4>Nedeľa</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
@@ -96,7 +98,6 @@ $this->viewBuilder()->setLayout('default');
 
 <section id="signup">
   <div class="container">
-  <!--
     <h2>Prihlasovací formulár</h2>
     <form id="week-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
@@ -158,21 +159,16 @@ $this->viewBuilder()->setLayout('default');
         <div class="col-md-6 mb-3">
           <label for="term-select">Vyber termín víkendu</label>
           <select class="form-control" id="term-select" name="term">
-            <option value="<?= $terms[1]['id'] ?>">
-              <?= $terms[1]['start_date'] ?> - <?= $terms[1]['end_date'] ?>
-            </option>
+            <?php foreach ($terms as $key => $term): ?>
+              <option value="<?= $term['id'] ?>">
+                <?= $term['start_date'] ?> - <?= $term['end_date'] ?>
+              </option>
+            <?php endforeach; ?>
           </select>
         </div>
       </div>
       
       <div class="form-group">
-        <!-- <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="yes" name="fasting" id="invalidCheck">
-          <label class="form-check-label" for="invalidCheck">
-            Počas víkendu chcem mať úplný pôst od jedla
-          </label>
-        </div>
-        <hr/> 
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
@@ -206,7 +202,6 @@ $this->viewBuilder()->setLayout('default');
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
-    -->
 
     <div class="row">
       <?php foreach ($terms as $key => $term): ?>

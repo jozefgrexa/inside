@@ -220,7 +220,7 @@ section {
 }
 
 .bg-week-lead {
-  background-color: #153B50;
+  background-color: #006680;
 }
 
 section#start.weekend {
@@ -229,6 +229,8 @@ section#start.weekend {
 
 section#program.weekend {
   background-attachment: fixed;
+  background-position: center;
   font-weight: 700;
-  text-shadow: 0 0 5px #000000;
+  /*text-shadow: 0 0 5px #000000;*/
+  color: black;
 }
