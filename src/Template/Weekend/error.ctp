@@ -4,10 +4,12 @@
 
 ?>
 
-<section id="start" class="weekend-big-picture weekend" >
-  <div class="row">
-    <div class="col-md-12">
-      <?= $this->Html->image('weekend/just_trying.png', ['alt' => 'just_trying', 'class' => 'img-fluid']) ?>
+<section id="start" class="weekend-big-picture weekend" style="background-image: url('webroot/img/weekend/nezastavitelny_bg.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <?= $this->Html->image('weekend/nezastavitelny_title.jpg', ['alt' => 'vmp-logo', 'class' => 'img-fluid']) ?>
+      </div>
     </div>
   </div>
 </section>
