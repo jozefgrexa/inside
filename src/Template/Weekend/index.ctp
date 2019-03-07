@@ -31,7 +31,9 @@ $this->viewBuilder()->setLayout('default');
       <div class="col-md-6">
         <h2>O téme</h2>
         <p>
-        Tentokrát sa pozrieme na príbeh zo starej zmluvy, o ktorom si možno počul na besiedke či hodine náboženstva. Alebo si o ňom videl film. Alebo proste len počul z rozprávania. Bude to príbeh o potope sveta a zameriame sa na to, čo pre nás tento príbeh znamená v dnešnej dobe. Lebo hoci sa odohráva dávno v minulosti, má nám čo povedať aj dnes, lebo sa nachádzame vo veľmi podobnej situácii ako ľudia vtedy. Akurát je na arche miesto aj pre teba, tak neváhaj a NASTÚP SI! :)
+        Počas tohto víkendu sa chceme akčnou formou pozrieť na jeden špecíalny rozmer Božieho charakteru- na Jeho lásku, v ktorej je <strong>NEZASTAVITEĽNÝ. </strong>
+        Biblia je plná príbehov, kde pred Pánom Ježišom stoja prekážky, ktoré mu bránia prejaviť lásku úplne priamočiaro. No On je <strong> NEZASTAVITEĽNÝ </strong> a ochotný zaplatiť akúkoľvek cenu za to, aby túto lásku prejavil.
+        Akúkoľvek. Žiadne hrozby, žiadne odsúdenie rodinou a okolím, žiadna hrozba nevyliečiteľnej choroby, žiadny zvyk. Nič Ho nedokázalo zastaviť v tom, aby miloval. Bol (a stále je) proste <strong>NEZASTAVITEĽNÝ!</strong>  
         </p>
       </div>
       <div class="col-md-6">
@@ -39,12 +41,12 @@ $this->viewBuilder()->setLayout('default');
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Podujatie je pre dorast vo veku 12-15 rokov</li>
             <li class="list-group-item">MIESTO: Prameň, Častá-Píla</li>
-            <li class="list-group-item">TERMÍN: 19.-21. alebo 26.-28. október 2018</li>
-            <li class="list-group-item">ZAČIATOK: piatok - 16:00-registrácia</li>
-            <li class="list-group-item">KONIEC: nedeľa - okolo 16:00</li>
+            <li class="list-group-item">TERMÍN: 29.-31. marca alebo 5.-7. apríla 2019</li>
+            <li class="list-group-item">ZAČIATOK: piatok - 16:00 začína registrácia</li>
+            <li class="list-group-item">KONIEC: nedeľa - obed je posledný bod programu, no dá sa ešte chvíľu zostať na športy a rozhovory,budeme tam asi do 16-tej</li>
             <li class="list-group-item">BÝVANIE: 4-8 posteľové chatky</li>
             <li class="list-group-item">CENA: 30 Eur</li>
-            <li class="list-group-item"> V prípade, že by jediným dôvodom tvojej neúčasti mali byť financie, prosím ozvi sa na inside@sem.sk. Radi ti poskytneme zľavu až do výšky 100%.</li>
+            <li class="list-group-item"> V prípade, že by jediným dôvodom tvojej neúčasti mali byť financie, prosím ozvi sa na inside@sem.sk. Radi ti poskytneme zľavu až do výšky 100%. Naozaj radi. Nebudeš prvý, ani posledný :)</li>
           </ul>
       </div>
     </div>
@@ -54,12 +56,12 @@ $this->viewBuilder()->setLayout('default');
 <section id="program" class="weekend" style="background-image: url('<?= $this->Url->image('weekend/nezastavitelny-big-bg-2.jpg') ?>');">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 text-white">
         <h2>Program</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Piatok</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">16:00 Registrácia</li>
@@ -68,7 +70,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Sobota</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
@@ -82,13 +84,14 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Nedeľa</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
           <li class="list-group-item bg-transparent">08:15 Raňajky</li>
           <li class="list-group-item bg-transparent">09:15 Diskusné skupinky</li>
           <li class="list-group-item bg-transparent">10:15 Služby Božie</li>
+          <li class="list-group-item bg-transparent">12:30 Obed</li>
         </ul>
       </div> 
     </div>
