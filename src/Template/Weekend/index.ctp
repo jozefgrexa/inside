@@ -182,7 +182,7 @@ $this->viewBuilder()->setLayout('default');
         <div class="form-check under-18">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
-            Zákonný zástupca / rodič neplnoletého súhlasí s účasťou svojho dieťaťa na podujatí a prinesie <?= $this->Html->link('podpísaný súhlas s účasťou', '/webroot/storage/IV2018_SuhlasSUcastou.pdf', ['target' => '_blank']); ?>
+            Zákonný zástupca / rodič neplnoletého súhlasí s účasťou svojho dieťaťa na podujatí a prinesie <?= $this->Html->link('podpísaný súhlas s účasťou', '/webroot/storage/IV2019_SuhlasSUcastou.pdf', ['target' => '_blank']); ?>
           </label>
           <div class="invalid-feedback">
             Pred odoslaním formuláru prosím označ toto pole.
