@@ -201,8 +201,7 @@ section {
 .weekend-big-picture {
   color: white;
   /*padding: 150px 0;*/
-  /*height: 70vh;*/
-  /*min-height: 300px;*/
+  min-height: 300px;
   background: center center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -220,7 +219,43 @@ section {
 }
 
 .bg-week-lead {
-  background-color: #006680;
+  background-color: #2C7380;
+}
+.bg-week-info {
+  background-color: #EC6C6B;
+}
+
+@media (min-width: 0px) {
+  section#start .title-image {
+    margin-top: 40%;
+  }
+  .weekend-big-picture {
+    height: 50vh;
+  }
+}
+@media (min-width: 576px) {
+  section#start .title-image {
+    margin-top: 30%;
+  }
+  .weekend-big-picture {
+    height: 60vh;
+  }
+}
+@media (min-width: 768px) {
+  section#start .title-image {
+    margin-top: 20%;
+  }
+  .weekend-big-picture {
+    height: 70vh;
+  }
+}
+@media (min-width: 992px) {
+  section#start .title-image {
+    margin-top: 10%;
+  }
+  .weekend-big-picture {
+    height: 70vh;
+  }
 }
 
 section#start.weekend {
