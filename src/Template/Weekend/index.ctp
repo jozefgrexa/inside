@@ -19,7 +19,7 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-md-8">
         <h2>Víkend pre starší dorast</h2>
-        <p class="lead">Pozývame ťa na víkend plný akcie, ktorý sa tak ako vždy uskutoční v Častej! Počas tohto víkendu zažiješ rôzne hry či aktivity, ale zároveň sa budeš môcť zamyslieť nas témou celého víkendu a nad tým, ako vyzerá tvoj život s Pánom Bohom. Avšak určite sa nemusíš báť nudného školského vyučovania, lebo veríme, že aj o dôležitých a vážnych veciach sa dá hovoriť zaujímavo :) </p>
+        <p class="lead">INSIDE Víkend pre starší dorast je priestor, kde sa snažíme ísť o niečo hlbšie v budovaní našich vzťahov s Pánom Ježišom- nechceme ostať len pri tom, že sme niečo počuli, ale chceme vidieť zmeny v našich životoch. Ale o tom viac nižšie :) Na tejto víkendovke môžeš očakávať viac rozprávania, slova, chvál, nejaké semináre a menej hier, no to neznamená, že si nič nezahráme. Dôležitým dôrazom je budovanie našich charakterov v rôznych oblastiach nášho života. </p>
       </div>
       <div class="col-md-4">
         <?= $this->Html->image('weekend/miesta_zmeny_motto.png', ['class' => 'img-fluid']) ?>
@@ -34,17 +34,15 @@ $this->viewBuilder()->setLayout('default');
       <div class="col-md-6">
         <?= $this->Html->image('weekend/miesta_zmeny_headline.png', ['class' => 'img-fluid w-75 mb-5']) ?>
         <p>
-        Počas tohto víkendu sa chceme akčnou formou pozrieť na jeden špecíalny rozmer Božieho charakteru- na Jeho lásku, v ktorej je <strong>NEZASTAVITEĽNÝ. </strong>
-        Biblia je plná príbehov, kde pred Pánom Ježišom stoja prekážky, ktoré mu bránia prejaviť lásku úplne priamočiaro. No On je <strong> NEZASTAVITEĽNÝ </strong> a ochotný zaplatiť akúkoľvek cenu za to, aby túto lásku prejavil.
-        Akúkoľvek. Žiadne hrozby, žiadne odsúdenie rodinou a okolím, žiadna hrozba nevyliečiteľnej choroby, žiadny zvyk. Nič Ho nedokázalo zastaviť v tom, aby miloval. Bol (a stále je) proste <strong>NEZASTAVITEĽNÝ!</strong>  
+        Tento víkend bude o zmene. Pretože žiadna teória a vedomosti, ktoré nazbierame, sa nevyrovnajú tomu, keď ich vieme uplatniť v skutočnom každodennom živote. Počas tohto víkendu sa pozrieme na to, čo vo svojich listoch písal apoštol Pavol. Miesta zmeny, o ktorých budeme hovoriť, nie sú miestami, na ktorých sa instantne niečo zmení. Sú súčasťou procesu. Lebo o tom je väčšina zmien v našich životoch. O postupnom procese zmeny, kedy sa približujeme obrazu, na ktorý nás Pán Boh stvoril. Kedy sa približujeme príkladu, ktorý nám dal Pán Ježiš. Nie preto, že musíme. Preto, že chceme.
         </p>
       </div>
       <div class="col-md-6">
         <h2>Praktické informácie</h2>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-transparent">Podujatie je pre dorast vo veku 12-15 rokov</li>
+            <li class="list-group-item bg-transparent">Podujatie je pre dorast vo veku 15-18 rokov</li>
             <li class="list-group-item bg-transparent">MIESTO: Prameň, Častá-Píla</li>
-            <li class="list-group-item bg-transparent">TERMÍN: 29.-31. marca alebo 5.-7. apríla 2019</li>
+            <li class="list-group-item bg-transparent">TERMÍN: 10.-12. mája 2019</li>
             <li class="list-group-item bg-transparent">ZAČIATOK: piatok - 16:00 začína registrácia</li>
             <li class="list-group-item bg-transparent">KONIEC: nedeľa - obed je posledný bod programu, no dá sa ešte chvíľu zostať na športy a rozhovory,budeme tam asi do 16-tej</li>
             <li class="list-group-item bg-transparent">BÝVANIE: 4-8 posteľové chatky</li>
@@ -60,9 +58,10 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Program</h2>
+        <h2>Na programe pracujeme a bude tu zverejnený ešte pred víkendovkou :) </h2>
       </div>
     </div>
+    <!--
     <div class="row">
       <div class="col-md-4 mt-3">
         <h4>Piatok</h4>
@@ -97,7 +96,8 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">12:30 Obed</li>
         </ul>
       </div> 
-    </div>
+    </div> 
+    -->
   </div>
 </section>
 
