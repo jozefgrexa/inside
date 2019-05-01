@@ -19,11 +19,12 @@ $this->viewBuilder()->setLayout('default');
   <div id="carousel-switch" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel-switch" data-slide-to="0"></li>
-      <li data-target="#carousel-switch" data-slide-to="1" class="active"></li>
+      <li data-target="#carousel-switch" data-slide-to="1"></li>
+      <li data-target="#carousel-switch" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('home/slider-bg-01.jpg') ?>')">
+      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-01.jpg') ?>')">
         <div class="carousel-caption">
           <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
           <h3>To na čom najviac záleží je ukryté vo vnútri</h3>
@@ -37,13 +38,14 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
 
-      <!-- Slide Four - Set the background image for this slide in the line below -->
-      <!-- <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
-        <div class="carousel-caption">
-          <?= $this->Html->image('home/home-slider-camp.png', ['alt' => 'inside tabor logo', 'class' => 'img-fluid m-3']) ?>
-          <h1>Prihlasovanie spustené!</h1>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('weekend/miesta_zmeny_bg.jpg') ?>')">
+        <div class="row">
+          <div class="col-sm-11 col-md-10 col-lg-8 mx-auto">
+            <?= $this->Html->link($this->Html->image('weekend/miesta_zmeny_title.png', ['alt' => 'miesta zmeny inside vikend', 'class' => 'img-fluid mt-5 pt-5']), ['controller' => 'weekend', 'action' => 'index'], ['class' => 'd-block', 'escape' => false]) ?>
+          </div>
         </div>
-      </div> -->
+      </div>
     </div>
     <a class="carousel-control-prev" href="#carousel-switch" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
