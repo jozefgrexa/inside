@@ -8,7 +8,7 @@
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
         <td style="padding: 20px 0 20px 0; color: #634840; font-size: 16px; line-height: 20px;">
-          Prihlásil si sa na INSIDE Games 2018. Tešíme sa z toho! Pred INSIDE Games ti na túto mailovú adresu pošleme viac potrebných informácií.
+          Prihlásil si sa na INSIDE Games 2019. Tešíme sa z toho! Pred INSIDE Games ti na túto mailovú adresu pošleme viac potrebných informácií.
           <br/>
           <br/>V prihláške si uviedol nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
