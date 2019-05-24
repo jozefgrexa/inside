@@ -14,9 +14,9 @@ class CaptainsTable extends Table
         $this->belongsTo('Teams');
     }
 
-    public function getCaptainList(){
+    public function getCaptainList($event_id){
     	$captains = TableRegistry::get('Captains');
-    	$query = $captains->find('all')->contain(['Participants']);
+    	$query = $captains->find('all')->contain(['Participants'])->where(['Participants.event_id' => $event_id]);
 
 		foreach ($query as $row) {
 			$keyField = $row->participant->id;

@@ -7,12 +7,8 @@
 <section id="home" class="games-home" style="background-image: url('<?= $this->Url->image('games/games-bg-sports.jpg') ?>')">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-6">
-        <?= $this->Html->image('games/games-logo.png', ['alt' => 'games-logo', 'class' => 'img-fluid']) ?>
-      </div>
-      <div class="col-md-12 col-lg-6 text-right pt-3">
-        <h4>Športový turnaj <strong>pre každého</strong></h4>
-        <h2>23.jún 2018 | Senec</h2>
+      <div class="col text-center">
+        <?= $this->Html->image('games/main-logo.png', ['alt' => 'INSIDE Games 2018 Logo Téma', 'class' => 'img-fluid']) ?>
       </div>
     </div>
   </div>

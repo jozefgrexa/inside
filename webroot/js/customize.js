@@ -157,3 +157,17 @@ $('#week-form #birthday').change(function(){
 		$('.under-18 > input').prop('disabled', true);
 	}
 });
+
+$('#games-form #birthday').change(function(){
+	let setDate = $(this).val().split('-');
+	let birth16Date = new Date(parseInt(setDate[0])+16, parseInt(setDate[1])-1, setDate[2]);
+	let currentDate = new Date();
+
+	if (birth16Date > currentDate) {
+		$('.under-16').show();
+		$('#under-16').prop('disabled', false);
+	} else {
+		$('.under-16').hide();
+		$('#under-16').prop('disabled', true);
+	}
+});

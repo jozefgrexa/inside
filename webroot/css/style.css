@@ -141,11 +141,11 @@ section {
   color: white;
   padding: 70px 0 0 0;
   min-height: 400px;
-  background: center center no-repeat scroll;
-  -webkit-background-size: cover;
+  background: center center no-repeat fixed;
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover;*/
 }
 .games-info .info-card-1 {
   background-color: #0E79C1;
