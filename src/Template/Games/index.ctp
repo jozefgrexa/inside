@@ -722,10 +722,8 @@
     $('#games-form').on('submit', function(e){
       e.preventDefault();
     });
-    console.log('checking');
     console.log(document.getElementById("games-form").checkValidity());
     if(document.getElementById("games-form").checkValidity()) {
-      console.log('checked');
       $('#submit-button').prop('disabled', true);
       $('#submit-button').html('Odosiela sa ...');
       grecaptcha.execute();
