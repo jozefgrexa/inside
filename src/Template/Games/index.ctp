@@ -53,7 +53,7 @@
       <div class="col-md-9">
         <h2>Pozvanie od Lucky Debnárovej</h2>
         <p class="lead">
-          Tento rok na INSIDE Games stretne aj špeciálneho hosťa - Luciu Debnárovú, 10-násobnú majsterku sveta a európy. Nie len, že si s ňou budeš môcť zmerať svoje sily, ale aj sa od nej čosi viac dozvieš o športe, ktorému sa venuje a prečo vlastne príde práve na INSIDE Games.
+          Tento rok na INSIDE Games stretne aj špeciálneho hosťa - Luciu Debnárovú, 10-násobnú majsterku sveta a európy v armwrestlingu (pretláčanie rukami). Nie len, že si s ňou budeš môcť zmerať svoje sily, ale aj sa od nej čosi viac dozvieš o športe, ktorému sa venuje a prečo vlastne príde práve na INSIDE Games.
         </p>
       </div>
   </div>

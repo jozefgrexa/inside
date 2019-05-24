@@ -105,7 +105,7 @@ class GamesController extends AppController
             $team = $this->Teams->newEntity();
             $team->name = $this->request->getData('team-c');
             $team->sport = $this->Sports->findByName($this->request->getData('sport'))->first();
-            $team->event_id = $event_id;
+            $team->event = $this->Participants->Events->get($event_id);
             
             $captain = $this->Captains->newEntity();
             $captain->participant = $participant;
