@@ -14,7 +14,7 @@
   </div>
 </section>
 
-<section id="program" class="games-program bg-light">
+<section id="intro" class="games-program bg-light">
   <div class="container">
     <div class="row mb-5">
       <div class="col">
@@ -39,6 +39,23 @@
         <p class="lead">športových tímov</p>
       </div>
     </div>
+</section>
+
+<section id="intro" class="games-program bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <video width="100%" controls>
+          <source src="webroot/video/games/lucia-debnarova-pozvanie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="col-md-9">
+        <h2>Pozvanie od Lucky Debnárovej</h2>
+        <p class="lead">
+          Tento rok na INSIDE Games stretne aj špeciálneho hosťa - Luciu Debnárovú, 10-násobnú majsterku sveta a európy. Nie len, že si s ňou budeš môcť zmerať svoje sily, ale aj sa od nej čosi viac dozvieš o športe, ktorému sa venuje a prečo vlastne príde práve na INSIDE Games.
+        </p>
+      </div>
   </div>
 </section>
 
@@ -301,6 +318,48 @@
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
+  </div>
+</section>
+
+<section id="teams" class="games-teams bg-dark text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Štatistika prihlásených</h2>
+        <p>Celkový počet aktuálne prihlásených: <?= $peoplecount['all'] ?> | Súťažiaci: <?= $peoplecount['sport'] ?> | Nesúťažiaci: <?= $peoplecount['nosport'] ?></p>
+      </div>
+    </div>
+    <div class="row">
+      <?php foreach($sports as $sport): ?>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <h3 class="sportname"><?= $sport['name'] ?></h3>
+          <div class="accordion" id="<?= 'accordion'.$sport['title'] ?>">
+            <?php foreach($teams as $team): ?>
+              <?php if($team->sport->id == $sport['id']): ?>
+                <div class="card">
+                  <div class="card-header" id="<?= 'team'.$team->id ?>">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="<?= '#collapseTeam'.$team->id ?>" aria-expanded="false" aria-controls="<?= 'collapseTeam'.$team->id ?>">
+                        <?= $team->name ?> (<?= $playersCount[$team->id] ?>)
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="<?= 'collapseTeam'.$team->id ?>" class="collapse" aria-labelledby="<?= 'headingTeam'.$team->id ?>" data-parent="<?= '#accordion'.$sport['title'] ?>">
+                    <div class="card-body">
+                      <?php foreach($players as $player): ?>
+                        <?php if ($player['team_id'] == $team->id): ?>
+                          <span class="text-light"><?= $player['first_name'].', ' ?></span>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </div>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
   </div>
 </section>
 
@@ -582,48 +641,6 @@
   </div>
 </section>-->
 
-<section id="teams" class="games-teams bg-dark text-light">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>Štatistika prihlásených</h2>
-        <p>Celkový počet aktuálne prihlásených: <?= $peoplecount['all'] ?> | Súťažiaci: <?= $peoplecount['sport'] ?> | Nesúťažiaci: <?= $peoplecount['nosport'] ?></p>
-      </div>
-    </div>
-    <div class="row">
-      <?php foreach($sports as $sport): ?>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <h3 class="sportname"><?= $sport['name'] ?></h3>
-          <div class="accordion" id="<?= 'accordion'.$sport['title'] ?>">
-            <?php foreach($teams as $team): ?>
-              <?php if($team->sport->id == $sport['id']): ?>
-                <div class="card">
-                  <div class="card-header" id="<?= 'team'.$team->id ?>">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="<?= '#collapseTeam'.$team->id ?>" aria-expanded="false" aria-controls="<?= 'collapseTeam'.$team->id ?>">
-                        <?= $team->name ?> (<?= $playersCount[$team->id] ?>)
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="<?= 'collapseTeam'.$team->id ?>" class="collapse" aria-labelledby="<?= 'headingTeam'.$team->id ?>" data-parent="<?= '#accordion'.$sport['title'] ?>">
-                    <div class="card-body">
-                      <?php foreach($players as $player): ?>
-                        <?php if ($player['team_id'] == $team->id): ?>
-                          <span class="text-light"><?= $player['first_name'].', ' ?></span>
-                        <?php endif; ?>
-                      <?php endforeach; ?>
-                    </div>
-                  </div>
-                </div>
-              <?php endif; ?>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
 <section id="map">
   <div class="container">
     <div class="row">
@@ -671,11 +688,6 @@
         <img src="webroot/img/games/photos-2019/photo-16.jpg" alt="INSIDE Games 2018" class="img-fluid" />
       </div>
     </div>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="container">
     <div class="row">
       <div class="col">
         <h2>Fotky: INSIDE Games 2017</h2>
