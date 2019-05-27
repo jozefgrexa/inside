@@ -6,6 +6,7 @@
 
 <?= $this->Html->meta('icon') ?>
 <?= $this->Html->css('bootstrap.min.css') ?>
+<?= $this->Html->css('/vendor/fontawesome-free/css/all.min.css') ?>
 <?= $this->Html->css('open-iconic.css') ?>
 <?= $this->Html->css('style.css') ?>
 <?= $this->Html->css('half-slider.css') ?>

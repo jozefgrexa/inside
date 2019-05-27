@@ -8,7 +8,7 @@
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
         <td style="padding: 20px 0 20px 0; color: #634840; font-size: 16px; line-height: 20px;">
-          <strong>Tešíme sa z tvojho prihlásenia sa na INSIDE Tábor 2018!</strong> Pred INSIDE Táborom ti na túto mailovú adresu včas pošleme viac potrebných informácií.
+          <strong>Tešíme sa z tvojho prihlásenia sa na INSIDE Tábor 2019!</strong> Pred INSIDE Táborom ti na túto mailovú adresu včas pošleme viac potrebných informácií.
           <br/>
           <br/>V prihláške máš nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>

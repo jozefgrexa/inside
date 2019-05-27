@@ -38,21 +38,23 @@ class CampController extends AppController
 
     public function index()
     {
+        $event = $this->Events->find()->where(['slug' => 'tabor-2019'])->first();
+
     	$rc_site_key = Configure::read('RCKeys.siteKey');
 
     	if ($this->request->is('post')) {
             $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
 
             if ($rcResponse['success']) {
-                $this->_addParticipant();
+                $this->_addParticipant($event->id);
                 return $this->redirect(['action' => 'success']);
             }
             return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
-    	$peoplecount = $this->Participants->getPeopleCount(2); //eventId
+    	$peoplecount = $this->Participants->getPeopleCount($event->id);
         $churches = $this->Churches->find()->select('name')->toArray();
-        $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'tabor-2018'])->toArray();
+        $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.id' => $event->id])->toArray();
 
     	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames']));
     }
@@ -65,7 +67,7 @@ class CampController extends AppController
         
     }
 
-    private function _addParticipant(){
+    private function _addParticipant($event_id){
 
         $participant = $this->Participants->newEntity($this->request->getData());
         
@@ -83,10 +85,10 @@ class CampController extends AppController
         }
 
         $participant->church = $this->Churches->findByName($this->request->getData('church'))->first(); 
-        $participant->event = $this->Events->find()->where(['slug' => 'tabor-2018'])->first();
+        $participant->event = $this->Events->find()->where(['id' => $event_id])->first();
 		$this->Participants->save($participant);
 
-        $this->_sendEmail($participant->email, 'INSIDE Tábor 2018', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
+        $this->_sendEmail($participant->email, 'INSIDE Tábor 2019', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
     }
 
     private function _verifyResponse($recaptcha){

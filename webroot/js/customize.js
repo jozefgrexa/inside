@@ -125,11 +125,11 @@ $('#camp-form #birthday').change(function(){
 	}
 
 	if (birth18Date > currentDate) {
-		$('.under-18').show();
+		$('.under-18').css('display', 'flex');
 		$('#parent').prop('disabled', false);
 		$('#phone').prop('disabled', false);
 	} else {
-		$('.under-18').hide();
+		$('.under-18').css('display', 'none');
 		$('#parent').prop('disabled', true);
 		$('#phone').prop('disabled', true);
 	}

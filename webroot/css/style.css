@@ -133,7 +133,7 @@ section {
   display: none;
 }
 .under-18 {
-  display: block;
+  display: flex;
 }
 
 /*************** GAMES PAGE *******************/

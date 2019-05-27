@@ -4,11 +4,11 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture" style="background-image: url('<?= $this->Url->image('camp/biblengers_skyline_2.jpg') ?>')">
+<section id="start" class="weekend-big-picture" style="background-image: url('<?= $this->Url->image('camp/camp-big-pic.jpg') ?>')">
   <div class="container">
     <div class="row">
       <div class="col text-right">
-        <?= $this->Html->image('camp/header_logo.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
+        <?= $this->Html->image('camp/header_logo_2.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
       </div>
     </div>
   </div>
@@ -18,9 +18,9 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <h2>12-19.august | Planinka, Dechtice</h2>
+        <h2>11-18.august 2019 | Planinka, Dechtice</h2>
         <p class="lead">Rekreačné zariadenie Planinka, ubytovanie v 2, 3 a 4-posteľových izbách v hlavnej budove so zrekonštruovanými sociálnymi zariadeniami na chodbe, prípadne na 4-posteľových chatkách s vlastnými sociálnymi zariadeniami. Stravovanie 5x denne a pitný režim sú zabezpečené.</p>
-        <p class="lead">Začíname v nedeľu 12.8. registráciou, ktorá bude spustená od 16:00. Prvým bodom programu bude večera o 18:00. Končíme v nedeľu 19.8. obedom. Doprava na a z podujatia je individuálna.</p>
+        <p class="lead">Začíname v nedeľu 11.8. registráciou, ktorá bude spustená od 16:00. Prvým bodom programu bude večera o 18:00. Končíme v nedeľu 18.8. obedom. Doprava na a z podujatia je individuálna.</p>
       </div>
     </div>
   </div>
@@ -60,16 +60,57 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<section id="theme">
+<!-- <section id="theme">
   <div class="container">
     <div class="row">
       <div class="col text-center">
         <?= $this->Html->image('camp/header_theme.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row">
       <div class="col">
-        <p class="lead">Tému tábora sme nazvali Biblengers a jej zámerom je pomôcť ti, aby sa z bežného tínedžera, akým si aj ty, stal Biblenger - biblický nasledovník Pána Ježiša, ktorý bude svetlom a svedectvom na akomkoľvek mieste, kde sa bude nachádzať, ktorý bude prikladať ruku k dielu prinášania Božieho kráľovstva a jeho princípov na zem. Dúfam, že si na to pripravený a tešíš sa aspoň trochu tak ako my!</p>
+        <p class="lead">Kadý tábor má svoju tému, okolo ktorej sa točia všetky ostatné veci na tábore! Aj tento rok chystáme dobrodružstvo a veľa zábavy a na téme momentálne pracujeme. Na tomto mieste sa ju časom dozvieš.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="price" class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white">Vyber si, koľko zaplatíš</h2>
+        <p class="lead text-white">Každý máme iné možnosti. Niekto potrebuje zľavu a niekto môže zasa trochu prispieť. Preto sme sa rozhodli dať ti na výber, koľko za tábor zaplatíš - svoju cenu si vyber v prihlasovacom formulári nižšie.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-white">
+        <div class="bg-light text-dark m-3 p-3 text-center">
+          <h1>100 €</h1>
+          <h5>zľavnená cena</h5><hr/>
+          <p>Ak potrebuješ zľavu, pokojne si vyber túto cenu. Rozumieme tomu a radi ti na tábor prispejeme.</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-white">
+        <div class="bg-primary m-3 p-3 text-center">
+          <h1>125 €</h1>
+          <h5>štandardná cena</h5><hr/>
+          <p>Toto je štandardný poplatok, ktorý približne pokryje náklady na jedného účastníka.</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-white">
+        <div class="bg-light text-dark m-3 p-3 text-center">
+          <h1>150 €</h1>
+          <h5>sponzorská cena</h5><hr/>
+          <p>Výberom tejto ceny prispeješ na tábor okrem seba aj niekomu inému. Ak môžeš, budeme veľmi vďační.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <button class="btn btn-success btn-block" data-toggle="modal" data-target="#priceInfo">
+          <h5>Na čo tie peniaze používame?</h5>
+        </button>
       </div>
     </div>
   </div>
@@ -78,9 +119,7 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
-    <p class="lead">Prihlasovanie je uzavreté.</p>
-    <!-- <p class="lead">Prihlásiť sa na tábor môžeš práve tu. Cena tábora je <strong>110 €</strong>. Avšak vieme ti poskytnúť zľavu, len nám napíš na inside@sem.sk.</p> -->
-    <!-- <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
+    <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
           <label for="first-name">Meno</label>
@@ -163,6 +202,39 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="price-select">Vyber svoj poplatok za tábor <a href="#price"><i class="fas fa-question-circle"></i></a></label>
+          <select class="form-control" id="price-select" name="price">
+            <option value="100">100 € - zľavnená cena</option>
+            <option value="125" selected>125 € - štandardná cena</option>
+            <option value="150">150 € - spoznorská cena</option>
+          </select>
+        </div>
+        <div class="col-md-4 ml-3">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="discount" name="discount">
+              <label class="form-check-label" for="discount">
+                Potrebujem ešte väčšiu zľavu <a href="#" data-toggle="modal" data-target="#discountInfo"><i class="fas fa-question-circle"></i></a>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="sponsor" name="sponsor">
+              <label class="form-check-label" for="sponsor">
+                Rád by som prispel ešte viac <a href="#" data-toggle="modal" data-target="#sponsorInfo"><i class="fas fa-question-circle"></i></a>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="opinion" name="opinion">
+              <label class="form-check-label" for="opinion">
+                Bolo by lepšie, keby všetci platili rovnako
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -185,7 +257,7 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
-    </form> -->
+    </form>
 
     <div class="row mt-5">
       <div class="col">
@@ -199,34 +271,98 @@ $this->viewBuilder()->setLayout('default');
 </section>
 
 <section id="gallery">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <h2>Fotky: INSIDE Tábor 2017</h2>
+      <div class="col text-center">
+        <h2>Je to o priateľstvách! Takto nám bolo minulý rok...</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="webroot/img/camp/photos/photo-01.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-02.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-03.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-04.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
+      <div class="col-xs-12 col-sm-6 col-md-4 p-0">
+        <img src="webroot/img/camp/photos-2018/photo-01.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-02.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-04.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-05.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-06.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-07.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="webroot/img/camp/photos/photo-05.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-06.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-07.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-11.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
+      <div class="col-xs-12 col-sm-6 col-md-4 p-0">
+        <img src="webroot/img/camp/photos-2018/photo-08.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-09.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-10.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-03.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-11.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-12.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-13.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="webroot/img/camp/photos/photo-08.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-09.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-10.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
-        <img src="webroot/img/camp/photos/photo-12.jpg" alt="INSIDE Tábor 2018" class="img-fluid" />
+      <div class="col-xs-12 col-sm-6 col-md-4 p-0">
+        <img src="webroot/img/camp/photos-2018/photo-21.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-16.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-18.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-19.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-20.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
+        <img src="webroot/img/camp/photos-2018/photo-14.jpg" alt="INSIDE Tábor 2018" class="img-fluid m-0" />
       </div>
     </div>
   </div>
 </section>
+
+
+<div class="modal fade" id="priceInfo" tabindex="-1" role="dialog" aria-labelledby="priceInfoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceInfoLabel">Na čo tie peniaze používame?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Suma za ubytovanie a stravu pre jedného účastníka sa hýbe okolo 115 €. Ďalšie náklady sú hlavne: prenájom programových stanov a nafukovacieho vodného futbalu, športové, kancelárske a technické potreby pre zabezpečenie programu, táborové tričká a odmeny pre víťazov v hrách a športoch. Podľa možností časť poplatku za ubytovanie a stravu hradíme tímu dobrovoľníkov, ktorí tábor pripravujú a realizujú. Minuloročný tábor stál približne 12 500 €.</p>
+        <p>Zároveň sa snažíme cenu tábora nastaviť tak, aby bol dostupný pre každého. Ako občianske združenie Spoločenstvo evanjelickej mládeže máme na tábor dotáciu 500 € aj z Ministerstva školstva cez program podpory administrovaný IUVENTOU.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="discountInfo" tabindex="-1" role="dialog" aria-labelledby="priceInfoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceInfoLabel">Potrebujem ešte väčšiu zľavu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Ak je tábor pre teba napriek zľave veľmi drahý, alebo chcete ísť viacerí súrodenci a pre vašu rodinu je to príliš vysoká položka, zaškrtni toto políčko a my sa ti ozveme. Ak by v ceste tvojej účasti na tábore mali stáť iba financie, bola by to škoda.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="sponsorInfo" tabindex="-1" role="dialog" aria-labelledby="priceInfoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceInfoLabel">Rád by som prispel ešte viac</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Ak chceš (resp. tvoji rodičia) podporiť tábor a projekt INSIDE finančne ešte viac, zaškrtni toto políčko a my sa ti ozveme. Za každý dar a príspevok sme veľmi vďační a máme kopu možností ako ho zmysluplne využiť.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   function executeRecaptcha() {
