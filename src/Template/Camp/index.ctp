@@ -19,8 +19,8 @@ $this->viewBuilder()->setLayout('default');
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2>11-18.august 2019 | Planinka, Dechtice</h2>
+        <p class="h4 my-5">Zážitkové pobytové podujatie zamerané na <strong>budovanie vzťahov, charakteru jednotlivca a rast v osobnom vzťahu s Bohom</strong> určené pre <strong>dorast vo veku 12-17 rokov</strong>.</p>
         <p class="lead">Rekreačné zariadenie Planinka, ubytovanie v 2, 3 a 4-posteľových izbách v hlavnej budove so zrekonštruovanými sociálnymi zariadeniami na chodbe, prípadne na 4-posteľových chatkách s vlastnými sociálnymi zariadeniami. Stravovanie 5x denne a pitný režim sú zabezpečené.</p>
-        <p class="lead">Začíname v nedeľu 11.8. registráciou, ktorá bude spustená od 16:00. Prvým bodom programu bude večera o 18:00. Končíme v nedeľu 18.8. obedom. Doprava na a z podujatia je individuálna.</p>
       </div>
     </div>
   </div>
@@ -157,6 +157,7 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
+    <p class="lead">Kapacita tbora je obmedzená na 100 účastníkov - prihlás sa čím skôr.</p>
     <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
