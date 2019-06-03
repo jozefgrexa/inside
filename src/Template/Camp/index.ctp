@@ -139,7 +139,7 @@ $this->viewBuilder()->setLayout('default');
       <div class="col-sm-6 col-md-6 col-lg-3">
         <div class="bg-light m-3 p-3 text-center">
           <h1>3.</h1>
-          <h5>Podpísané<br/>podmienky časti</h5>
+          <h5>Podpísané<br/>podmienky účasti</h5>
           <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#papers">Podmienky účasti</button>
         </div>
       </div>
