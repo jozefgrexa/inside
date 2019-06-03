@@ -253,13 +253,13 @@ $this->viewBuilder()->setLayout('default');
         <div class="col-md-4 ml-3">
           <div class="form-group">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="discount" name="discount">
+              <input class="form-check-input" type="checkbox" value="1" id="discount" name="discount">
               <label class="form-check-label" for="discount">
                 Potrebujem ešte väčšiu zľavu <a href="#" data-toggle="modal" data-target="#discountInfo"><i class="fas fa-question-circle"></i></a>
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="sponsor" name="sponsor">
+              <input class="form-check-input" type="checkbox" value="1" id="sponsor" name="sponsor">
               <label class="form-check-label" for="sponsor">
                 Rád by som prispel ešte viac <a href="#" data-toggle="modal" data-target="#sponsorInfo"><i class="fas fa-question-circle"></i></a>
               </label>
