@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\ORM\Table;
 use Cake\Core\Configure;
+use Cake\I18n\Date;
 
 /**
  * Static content controller
@@ -98,7 +99,12 @@ class GamesController extends AppController
     }
 
     private function _addParticipant($event_id){
-
+        $prices = array(
+            '2019-05-01' => 5,
+            '2019-06-01' => 6,
+            '2019-06-11' => 7
+        );
+        
         $participant = $this->Participants->newEntity($this->request->getData());
 
         if ($this->request->getData('team-c')) {
@@ -118,6 +124,13 @@ class GamesController extends AppController
         $participant->team = $team;
         $participant->church = $this->Churches->findByName($this->request->getData('church'))->first(); 
         $participant->event = $this->Participants->Events->get($event_id);
+
+        $today = date('Y-m-d');
+        $payment = 0;
+        foreach ($prices as $date => $price) {
+            if ($today >= $date) { $payment = $price; }
+        }
+        $participant->payment = $payment;
 
         $this->Participants->save($participant);
 

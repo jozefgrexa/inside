@@ -89,6 +89,12 @@ class CampController extends AppController
 		$this->Participants->save($participant);
 
         $this->_sendEmail($participant->email, 'INSIDE Tábor 2019', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
+        if ($this->request->getData('discount')) {
+            $this->_sendEmail('inside@sem.sk', 'Tábor 2019 - ešte väčia zľava', 'camp_discount', ['participant' => $this->Participants->get($participant->id)]);
+        }
+        if ($this->request->getData('sponsor')) {
+            $this->_sendEmail('inside@sem.sk', 'Tábor 2019 - prispieť ešte viac', 'camp_sposor', ['participant' => $this->Participants->get($participant->id)]);
+        }
     }
 
     private function _verifyResponse($recaptcha){

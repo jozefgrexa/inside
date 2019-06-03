@@ -41,7 +41,7 @@ $this->viewBuilder()->setLayout('default');
         <h4>8:00 Rozcvička</h4>
         <small>Akčná, veselá a niekedy aj pojašená</small><hr/>
         <h4>8:15 Raňajky</h4><hr/>
-        <h4>9:00 Výcvik hrdinu</h4>
+        <h4>9:00 Výcvik :)</h4>
         <small>Doobedné spoločenstvo, čítanie Biblie a skupinky</small><hr/>
         <h4>10:30 CTRŠT</h4>
         <small>Celo-táborový-rôzno-športový-turnaj</small><hr/>
@@ -106,11 +106,49 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-4">
       <div class="col-md-12">
         <button class="btn btn-success btn-block" data-toggle="modal" data-target="#priceInfo">
           <h5>Na čo tie peniaze používame?</h5>
         </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h2 class="text-white">Postup pri prihlásení</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="bg-light m-3 p-3 text-center">
+          <h1>1.</h1>
+          <h5>Prihlásenie<br/>na webe</h5>
+          <a href="#signup" class="btn btn-primary mt-3">Prihlasovací formulár</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="bg-light m-3 p-3 text-center">
+          <h1>2.</h1>
+          <h5>Platba<br/>zálohy</h5>
+          <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#payment">Informácie k platbe</button>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="bg-light m-3 p-3 text-center">
+          <h1>3.</h1>
+          <h5>Podpísané<br/>podmienky časti</h5>
+          <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#papers">Podmienky účasti</button>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="bg-light m-3 p-3 text-center">
+          <h1>4.</h1>
+          <h5>Registrácia<br/>na mieste</h5>
+          <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#regInfo">Informácie</button>
+        </div>
       </div>
     </div>
   </div>
@@ -147,7 +185,7 @@ $this->viewBuilder()->setLayout('default');
         </div>
         <div class="col-md-6 mb-3">
           <label for="birthday">Dátum narodenia</label>
-          <input type="date" class="form-control" id="birthday" placeholder="" min="1900-01-01" max="2018-06-23" name="birthday" required>
+          <input type="date" class="form-control" id="birthday" placeholder="" min="1900-01-01" max="2019-08-11" name="birthday" required>
           <div class="invalid-feedback">
             Prosím zadaj správny dátum narodenia.
           </div>
@@ -205,7 +243,7 @@ $this->viewBuilder()->setLayout('default');
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="price-select">Vyber svoj poplatok za tábor <a href="#price"><i class="fas fa-question-circle"></i></a></label>
-          <select class="form-control" id="price-select" name="price">
+          <select class="form-control" id="price-select" name="payment">
             <option value="100">100 € - zľavnená cena</option>
             <option value="125" selected>125 € - štandardná cena</option>
             <option value="150">150 € - spoznorská cena</option>
@@ -223,12 +261,6 @@ $this->viewBuilder()->setLayout('default');
               <input class="form-check-input" type="checkbox" value="" id="sponsor" name="sponsor">
               <label class="form-check-label" for="sponsor">
                 Rád by som prispel ešte viac <a href="#" data-toggle="modal" data-target="#sponsorInfo"><i class="fas fa-question-circle"></i></a>
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="opinion" name="opinion">
-              <label class="form-check-label" for="opinion">
-                Bolo by lepšie, keby všetci platili rovnako
               </label>
             </div>
           </div>
@@ -307,7 +339,6 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-
 <div class="modal fade" id="priceInfo" tabindex="-1" role="dialog" aria-labelledby="priceInfoLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -318,8 +349,8 @@ $this->viewBuilder()->setLayout('default');
         </button>
       </div>
       <div class="modal-body">
-        <p>Suma za ubytovanie a stravu pre jedného účastníka sa hýbe okolo 115 €. Ďalšie náklady sú hlavne: prenájom programových stanov a nafukovacieho vodného futbalu, športové, kancelárske a technické potreby pre zabezpečenie programu, táborové tričká a odmeny pre víťazov v hrách a športoch. Podľa možností časť poplatku za ubytovanie a stravu hradíme tímu dobrovoľníkov, ktorí tábor pripravujú a realizujú. Minuloročný tábor stál približne 12 500 €.</p>
-        <p>Zároveň sa snažíme cenu tábora nastaviť tak, aby bol dostupný pre každého. Ako občianske združenie Spoločenstvo evanjelickej mládeže máme na tábor dotáciu 500 € aj z Ministerstva školstva cez program podpory administrovaný IUVENTOU.</p>
+        <p>Suma za ubytovanie a stravu pre jedného účastníka sa hýbe okolo 115 €. Ďalšie náklady sú hlavne: prenájom programových stanov a nafukovacieho vodného futbalu, športové, kancelárske a technické potreby pre zabezpečenie programu, táborové tričká a odmeny pre víťazov v hrách a športoch. Taktiež prispievame na tábor účastníkom, ktorí si to nemôžu finančne dovoliť a podľa možností časť poplatku za ubytovanie a stravu hradíme tímu dobrovoľníkov, ktorí tábor realizujú a štandardne si všetky náklady hradia sami.</p>
+        <p>Zároveň sa snažíme cenu tábora nastaviť tak, aby bol dostupný pre každého. Ako občianske združenie Spoločenstvo evanjelickej mládeže máme na tábor dotáciu 500 € aj z Ministerstva školstva cez program podpory administrovaný IUVENTOU. Minuloročný tábor stál približne 12 500 € / 100 účastníkov a aby sme ho mohli zaplatiť potrebovali sme približne 1000 € v sponzorských príspevkoch.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
@@ -356,6 +387,67 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div class="modal-body">
         <p>Ak chceš (resp. tvoji rodičia) podporiť tábor a projekt INSIDE finančne ešte viac, zaškrtni toto políčko a my sa ti ozveme. Za každý dar a príspevok sme veľmi vďační a máme kopu možností ako ho zmysluplne využiť.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="paymentLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentLabel">Informácie k platbe za tábor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Aby bolo tvoje prihlásenie kompletné, <string>do 15.júla</string> je potrebné zaplatiť <strong>zálohu 70 €</strong> alebo <strong>plnú sumu</strong> poplatku za tábor.</p>
+        <p>Zaplatiť je možné prevodom na účet:
+        <br/><strong>IBAN:</strong> SK63 0900 0000 0000 8212 9157
+        <br/><strong>Variabilný symbol:</strong> 11180819
+        <br/><strong>Správa pre adresáta:</strong> meno a priezvisko účastníka</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="papers" tabindex="-1" role="dialog" aria-labelledby="papersLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="papersLabel">Podmienky účasti</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Prečítaj si podmienky účasti na tábore. Poslednú stranu treba vytlačiť a <strong>vyplnenú a podpísanú priniesť na tábor</strong>.</p>
+        <p>V dokumente nájdeš informácie o organizácií tábora ako aj poučenie o spracovaní osobných údajov.</p>
+        <?= $this->Html->link('Stiahni PDF', '/storage/IT2019_VseobecnePodmienky2019.pdf', [ 'class' => 'btn btn-danger btn-block mt-3']) ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="regInfo" tabindex="-1" role="dialog" aria-labelledby="regInfoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="regInfoLabel">Registrácia na tábore</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>V deň príchodu na tábor <strong>v nedeľu 11.8.</strong> prebieha registrácia v čase <strong>16:00-18:00</strong>. Doprava na tábor je <strong>individuálna</strong></p>
+        <p>Pri registrácií sa podpíšeš do prezenčnej listiny, odovzdáš podpísané podmienky účasti a zaplatíš zvyšok sumy za tábor (ak si dopredu zaplatil iba zálohu) - dá sa platiť iba v hotovosti.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
