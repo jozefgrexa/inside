@@ -157,7 +157,7 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
-    <p class="lead">Kapacita tbora je obmedzená na 100 účastníkov - prihlás sa čím skôr.</p>
+    <p class="lead">Kapacita tábora je obmedzená na 100 účastníkov - prihlás sa čím skôr.</p>
     <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
