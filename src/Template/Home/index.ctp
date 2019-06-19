@@ -39,10 +39,10 @@ $this->viewBuilder()->setLayout('default');
       </div>
 
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('weekend/miesta_zmeny_bg.jpg') ?>')">
+      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('games/games-bg-sports.jpg') ?>')">
         <div class="row">
-          <div class="col-sm-11 col-md-10 col-lg-8 mx-auto">
-            <?= $this->Html->link($this->Html->image('weekend/miesta_zmeny_title.png', ['alt' => 'miesta zmeny inside vikend', 'class' => 'img-fluid mt-5 pt-5']), ['controller' => 'weekend', 'action' => 'index'], ['class' => 'd-block', 'escape' => false]) ?>
+          <div class="col-sm-11 col-md-10 col-lg-8 ml-auto mt-5">
+            <?= $this->Html->link($this->Html->image('games/main-logo-home.png', ['alt' => 'INSIDE Games 2018 Logo Téma', 'class' => 'img-fluid']), ['controller' => 'games', 'action' => 'index'], ['class' => 'd-block', 'escape' => false]) ?>
           </div>
         </div>
       </div>
