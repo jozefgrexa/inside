@@ -14,31 +14,34 @@
   </div>
 </section>
 
-<section id="intro" class="games-program bg-light">
+<section id="program" class="games-program bg-light">
   <div class="container">
     <div class="row mb-5">
       <div class="col">
-        <h2>Jeden športový deň a kopa zábavy a zážitkov.</h2>
+        <h1 class="text-danger">Príďte už medzi 8:00 a 8:45 na registráciu!!!</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 text-center">
-        <h4 class="text-danger" style="font-size: 8em">4</h1>
-        <p class="lead">športové turnaje</p>
+      <div class="col-md-6">
+        <h4>08:00 Registrácia</h4>
+        <p>Do 9:00 musíme stihnúť zaregistrovať 150 ľudí, tak príďte čím skôr.</p>
+        <h4>09:00 Štart</h4>
+        <p>Otvorenie dňa, predstavenie rozhodcov, športov a pravidiel. Tu už buďte prezlečení a nachystaní športovať.</p>
+        <h4>10:00 Turnaje</h4>
+        <p>Športové turnaje na športoviskách podľa rozpisu zápasov</p>
+        <h4>12:15 Obed</h4>
+        <p>Posilnenie pre všetkých.</p>
       </div>
-      <div class="col-md-3 text-center">
-        <h1 class="text-warning" style="font-size: 8em">7</h1>
-        <p class="lead">ihrísk</p>
-      </div>
-      <div class="col-md-3 text-center">
-        <h1 class="text-success" style="font-size: 8em">250</h1>
-        <p class="lead">účastníkov</p>
-      </div>
-      <div class="col-md-3 text-center">
-        <h1 class="text-info" style="font-size: 8em">20</h1>
-        <p class="lead">športových tímov</p>
+      <div class="col-md-6">
+        <h4>13:15 Polčas</h4>
+        <p>Tematický program s kapelou a hovoreným slovom.</p>
+        <h4>14:00 Turnaje</h4>
+        <p>Športové turnaje na športoviskách podľa rozpisu zápasov.</p>
+        <h4>16:30 Finále</h4>
+        <p>Vyhodnotenie turnajov, vyhlásenie víťazov, odovzdanie cien.</p>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="intro" class="games-program bg-light">

@@ -46,7 +46,7 @@ class TopNavigationCell extends Cell
             'target' => 'Games@index',
             'subfields' => [
                 'home' => ['text' => 'Domov', 'icon' => 'home'],
-                // 'program' => ['text' => 'Program dňa', 'icon' => 'list'],
+                'program' => ['text' => 'Program dňa', 'icon' => 'list'],
                 'rules' => ['text' => 'Pravidlá', 'icon' => 'bullhorn'],
                 'info' => ['text' => 'O Games', 'icon' => 'info'],
                 'sports' => ['text' => 'Športy', 'icon' => 'grid-two-up'],
