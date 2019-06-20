@@ -159,7 +159,7 @@ $this->viewBuilder()->setLayout('default');
     <h2>Prihlasovací formulár</h2>
     <p class="lead">Kapacita tábora je obmedzená na 100 účastníkov a túto kapacitu sme už naplnili.</p>
     <h5 class="text-primary">Možno sa nejaké miesto uvoľní, alebo ešte niečo vyhútame, preto ak veľmi chceš ísť na tábor, napíš mail na</h5>
-    <h1 class="text-danger">prenesmiernetuzimbytnainsidetabore@sem.sk</h1>
+    <h1 class="text-danger"><span style="word-break: break-all;">prenesmiernetuzimbytnainsidetabore@sem.sk</span></h1>
     <p class="lead">Veríme, že sa na tábore uvidíme! A už sa na to veľmi tešíme!</p>
     <!-- <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
