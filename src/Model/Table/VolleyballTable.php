@@ -14,27 +14,22 @@ class VolleyballTable extends Table
 
     public function getStandings(){
     	$volleyballTable = [
-            'Allonsy' => [
+            'Skús to predýchať' => [
+                'score1' => 0,
+                'score2' => 0,
+                'points' => 0,
+            ],
+            'Pegas Range' => [
+                'score1' => 0,
+                'score2' => 0,
+                'points' => 0,
+            ],
+            'Tesne Vedľa' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,
             ],
             'Iskričky' => [
-                'score1' => 0,
-                'score2' => 0,
-                'points' => 0,
-            ],
-            'Draci C' => [
-                'score1' => 0,
-                'score2' => 0,
-                'points' => 0,
-            ],
-            '6+3' => [
-                'score1' => 0,
-                'score2' => 0,
-                'points' => 0,
-            ],
-            'HUPIKÉK TÖRPIKÉK' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,

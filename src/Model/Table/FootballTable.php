@@ -49,4 +49,31 @@ class FootballTable extends Table
 
         return $footballTable;
     }
+
+    public function getSerieStatus() {
+        $serieStatus = [
+            'Modra 1' => 0,
+            'Tri bodky' => 0
+        ];
+
+        $football = TableRegistry::get('Football')->find()->toArray();
+
+        foreach ($football as $match) {
+            if ($match['team1'] == 'Modra 1') {
+                if ($match['score1'] > $match['score2']) {
+                    $serieStatus['Modra 1'] += 1;
+                } elseif ($match['score1'] < $match['score2']) {
+                    $serieStatus['Tri bodky'] += 1;
+                }
+            } elseif ($match['team1'] == 'Tri bodky') {
+                if ($match['score1'] > $match['score2']) {
+                    $serieStatus['Tri bodky'] += 1;
+                } elseif ($match['score1'] < $match['score2']) {
+                    $serieStatus['Modra 1'] += 1;
+                }
+            }
+        }
+
+        return $serieStatus;
+    }
 }

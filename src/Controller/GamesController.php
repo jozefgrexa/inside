@@ -59,17 +59,16 @@ class GamesController extends AppController
         }
 
         // match servis
-        // $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
-        // $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
-        // $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
-        // $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
+        $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
+        $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
+        $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
+        $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
 
         // $footballTable = $this->Football->getStandings();
-        // $floorballATable = $this->Floorball->getStandings('skupina A');
-        // $floorballBTable = $this->Floorball->getStandings('skupina B');
-        // $floorballCTable = $this->Floorball->getStandings('skupina C');
-        // $volleyballTable = $this->Volleyball->getStandings();
-        // $dodgeballTable = $this->Dodgeball->getStandings();
+        $footballSerie = $this->Football->getSerieStatus();
+        $floorballTable = $this->Floorball->getStandings();
+        $volleyballTable = $this->Volleyball->getStandings();
+        $dodgeballTable = $this->Dodgeball->getStandings();
 
         $teams = $this->Teams->find()->contain(['Sports','Captains','Events'])->order(['sport_id' => 'ASC'])->where(['Events.id' => $event_id]);
         $teamscount = $this->Teams->getSportTeamsCount($event_id);
@@ -86,8 +85,107 @@ class GamesController extends AppController
             }
         }
 
-        // $this->set(compact(['teams','sports','peoplecount','teamscount','playersCount','players','football','floorball','volleyball','dodgeball','footballTable','floorballATable','floorballBTable','floorballCTable','volleyballTable','dodgeballTable']));
+        $this->set(compact(['teams','sports','peoplecount','teamscount','playersCount','players','football','floorball','volleyball','dodgeball','footballSerie','floorballTable','volleyballTable','dodgeballTable']));
         $this->set(compact(['teams','churches','sports','captains','peoplecount','teamscount','playersCount','players','rc_site_key']));
+    }
+
+    public function floorballResultsInput() {
+        if ($this->request->is('put')) {
+            $match = $this->Floorball->get($this->request->getData('id'));
+            $match = $this->Floorball->patchEntity($match, $this->request->getData());
+            if($this->Floorball->save($match)) {
+                return $this->redirect(['action' => 'floorballResults']);
+            } else {
+                return $this->redirect(['action' => 'index']);
+            }
+        }
+
+        $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
+        $this->set(compact('floorball'));
+    }
+
+    public function volleyballResultsInput() {
+        if ($this->request->is('put')) {
+            $match = $this->Volleyball->get($this->request->getData('id'));
+            $match = $this->Volleyball->patchEntity($match, $this->request->getData());
+            if($this->Volleyball->save($match)) {
+                return $this->redirect(['action' => 'volleyballResults']);
+            } else {
+                return $this->redirect(['action' => 'index']);
+            }
+        }
+
+        $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
+        $this->set(compact('volleyball'));
+    }
+
+    public function dodgeballResultsInput() {
+        if ($this->request->is('put')) {
+            $match = $this->Dodgeball->get($this->request->getData('id'));
+            $match = $this->Dodgeball->patchEntity($match, $this->request->getData());
+            if($this->Dodgeball->save($match)) {
+                return $this->redirect(['action' => 'dodgeballResults']);
+            } else {
+                return $this->redirect(['action' => 'index']);
+            }
+        }
+
+        $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
+        $this->set(compact('dodgeball'));
+    }
+
+    public function footballResultsInput() {
+        if ($this->request->is('put')) {
+            $match = $this->Football->get($this->request->getData('id'));
+            $match = $this->Football->patchEntity($match, $this->request->getData());
+            if($this->Football->save($match)) {
+                return $this->redirect(['action' => 'footballResults']);
+            } else {
+                return $this->redirect(['action' => 'index']);
+            }
+        }
+
+        $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
+        $this->set(compact('football'));
+    }
+
+    public function floorball() {
+        $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
+        $floorballTable = $this->Floorball->getStandings();
+        $this->set(compact(['floorball', 'floorballTable']));
+    }
+    public function volleyball() {
+        $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
+        $volleyballTable = $this->Volleyball->getStandings();
+        $this->set(compact(['volleyball', 'volleyballTable']));
+    }
+    public function dodgeball() {
+        $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
+        $dodgeballTable = $this->Dodgeball->getStandings();
+        $this->set(compact(['dodgeball', 'dodgeballTable']));
+    }
+    public function football() {
+        $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
+        $footballSerie = $this->Football->getSerieStatus();
+        $this->set(compact(['football', 'footballSerie']));
+    }
+    public function resultServis() {
+        $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
+        $floorballTable = $this->Floorball->getStandings();
+
+        $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
+        $volleyballTable = $this->Volleyball->getStandings();
+        
+        $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
+        $dodgeballTable = $this->Dodgeball->getStandings();
+        
+        $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
+        $footballSerie = $this->Football->getSerieStatus();
+        
+        $this->set(compact(['floorball', 'floorballTable']));
+        $this->set(compact(['volleyball', 'volleyballTable']));
+        $this->set(compact(['dodgeball', 'dodgeballTable']));
+        $this->set(compact(['football', 'footballSerie']));
     }
 
     public function success() {

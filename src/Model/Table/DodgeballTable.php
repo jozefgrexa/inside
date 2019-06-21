@@ -14,22 +14,27 @@ class DodgeballTable extends Table
 
     public function getStandings(){
     	$dodgeballTable = [
-            'Maskáčový gang' => [
+            'Maskáčový GANG' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,
             ],
-            'Modranský swag' => [
+            'Tí drsní lýceisti' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,
             ],
-            'Ťavičky' => [
+            'Legendary Blues' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,
             ],
-            'Deti z Palisád' => [
+            'Na názve sme sa nezhodli' => [
+                'score1' => 0,
+                'score2' => 0,
+                'points' => 0,
+            ],
+            'Fess ťa rozbijeme Laura' => [
                 'score1' => 0,
                 'score2' => 0,
                 'points' => 0,
