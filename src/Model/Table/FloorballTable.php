@@ -24,11 +24,6 @@ class FloorballTable extends Table
                 'score2' => 0,
                 'points' => 0,
             ],
-            'WOLFS' => [
-                'score1' => 0,
-                'score2' => 0,
-                'points' => 0,
-            ],
             'Azkaban' => [
                 'score1' => 0,
                 'score2' => 0,
