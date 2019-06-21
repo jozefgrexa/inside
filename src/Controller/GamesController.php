@@ -94,7 +94,7 @@ class GamesController extends AppController
             $match = $this->Floorball->get($this->request->getData('id'));
             $match = $this->Floorball->patchEntity($match, $this->request->getData());
             if($this->Floorball->save($match)) {
-                return $this->redirect(['action' => 'floorballResults']);
+                return $this->redirect(['action' => 'floorballResultsInput']);
             } else {
                 return $this->redirect(['action' => 'index']);
             }
@@ -109,7 +109,7 @@ class GamesController extends AppController
             $match = $this->Volleyball->get($this->request->getData('id'));
             $match = $this->Volleyball->patchEntity($match, $this->request->getData());
             if($this->Volleyball->save($match)) {
-                return $this->redirect(['action' => 'volleyballResults']);
+                return $this->redirect(['action' => 'volleyballResultsInput']);
             } else {
                 return $this->redirect(['action' => 'index']);
             }
@@ -124,7 +124,7 @@ class GamesController extends AppController
             $match = $this->Dodgeball->get($this->request->getData('id'));
             $match = $this->Dodgeball->patchEntity($match, $this->request->getData());
             if($this->Dodgeball->save($match)) {
-                return $this->redirect(['action' => 'dodgeballResults']);
+                return $this->redirect(['action' => 'dodgeballResultsInput']);
             } else {
                 return $this->redirect(['action' => 'index']);
             }
@@ -139,7 +139,7 @@ class GamesController extends AppController
             $match = $this->Football->get($this->request->getData('id'));
             $match = $this->Football->patchEntity($match, $this->request->getData());
             if($this->Football->save($match)) {
-                return $this->redirect(['action' => 'footballResults']);
+                return $this->redirect(['action' => 'footballResultsInput']);
             } else {
                 return $this->redirect(['action' => 'index']);
             }
