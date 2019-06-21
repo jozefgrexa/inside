@@ -213,10 +213,10 @@
     <h2>Rozpisy a výsledky</h2>
     <div class="row border-top border-bottom my-5 py-5">
       <div class="col">
-        <?= $this->Html->link('Futbal', ['action' => 'football'], ['class' => 'btn btn-success brn-sm', 'target' => '_blank']) ?>
-        <?= $this->Html->link('Florbal', ['action' => 'floorball'], ['class' => 'btn btn-warning brn-sm', 'target' => '_blank']) ?>
-        <?= $this->Html->link('Volejbal', ['action' => 'volleyball'], ['class' => 'btn btn-danger brn-sm', 'target' => '_blank']) ?>
-        <?= $this->Html->link('Vybíjaná', ['action' => 'dodgeball'], ['class' => 'btn btn-primary brn-sm', 'target' => '_blank']) ?>
+        <?= $this->Html->link('Futbal', ['action' => 'futbal'], ['class' => 'btn btn-success brn-sm', 'target' => '_blank']) ?>
+        <?= $this->Html->link('Florbal', ['action' => 'florbal'], ['class' => 'btn btn-warning brn-sm', 'target' => '_blank']) ?>
+        <?= $this->Html->link('Volejbal', ['action' => 'volejbal'], ['class' => 'btn btn-danger brn-sm', 'target' => '_blank']) ?>
+        <?= $this->Html->link('Vybíjaná', ['action' => 'vybijana'], ['class' => 'btn btn-primary brn-sm', 'target' => '_blank']) ?>
       </div>
     </div>
     <div class="row">

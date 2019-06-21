@@ -149,22 +149,22 @@ class GamesController extends AppController
         $this->set(compact('football'));
     }
 
-    public function floorball() {
+    public function florbal() {
         $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
         $floorballTable = $this->Floorball->getStandings();
         $this->set(compact(['floorball', 'floorballTable']));
     }
-    public function volleyball() {
+    public function volejbal() {
         $volleyball = $this->Volleyball->find()->order(['time' => 'ASC'])->toArray();
         $volleyballTable = $this->Volleyball->getStandings();
         $this->set(compact(['volleyball', 'volleyballTable']));
     }
-    public function dodgeball() {
+    public function vybijana() {
         $dodgeball = $this->Dodgeball->find()->order(['time' => 'ASC'])->toArray();
         $dodgeballTable = $this->Dodgeball->getStandings();
         $this->set(compact(['dodgeball', 'dodgeballTable']));
     }
-    public function football() {
+    public function futbal() {
         $football = $this->Football->find()->order(['time' => 'ASC'])->toArray();
         $footballSerie = $this->Football->getSerieStatus();
         $this->set(compact(['football', 'footballSerie']));
