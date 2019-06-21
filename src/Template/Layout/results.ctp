@@ -2,7 +2,7 @@
 <html lang="sk-SK">
 <head>
     <?= $this->element('Frontend/head'); ?>
-    <meta http-equiv="refresh" content="5; URL=https://inside.sem.sk/games/result-servis">
+    <meta http-equiv="refresh" content="5; URL=https://inside.sem.sk/games/result-service">
 </head>
 
 <body>

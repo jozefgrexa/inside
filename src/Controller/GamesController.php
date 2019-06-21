@@ -169,7 +169,7 @@ class GamesController extends AppController
         $footballSerie = $this->Football->getSerieStatus();
         $this->set(compact(['football', 'footballSerie']));
     }
-    public function resultServis() {
+    public function resultService() {
         $floorball = $this->Floorball->find()->order(['time' => 'ASC'])->toArray();
         $floorballTable = $this->Floorball->getStandings();
 
