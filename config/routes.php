@@ -56,6 +56,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/vikend/prihlasenie-neuspesne', ['controller' => 'Weekend', 'action' => 'error']);
     $routes->connect('/vikend/prihlasenie-uspesne', ['controller' => 'Weekend', 'action' => 'success']);
     $routes->connect('/tabor', ['controller' => 'Camp', 'action' => 'index']);
+    $routes->connect('/tabor/prihlasenie/:hashcode', ['controller' => 'Camp', 'action' => 'signup'], ['pass' => ['hashcode']]);
     $routes->connect('/tabor/prihlasenie-neuspesne', ['controller' => 'Camp', 'action' => 'error']);
     $routes->connect('/tabor/prihlasenie-uspesne', ['controller' => 'Camp', 'action' => 'success']);
     $routes->connect('/ochrana-udajov', ['controller' => 'Pages', 'action' => 'data_protection']);

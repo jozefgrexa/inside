@@ -34,6 +34,7 @@ class CampController extends AppController
         $this->loadModel('Churches');
         $this->loadModel('Parents');
         $this->loadModel('Events');
+        $this->loadModel('Codes');
     }
 
     public function index()
@@ -65,6 +66,33 @@ class CampController extends AppController
 
     public function error() {
         
+    }
+
+    public function signup($code = null) {
+        $approved = $this->Codes->findByCode($code)->first();
+
+        if ($approved && !$approved->used) {
+            $event = $this->Events->find()->where(['slug' => 'tabor-2019'])->first();
+            $rc_site_key = Configure::read('RCKeys.siteKey');
+
+            if ($this->request->is('post')) {
+                $rcResponse = $this->_verifyResponse($this->request->getData('g-recaptcha-response'));
+
+                if ($rcResponse['success']) {
+                    $approved->used = true;
+                    $this->Codes->save($approved);
+                    
+                    $this->_addParticipant($event->id);
+                    return $this->redirect(['action' => 'success']);
+                }
+                return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
+            }
+            $churches = $this->Churches->find()->select('name')->toArray();
+
+            $this->set(compact(['churches','rc_site_key']));
+        } else {
+            return $this->redirect(['action' => 'index']);
+        }
     }
 
     private function _addParticipant($event_id){
