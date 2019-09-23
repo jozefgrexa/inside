@@ -49,18 +49,25 @@ class WeekendController extends AppController
             return $this->redirect(['action' => 'error', '?' => ['code' => $rcResponse['error-codes']]]);
         }
 
-     //    $peoplecount[] = $this->Participants->getPeopleCount(6); //eventId
-    	// $peoplecount[] = $this->Participants->getPeopleCount(7); //eventId
-     //    $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-1-2019'])->toArray();
-     //    $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-2-2019'])->toArray();
-     //    $churches = $this->Churches->find()->select('name')->toArray();
-     //    $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['OR' => [['slug' => 'inside-vikend-1-2019'], ['slug' => 'inside-vikend-2-2019']]])->toArray();
+         $peoplecount[] = $this->Participants->getPeopleCount(12); //eventId
+    	 $peoplecount[] = $this->Participants->getPeopleCount(13); //eventId
+         $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-5-2019'])->toArray();
+         $peoplenames[] = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'inside-vikend-6-2019'])->toArray();
+         $churches = $this->Churches->find()->select('name')->toArray();
+         $terms = $this->Events->find()->select(['id','start_date','end_date'])->where(['OR' => [['slug' => 'inside-vikend-5-2019'], ['slug' => 'inside-vikend-6-2019']]])->toArray();
 
-        $peoplecount = $this->Participants->getPeopleCount(11); //eventId
-        $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'vmp-2019'])->toArray();
-        $churches = $this->Churches->find()->select('name')->toArray();
+         foreach ($terms as $key => $term) {
+            $term['start_date'] = $term['start_date']->format('d.m.Y');
+            $term['end_date'] = $term['end_date']->format('d.m.Y');
+        }
 
-    	$this->set(compact(['churches','peoplecount','rc_site_key','peoplenames']));
+      //  $peoplecount = $this->Participants->getPeopleCount(11); //eventId
+      //  $peoplenames = $this->Participants->find()->contain('Events')->select(['first_name'])->where(['Events.slug' => 'vmp-2019'])->toArray();
+      //  $churches = $this->Churches->find()->select('name')->toArray();
+
+    	
+
+        $this->set(compact(['churches','peoplecount','rc_site_key','peoplenames', 'terms']));
     }
     
     public function success() {
@@ -76,7 +83,8 @@ class WeekendController extends AppController
         $participant = $this->Participants->newEntity($this->request->getData());
         
         $participant->church = $this->Churches->findByName($this->request->getData('church'))->first();
-        $participant->event = $this->Events->findById(11)->first(); //eventId
+        //$participant->event = $this->Events->findById(11)->first(); //eventId
+        $participant->event = $this->Events->findById($this->request->getData('term'))->first();
 		$this->Participants->save($participant);
 
         $this->_sendEmail($participant->email, 'Prihlásenie - INSIDE Víkend', 'weekend_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Events'])]);

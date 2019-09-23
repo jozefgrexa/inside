@@ -4,11 +4,11 @@ $this->viewBuilder()->setLayout('default');
 
 ?>
 
-<section id="start" class="weekend-big-picture weekend" style="background-image: url('<?= $this->Url->image('weekend/miesta_zmeny_bg.jpg') ?>');">
+<section id="start" class="bg-week-lead">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <?= $this->Html->image('weekend/miesta_zmeny_title.png', ['alt' => 'Miesta zmeny', 'class' => 'img-fluid title-image']) ?>
+        <?= $this->Html->image('weekend/vmp19.png', ['alt' => 'VMP 19', 'class' => 'img-fluid title-image']) ?>
       </div>
     </div>
   </div>
@@ -18,11 +18,10 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h2>Víkend pre starší dorast</h2>
-        <p class="lead">INSIDE Víkend pre starší dorast je priestor, kde sa snažíme ísť o niečo hlbšie v budovaní našich vzťahov s Pánom Ježišom- nechceme ostať len pri tom, že sme niečo počuli, ale chceme vidieť zmeny v našich životoch. Ale o tom viac nižšie :) Na tejto víkendovke môžeš očakávať viac rozprávania, slova, chvál, nejaké semináre a menej hier, no to neznamená, že si nič nezahráme. Dôležitým dôrazom je budovanie našich charakterov v rôznych oblastiach nášho života. </p>
-      </div>
-      <div class="col-md-4">
-        <?= $this->Html->image('weekend/miesta_zmeny_motto.png', ['class' => 'img-fluid']) ?>
+        <h2>Víkend modlitieb a pôstu</h2>
+        <p class="lead"> Uvedomujeme si, že Božie konanie nie je niečo, čo si môžeme akokoľvek nahradiť či vyrobiť a preto sa chceme stretnúť a spoločne Pána Boha prosiť o požehnanie do konkrétnych vecí ktoré žijeme v našich osobných životoch, no najmä v cirkvných zboroch v rámci nášho seniorátu. <br />
+        Uvedomujeme si, že duchovný boj je realita života okolo nás a chceme sa doň zapojiť spoločnými modlitbami a pôstom, aby sme pripravovali svoje srdcia na Božie konanie, ktoré nás čaká. <br />
+        Uvedomujeme si, že bez Jeho milosti sme stratení vo všetkých svojich snahách a tak chceme utekať za naším Nebeským Otcom s prosbami o premenu- našich životov; ľudí, na ktorých nám záleží; a zborov, ktoré nám sú, alebo môžu byť duchovným domovom.</p>
       </div>
     </div>
   </div>
@@ -32,20 +31,20 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <?= $this->Html->image('weekend/miesta_zmeny_headline.png', ['class' => 'img-fluid w-75 mb-5']) ?>
         <p>
-        Tento víkend bude o zmene. Pretože žiadna teória a vedomosti, ktoré nazbierame, sa nevyrovnajú tomu, keď ich vieme uplatniť v skutočnom každodennom živote. Počas tohto víkendu sa pozrieme na to, čo vo svojich listoch písal apoštol Pavol. Miesta zmeny, o ktorých budeme hovoriť, nie sú miestami, na ktorých sa instantne niečo zmení. Sú súčasťou procesu. Lebo o tom je väčšina zmien v našich životoch. O postupnom procese zmeny, kedy sa približujeme obrazu, na ktorý nás Pán Boh stvoril. Kedy sa približujeme príkladu, ktorý nám dal Pán Ježiš. Nie preto, že musíme. Preto, že chceme.
+        Tento víkend je veľmi iný ako všetko ostatné víkendovky, ktoré robíme. Je miestom primárne pre tých, ktorí už niekde slúžia, takže pokiaľ ešte nemáš 15 rokov, prosím, napíš na inside@sem.sk a porozprávame sa, či je pre teba vhodným miestom :) <br />
+        Sám o sebe je totiž programovo veľmi jednoduchý, bez hier či aktivít, no skôr o čase v spoločenstve a v spoločnom zápase za to, čo je pre nás kľúčové- prínašanie skutočného života v Pánovi Ježišovi do cirkevných zborov bratislavského seniorátu. <br />
+        Ako už z názvu vyplýva, súčasťou tohto víkendu je aj pôst. Pokiaľ ti okolnosti nedovoľujú sa pôstiť od jedla, napíš nám prosím a niečo vymyslíme :) Pre tých, ktorí sa zapoja do pôstu, budú k dispozícii nejaké džúsy a podobne a víkend ukončíme spoločným nedeľným obedom v stredisku.
         </p>
       </div>
       <div class="col-md-6">
         <h2>Praktické informácie</h2>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-transparent">Podujatie je pre dorast vo veku 15-18 rokov</li>
+            <li class="list-group-item bg-transparent">Podujatie je pre konfirmandov a mladší dorast vo veku 12-15 rokov</li>
             <li class="list-group-item bg-transparent">MIESTO: Prameň, Častá-Píla</li>
-            <li class="list-group-item bg-transparent">TERMÍN: 10.-12. mája 2019</li>
-            <li class="list-group-item bg-transparent">ZAČIATOK: piatok - 16:00 začína registrácia</li>
-            <li class="list-group-item bg-transparent">KONIEC: nedeľa - obed je posledný bod programu, no dá sa ešte chvíľu zostať na športy a rozhovory,budeme tam asi do 16-tej</li>
-            <li class="list-group-item bg-transparent">BÝVANIE: 4-8 posteľové chatky</li>
+            <li class="list-group-item bg-transparent">TERMÍN: 18.-20.10. / 25.-27.10. 2019</li>
+            <li class="list-group-item bg-transparent">ZAČIATOK: V piatok o 16:00 začína registrácia</li>
+            <li class="list-group-item bg-transparent">KONIEC: V nedeľu končíme spoločným obedom o 12:30</li>
             <li class="list-group-item bg-transparent">CENA: 30 Eur</li>
             <li class="list-group-item bg-transparent"> V prípade, že by jediným dôvodom tvojej neúčasti mali byť financie, prosím ozvi sa na inside@sem.sk. Radi ti poskytneme zľavu až do výšky 100%. Naozaj radi. Nebudeš prvý, ani posledný :)</li>
           </ul>
@@ -54,16 +53,15 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<section id="program" class="weekend" style="background-image: url('<?= $this->Url->image('weekend/miesta_zmeny_big_bg.jpg') ?>');">
+<section id="program" class="bg-week-lead text-white">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2>Na programe pracujeme a bude tu zverejnený ešte pred víkendovkou :) </h2>
+      <div class="col-md-12 text-white">
+        <h2>Program</h2>
       </div>
     </div>
-    <!--
     <div class="row">
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Piatok</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">16:00 Registrácia</li>
@@ -72,7 +70,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Sobota</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
@@ -86,7 +84,7 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">22:30 Nočný pokoj</li>
         </ul>
       </div>
-      <div class="col-md-4 mt-3">
+      <div class="col-md-4 mt-3 text-white">
         <h4>Nedeľa</h4>
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent">08:00 Budíček</li>
@@ -96,13 +94,12 @@ $this->viewBuilder()->setLayout('default');
           <li class="list-group-item bg-transparent">12:30 Obed</li>
         </ul>
       </div> 
-    </div> 
-    -->
+    </div>
   </div>
 </section>
 
 
-<section id="signup" class="bg-week-lead">
+<section id="signup" class="bg-week-info">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
     <form id="week-form" method="post" action="#" class="needs-validation" novalidate>        
@@ -161,6 +158,19 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="term-select">Vyber termín víkendu</label>
+          <select class="form-control" id="term-select" name="term">
+            <?php foreach ($terms as $key => $term): ?>
+              <option value="<?= $term['id'] ?>">
+                <?= $term['start_date'] ?> - <?= $term['end_date'] ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+        </div>
+      </div>
+
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -196,13 +206,24 @@ $this->viewBuilder()->setLayout('default');
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
     </form>
 
-    <div class="row">
+    <!--<div class="row">
       <div class="col-md-6 mt-5 text-white">
         <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
         <?php foreach ($peoplenames as $name): ?>
           <span><?= $name['first_name'] ?>, </span>
         <?php endforeach; ?>
       </div>
+    </div> -->
+    <div class="row">
+      <?php foreach ($terms as $key => $term): ?>
+        <div class="col-md-6 mt-5">
+          <h6><?= $key+1 ?>. termín: <?= $term['start_date'] ?>-<?= $term['end_date'] ?></h6>
+          <h4>Počet aktuálne prihlásených: <?= $peoplecount[$key]['all'] ?></h4>
+          <?php foreach ($peoplenames[$key] as $name): ?>
+            <span><?= $name['first_name'] ?>, </span>
+          <?php endforeach; ?>
+        </div>
+      <?php endforeach ?>
     </div>
   </div>
 </section>
