@@ -219,15 +219,15 @@ section {
 }
 
 .bg-week-lead {
-  background-color: #2C7380;
+  background-color: #E0CD0E;
 }
 .bg-week-info {
-  background-color: #EC6C6B;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 0px) {
   section#start .title-image {
-    margin-top: 40%;
+    margin-top: 0; /*40%*/
   }
   .weekend-big-picture {
     height: 50vh;
@@ -235,7 +235,7 @@ section {
 }
 @media (min-width: 576px) {
   section#start .title-image {
-    margin-top: 30%;
+    margin-top: 0; /*30%*/
   }
   .weekend-big-picture {
     height: 60vh;
@@ -243,7 +243,7 @@ section {
 }
 @media (min-width: 768px) {
   section#start .title-image {
-    margin-top: 20%;
+    margin-top: 0; /*20%*/
   }
   .weekend-big-picture {
     height: 70vh;
@@ -251,7 +251,7 @@ section {
 }
 @media (min-width: 992px) {
   section#start .title-image {
-    margin-top: 10%;
+    margin-top: 0; /*10%*/
   }
   .weekend-big-picture {
     height: 70vh;

@@ -8,20 +8,20 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <?= $this->Html->image('weekend/vmp19.png', ['alt' => 'VMP 19', 'class' => 'img-fluid title-image']) ?>
+        <?= $this->Html->image('weekend/bod-zlomu.jpg', ['alt' => 'Bod zlomu', 'class' => 'img-fluid title-image']) ?>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about" class="text-white bg-week-lead">
+<section id="about" class=" bg-week-lead">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h2>Víkend modlitieb a pôstu</h2>
-        <p class="lead"> Uvedomujeme si, že Božie konanie nie je niečo, čo si môžeme akokoľvek nahradiť či vyrobiť a preto sa chceme stretnúť a spoločne Pána Boha prosiť o požehnanie do konkrétnych vecí ktoré žijeme v našich osobných životoch, no najmä v cirkvných zboroch v rámci nášho seniorátu. <br />
-        Uvedomujeme si, že duchovný boj je realita života okolo nás a chceme sa doň zapojiť spoločnými modlitbami a pôstom, aby sme pripravovali svoje srdcia na Božie konanie, ktoré nás čaká. <br />
-        Uvedomujeme si, že bez Jeho milosti sme stratení vo všetkých svojich snahách a tak chceme utekať za naším Nebeským Otcom s prosbami o premenu- našich životov; ľudí, na ktorých nám záleží; a zborov, ktoré nám sú, alebo môžu byť duchovným domovom.</p>
+        <h2>O víkende</h2>
+        <p class="lead">
+        	Pozývame ťa stráviť víkend naplnený akciou v Častej! Počas tohto víkendu zažiješ rôzne hry či aktivity, ale zároveň sa budeš môcť zamyslieť nad témou celého víkendu a nad tým, ako vyzerá tvoj život s Pánom Bohom. Avšak určite sa nemusíš báť nudného školského vyučovania, lebo veríme, že aj o dôležitých a vážnych veciach sa dá hovoriť zaujímavo :)	
+         </p>
       </div>
     </div>
   </div>
@@ -31,11 +31,9 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p>
-        Tento víkend je veľmi iný ako všetko ostatné víkendovky, ktoré robíme. Je miestom primárne pre tých, ktorí už niekde slúžia, takže pokiaľ ešte nemáš 15 rokov, prosím, napíš na inside@sem.sk a porozprávame sa, či je pre teba vhodným miestom :) <br />
-        Sám o sebe je totiž programovo veľmi jednoduchý, bez hier či aktivít, no skôr o čase v spoločenstve a v spoločnom zápase za to, čo je pre nás kľúčové- prínašanie skutočného života v Pánovi Ježišovi do cirkevných zborov bratislavského seniorátu. <br />
-        Ako už z názvu vyplýva, súčasťou tohto víkendu je aj pôst. Pokiaľ ti okolnosti nedovoľujú sa pôstiť od jedla, napíš nám prosím a niečo vymyslíme :) Pre tých, ktorí sa zapoja do pôstu, budú k dispozícii nejaké džúsy a podobne a víkend ukončíme spoločným nedeľným obedom v stredisku.
-        </p>
+        <h4> O téme </h4>
+        <p>        
+Život Pavla mal jasne vytýčený smer. Presne vedel, čo chce a ako to chce dosiahnuť. No počas jeho života nastal moment, ktorý mu úplne zmenil život. Bod zlomu. Stretol sa s Ježišom. A odvtedy už nič nebolo také, ako predtým. Čo sa udialo v tomto bode zlomu? Prečo sa Pavol úplne zmenil? A čo to má vlastne s našimi životmi? Počas víkendovky budeme spolu hľadať odpovede.
       </div>
       <div class="col-md-6">
         <h2>Praktické informácie</h2>
@@ -53,7 +51,7 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<section id="program" class="bg-week-lead text-white">
+<section id="program" class="bg-week-lead">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-white">
