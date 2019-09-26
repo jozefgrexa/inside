@@ -13,7 +13,7 @@
           <br/>V prihláške máš nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
           <br/>Priezvisko: <?= $participant->last_name ?>
-          <br/>Dátum narodenia: <?= $participant->birthday ?>
+          <br/>Dátum narodenia: <?= $participant->birthday->i18nFormat('dd.MM.yyyy') ?>
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
           <?= $participant->idcard ? '<br/>Číslo občianskeho preukazu: '.$participant->idcard : '' ?>

@@ -13,7 +13,7 @@
           <br/>V prihláške si uviedol nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
           <br/>Priezvisko: <?= $participant->last_name ?>
-          <br/>Dátum narodenia: <?= $participant->birthday ?>
+          <br/>Dátum narodenia: <?= $participant->birthday->i18nFormat('dd.MM.yyyy') ?>
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
           <?= $fasting ? '<br/>Tešíme sa, že sa chystáš s nami do pôstu od jedla!' : '<br/>Nakoľko sa nepridáš k pôstu od jedla, na celý víkend ti objednávame stravu.' ?>
