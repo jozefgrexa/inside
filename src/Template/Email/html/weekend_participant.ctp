@@ -13,10 +13,10 @@
           <br/>V prihláške si uviedol nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
           <br/>Priezvisko: <?= $participant->last_name ?>
-          <br/>Dátum narodenia: <?= $participant->birthday->i18nFormat('dd.MM.yyyy') ?>
+          <br/>Dátum narodenia: <?= $participant->birthday ?>
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
-          <br/>Termín víkendu: <?= $participant->event->start_date->i18nFormat('dd.MM.yyyy') ?> - <?= $participant->event->end_date->i18nFormat('dd.MM.yyyy') ?>
+          <br/>Termín víkendu: <?= $participant->event->start_date ?> - <?= $participant->event->end_date ?>
           <br/>Cena: <?= $this->Number->currency($participant->event->price, 'EUR') ?>
         </td>
       </tr>

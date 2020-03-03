@@ -39,7 +39,7 @@ class CampController extends AppController
 
     public function index()
     {
-        $event = $this->Events->find()->where(['slug' => 'tabor-2019'])->first();
+        $event = $this->Events->find()->where(['slug' => 'tabor-2020'])->first();
 
     	$rc_site_key = Configure::read('RCKeys.siteKey');
 
@@ -116,12 +116,12 @@ class CampController extends AppController
         $participant->event = $this->Events->find()->where(['id' => $event_id])->first();
 		$this->Participants->save($participant);
 
-        $this->_sendEmail($participant->email, 'INSIDE Tábor 2019', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
+        $this->_sendEmail($participant->email, 'INSIDE Tábor 2020', 'camp_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
         if ($this->request->getData('discount')) {
-            $this->_sendEmail('inside@sem.sk', 'Tábor 2019 - ešte väčia zľava', 'camp_discount', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
+            $this->_sendEmail('inside@sem.sk', 'Tábor 2020 - ešte väčia zľava', 'camp_discount', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
         }
         if ($this->request->getData('sponsor')) {
-            $this->_sendEmail('inside@sem.sk', 'Tábor 2019 - prispieť ešte viac', 'camp_sponsor', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
+            $this->_sendEmail('inside@sem.sk', 'Tábor 2020 - prispieť ešte viac', 'camp_sponsor', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Parents'])]);
         }
     }
 

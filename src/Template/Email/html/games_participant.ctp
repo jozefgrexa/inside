@@ -13,7 +13,7 @@
           <br/>V prihláške si uviedol nasledovné informácie:
           <br/>Meno: <?= $participant->first_name ?>
           <br/>Priezvisko: <?= $participant->last_name ?>
-          <br/>Dátum narodenia: <?= $participant->birthday->i18nFormat('dd.MM.yyyy') ?>
+          <br/>Dátum narodenia: <?= $participant->birthday ?>
           <br/>Adresa: <?= $participant->residence ?>
           <br/>E-mail: <?= $participant->email ?>
           <br/>Tvoje zaradenie v tíme: <?= $participant->team->name ?>

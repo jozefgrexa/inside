@@ -31,7 +31,7 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
       <!-- Slide Two - Link to Facebook group-->
-      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
+      <div class="carousel-item" style="background-image: url('<?= $this->Url->image('home/slider-bg-02.jpg') ?>')">
         <div class="carousel-caption">
           <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
           <h3>Viac fotiek nájdeš v našej <a href="https://www.facebook.com/groups/128360077233101/" target="_blank" class="text-white font-italic">Facebookovej skupine</a>.</h3>
@@ -39,11 +39,10 @@ $this->viewBuilder()->setLayout('default');
       </div>
 
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('games/games-bg-sports.jpg') ?>')">
-        <div class="row">
-          <div class="col-sm-11 col-md-10 col-lg-8 ml-auto mt-5">
-            <?= $this->Html->link($this->Html->image('games/main-logo-home.png', ['alt' => 'INSIDE Games 2018 Logo Téma', 'class' => 'img-fluid']), ['controller' => 'games', 'action' => 'index'], ['class' => 'd-block', 'escape' => false]) ?>
-          </div>
+      <div class="carousel-item active" style="background-image: url('<?= $this->Url->image('home/slider-bg-03.jpg') ?>')">
+        <div class="carousel-caption">
+          <?= $this->Html->image('home/home-header-logo.png', ['alt' => 'inside logo', 'class' => 'img-fluid m-3']) ?>
+          <h1>Prihlasovanie na tábor spustíme už 1. 3. 2020!</h1>
         </div>
       </div>
     </div>
@@ -121,7 +120,7 @@ $this->viewBuilder()->setLayout('default');
 </section>-->
 
 <section id="calendar-19">
-  <img src="webroot/img/home/inside_2019.jpg" class="img-fluid">
+  <img src="webroot/img/home/2020.png" class="img-fluid">
 </section>
 
 <section id="contact">

@@ -83,8 +83,8 @@ class WeekendController extends AppController
         $participant = $this->Participants->newEntity($this->request->getData());
         
         $participant->church = $this->Churches->findByName($this->request->getData('church'))->first();
-        //$participant->event = $this->Events->findById(11)->first(); //eventId
-        $participant->event = $this->Events->findById($this->request->getData('term'))->first();
+        $participant->event = $this->Events->findById(12)->first(); //eventId
+        //$participant->event = $this->Events->findById($this->request->getData('term'))->first();
 		$this->Participants->save($participant);
 
         $this->_sendEmail($participant->email, 'Prihlásenie - INSIDE Víkend', 'weekend_participant', ['participant' => $this->Participants->get($participant->id, ['contain' => 'Events'])]);

@@ -8,7 +8,7 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col text-right">
-        <?= $this->Html->image('camp/header_logo_2.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
+        <!--<?= $this->Html->image('camp/header_logo_2.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>-->
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@ $this->viewBuilder()->setLayout('default');
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <h2>11-18.august 2019 | Planinka, Dechtice</h2>
+        <h2>16.-23.august 2020 | Planinka, Dechtice</h2>
         <p class="h4 my-5">Zážitkové pobytové podujatie zamerané na <strong>budovanie vzťahov, charakteru jednotlivca a rast v osobnom vzťahu s Bohom</strong> určené pre <strong>dorast vo veku 12-17 rokov</strong>.</p>
         <p class="lead">Rekreačné zariadenie Planinka, ubytovanie v 2, 3 a 4-posteľových izbách v hlavnej budove so zrekonštruovanými sociálnymi zariadeniami na chodbe, prípadne na 4-posteľových chatkách s vlastnými sociálnymi zariadeniami. Stravovanie 5x denne a pitný režim sú zabezpečené.</p>
       </div>
@@ -60,20 +60,15 @@ $this->viewBuilder()->setLayout('default');
   </div>
 </section>
 
-<!-- <section id="theme">
+<section id="theme">
   <div class="container">
     <div class="row">
-      <div class="col text-center">
-        <?= $this->Html->image('camp/header_theme.png', ['alt' => 'camp-logo', 'class' => 'img-fluid']) ?>
-      </div>
-    </div>
-    <div class="row">
       <div class="col">
-        <p class="lead">Kadý tábor má svoju tému, okolo ktorej sa točia všetky ostatné veci na tábore! Aj tento rok chystáme dobrodružstvo a veľa zábavy a na téme momentálne pracujeme. Na tomto mieste sa ju časom dozvieš.</p>
+        <p class="lead">Každý tábor má svoju tému, okolo ktorej sa točia všetky ostatné veci na tábore! Aj tento rok chystáme dobrodružstvo a veľa zábavy a na téme momentálne pracujeme. Na tomto mieste sa ju časom dozvieš.</p>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 <section id="price" class="bg-dark">
   <div class="container">
@@ -156,12 +151,12 @@ $this->viewBuilder()->setLayout('default');
 
 <section id="signup">
   <div class="container">
-    <h2>Prihlasovací formulár</h2>
-    <p class="lead">Kapacita tábora je obmedzená na 100 účastníkov a túto kapacitu sme už naplnili.</p>
+    <h2>Prihlasovací formulár pre dorastencov</h2>
+    <!--<p class="lead">Kapacita tábora je obmedzená na 100 účastníkov a túto kapacitu sme už naplnili.</p>
     <h5 class="text-primary">Možno sa nejaké miesto uvoľní, alebo ešte niečo vyhútame, preto ak veľmi chceš ísť na tábor, napíš mail na</h5>
     <h1 class="text-danger"><span style="word-break: break-all;">prenesmiernetuzimbytnainsidetabore@sem.sk</span></h1>
-    <p class="lead">Veríme, že sa na tábore uvidíme! A už sa na to veľmi tešíme!</p>
-    <!-- <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
+    <p class="lead">Veríme, že sa na tábore uvidíme! A už sa na to veľmi tešíme!</p>-->
+    <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
           <label for="first-name">Meno</label>
@@ -293,11 +288,11 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
-    </form> -->
+    </form>
 
     <div class="row mt-5">
       <div class="col">
-        <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?></h4>
+        <h4>Počet aktuálne prihlásených: <?= $peoplecount['all'] ?>/80 </h4>
         <?php foreach ($peoplenames as $name): ?>
           <span><?= $name['first_name'] ?>, </span>
         <?php endforeach; ?>
@@ -353,8 +348,8 @@ $this->viewBuilder()->setLayout('default');
         </button>
       </div>
       <div class="modal-body">
-        <p>Suma za ubytovanie a stravu pre jedného účastníka sa hýbe okolo 115 €. Ďalšie náklady sú hlavne: prenájom programových stanov a nafukovacieho vodného futbalu, športové, kancelárske a technické potreby pre zabezpečenie programu, táborové tričká a odmeny pre víťazov v hrách a športoch. Taktiež prispievame na tábor účastníkom, ktorí si to nemôžu finančne dovoliť a podľa možností časť poplatku za ubytovanie a stravu hradíme tímu dobrovoľníkov, ktorí tábor realizujú a štandardne si všetky náklady hradia sami.</p>
-        <p>Zároveň sa snažíme cenu tábora nastaviť tak, aby bol dostupný pre každého. Ako občianske združenie Spoločenstvo evanjelickej mládeže máme na tábor dotáciu 500 € aj z Ministerstva školstva cez program podpory administrovaný IUVENTOU. Minuloročný tábor stál približne 12 500 € / 100 účastníkov a aby sme ho mohli zaplatiť potrebovali sme približne 1000 € v sponzorských príspevkoch.</p>
+        <p>Suma za ubytovanie a stravu pre jedného účastníka sa hýbe okolo 115 €. Ďalšie náklady sú hlavne: prenájom programových stanov a nafukovacieho vodného futbalu, športové, kancelárske a technické potreby pre zabezpečenie programu, odmeny pre víťazov v hrách a športoch. Taktiež prispievame na tábor účastníkom, ktorí si to nemôžu finančne dovoliť a podľa možností časť poplatku za ubytovanie a stravu hradíme tímu dobrovoľníkov, ktorí tábor realizujú a štandardne si všetky náklady hradia sami.</p>
+        <p>Zároveň sa snažíme cenu tábora nastaviť tak, aby bol dostupný pre každého. Ako občianske združenie Spoločenstvo evanjelickej mládeže máme na tábor dotáciu aj z Ministerstva školstva cez program podpory administrovaný IUVENTOU- minulý rok bola výška takéhoto príspevku okolo 750€. Taktiež nás nesmierne povzbudilo, že minulý rok sa viac ľudí rozhodlo podporiť náš tábor vyššou sumou, ako potrebovalo nižšiu, takže sme vedeli podporiť služobníkov, aby si nemuseli platiť plnú cenu.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
@@ -408,11 +403,12 @@ $this->viewBuilder()->setLayout('default');
         </button>
       </div>
       <div class="modal-body">
-        <p>Aby bolo tvoje prihlásenie kompletné, <string>do 15.júla</string> je potrebné zaplatiť <strong>zálohu 70 €</strong> alebo <strong>plnú sumu</strong> poplatku za tábor.</p>
+        <p>Aby bolo tvoje prihlásenie kompletné, <string>do 31. mája</string> je potrebné zaplatiť <strong>zálohu 70 €</strong> alebo <strong>plnú sumu</strong> poplatku za tábor.</p>
         <p>Zaplatiť je možné prevodom na účet:
-        <br/><strong>IBAN:</strong> SK63 0900 0000 0000 8212 9157
-        <br/><strong>Variabilný symbol:</strong> 11180819
-        <br/><strong>Správa pre adresáta:</strong> meno a priezvisko účastníka</p>
+        <!--<br/><strong>IBAN:</strong> SK63 0900 0000 0000 8212 9157
+        <br/><strong>Variabilný symbol:</strong> 16230820
+        <br/><strong>Správa pre adresáta:</strong> meno a priezvisko účastníka-->
+        	Detaily platby zverejníme čoskoro :) 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
@@ -432,7 +428,7 @@ $this->viewBuilder()->setLayout('default');
       <div class="modal-body">
         <p>Prečítaj si podmienky účasti na tábore. Poslednú stranu treba vytlačiť a <strong>vyplnenú a podpísanú priniesť na tábor</strong>.</p>
         <p>V dokumente nájdeš informácie o organizácií tábora ako aj poučenie o spracovaní osobných údajov.</p>
-        <?= $this->Html->link('Stiahni PDF', '/storage/IT2019_VseobecnePodmienky2019.pdf', [ 'class' => 'btn btn-danger btn-block mt-3']) ?>
+        <?= $this->Html->link('Stiahni PDF', '/storage/INSIDETabor_VseobecnePodmienky.pdf', [ 'class' => 'btn btn-danger btn-block mt-3']) ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
@@ -450,7 +446,7 @@ $this->viewBuilder()->setLayout('default');
         </button>
       </div>
       <div class="modal-body">
-        <p>V deň príchodu na tábor <strong>v nedeľu 11.8.</strong> prebieha registrácia v čase <strong>16:00-18:00</strong>. Doprava na tábor je <strong>individuálna</strong></p>
+        <p>V deň príchodu na tábor <strong>v nedeľu 16.8.</strong> prebieha registrácia v čase <strong>16:00-18:00</strong>. Doprava na tábor je <strong>individuálna</strong></p>
         <p>Pri registrácií sa podpíšeš do prezenčnej listiny, odovzdáš podpísané podmienky účasti a zaplatíš zvyšok sumy za tábor (ak si dopredu zaplatil iba zálohu) - dá sa platiť iba v hotovosti.</p>
       </div>
       <div class="modal-footer">

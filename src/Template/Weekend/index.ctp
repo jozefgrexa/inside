@@ -100,6 +100,8 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup" class="bg-week-info">
   <div class="container">
     <h2>Prihlasovací formulár</h2>
+    <h2 class="text-warning">Prihlasovanie na druhý termín bolo ukončené</h2> 
+    <h4 class="text-warning"> Ak to predsa chceš skúsiť, píš na inside@sem.sk a ak sa uvoľnia miesta, dáme ti vedieť </h4>
     <form id="week-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
@@ -156,7 +158,7 @@ $this->viewBuilder()->setLayout('default');
         </div>
       </div>
 
-      <div class="form-row">
+      <!--<div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="term-select">Vyber termín víkendu</label>
           <select class="form-control" id="term-select" name="term">
@@ -167,7 +169,7 @@ $this->viewBuilder()->setLayout('default');
             <?php endforeach; ?>
           </select>
         </div>
-      </div>
+      </div> -->
 
       <div class="form-group">
         <div class="form-check">

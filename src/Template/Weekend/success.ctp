@@ -4,11 +4,11 @@
 
 ?>
 
-<section id="start" class="weekend-big-picture weekend" style="background-image: url('<?= $this->Url->image('weekend/miesta_zmeny_bg.jpg') ?>');">
+<section id="start" class="bg-week-info">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <?= $this->Html->image('weekend/miesta_zmeny_title.png', ['alt' => 'Miesta zmeny', 'class' => 'img-fluid title-image']) ?>
+        <?= $this->Html->image('weekend/bod-zlomu.jpg', ['alt' => 'Miesta zmeny', 'class' => 'img-fluid title-image']) ?>
       </div>
     </div>
   </div>
