@@ -152,11 +152,11 @@ $this->viewBuilder()->setLayout('default');
 <section id="signup">
   <div class="container">
     <h2>Prihlasovací formulár pre dorastencov</h2>
-    <!--<p class="lead">Kapacita tábora je obmedzená na 100 účastníkov a túto kapacitu sme už naplnili.</p>
+    <p class="lead">Kapacita tábora je obmedzená na 80 účastníkov a túto kapacitu sme už naplnili.</p>
     <h5 class="text-primary">Možno sa nejaké miesto uvoľní, alebo ešte niečo vyhútame, preto ak veľmi chceš ísť na tábor, napíš mail na</h5>
     <h1 class="text-danger"><span style="word-break: break-all;">prenesmiernetuzimbytnainsidetabore@sem.sk</span></h1>
-    <p class="lead">Veríme, že sa na tábore uvidíme! A už sa na to veľmi tešíme!</p>-->
-    <form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
+    <p class="lead">Veríme, že sa na tábore uvidíme! A už sa na to veľmi tešíme!</p>
+    <!--<form id="camp-form" method="post" action="#" class="needs-validation" novalidate>        
       <div class="form-row mt-5">
         <div class="col-md-6 mb-3">
           <label for="first-name">Meno</label>
@@ -288,7 +288,7 @@ $this->viewBuilder()->setLayout('default');
       </div>
       <div id="recaptcha" class="g-recaptcha" data-sitekey="<?= $rc_site_key ?>" data-callback="onSubmit" data-size="invisible"></div>
       <button id="submit-button" class="btn btn-primary submit" type="submit" onclick="executeRecaptcha()">Odoslať</button>
-    </form>
+    </form>-->
 
     <div class="row mt-5">
       <div class="col">
